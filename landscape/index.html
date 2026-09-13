@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#101211" />
     <meta
       name="description"
-      content="A researched landscape of open-source Git forges, self-hosted GitHub alternatives, and distributed code collaboration projects."
+      content="A researched landscape of open-source Git forges and the design space for a shared cloud of independently operated Forkalope nodes."
     />
     <title>Landscape — forkalope</title>
     <link rel="icon" href="../public/logo.png" type="image/png" />
@@ -58,7 +58,7 @@
           <div>
             <p class="eyebrow">Landscape / Overview</p>
             <h1 id="overview">Open Git platforms</h1>
-            <p class="landscape-lede">The field is full of capable forges. The open question is whether one can feel as familiar as GitHub, run anywhere, and still belong to a network instead of a single operator.</p>
+            <p class="landscape-lede">The field is full of capable forges. The open question is whether one can feel as familiar as GitHub, run anywhere, and still belong to a cloud of operators who can help one another recover.</p>
           </div>
           <p class="heading-note"><i aria-hidden="true"></i> Researched September 2026</p>
         </header>
@@ -72,12 +72,12 @@
           <article class="reveal reveal-delay-two">
             <span>02 / The missing layer</span>
             <h2>Most homes are still islands.</h2>
-            <p>Mirrors move repository data. They do not automatically make identity, issues, reviews, and discovery portable.</p>
+            <p>Mirrors move repository data. They do not automatically make identity, permissions, issues, reviews, routing, and recovery portable.</p>
           </article>
           <article class="reveal reveal-delay-three">
             <span>03 / The Forkalope bet</span>
             <h2>Fork the home, then connect it.</h2>
-            <p>Make the familiar forge easy to deploy, with the network model treated as a product feature from the start.</p>
+            <p>Make the familiar forge easy to deploy, then make shared operations and recovery part of the product from the start.</p>
           </article>
         </section>
 
@@ -144,8 +144,8 @@
                   <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-partial" aria-label="Federation proposal">~</span></td><td><span class="mark mark-partial" aria-label="Experimental federation">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-yes" aria-label="Signed, local-first artifacts">✓</span></td>
                 </tr>
                 <tr>
-                  <th scope="row">Cloudflare-native deployment</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core target">core</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td>
+                  <th scope="row">Mutual recovery network</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-partial" aria-label="Federation is experimental">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-partial" aria-label="Peer-to-peer, different recovery model">~</span></td>
                 </tr>
               </tbody>
             </table>
@@ -216,13 +216,13 @@
             <p class="eyebrow">The opening</p>
             <h2 id="gap-title">Nobody has combined the three promises cleanly.</h2>
             <p>Today’s strongest projects tend to optimize for one of these: a complete self-hosted suite, an unusually lightweight forge, or a genuinely distributed protocol. Forkalope can be interesting only if it treats all three as first-class.</p>
-            <p>The hard part is not putting a GitHub-like page on Cloudflare. It is making identity, permissions, issues, reviews, search, packages, actions, backups, moderation, and upgrades behave coherently across independently operated nodes.</p>
+            <p>The hard part is not putting a GitHub-like page on a cheap server. It is making identity, permissions, issues, reviews, search, packages, actions, backups, moderation, upgrades, and recovery behave coherently across independently operated nodes.</p>
           </div>
-          <aside class="cloudflare-note">
-            <div class="note-topline"><span>Deployment reality</span><span><i aria-hidden="true"></i> useful, not magic</span></div>
-            <h3>Cloudflare is a distribution layer, not a resilience guarantee.</h3>
-            <p>Cloudflare’s current free tiers make small nodes attractive: Pages serves static assets free and unlimited, Workers includes 100,000 requests per day, and R2 includes 10 GB-month of storage. Limits, quotas, and the shared dependency still make replication and export core product requirements.</p>
-            <a href="https://developers.cloudflare.com/workers/platform/pricing/" target="_blank" rel="noreferrer">Check current Workers limits ↗</a>
+          <aside class="network-note">
+            <div class="note-topline"><span>Forkalope’s opening</span><span><i aria-hidden="true"></i> a cloud with neighbors</span></div>
+            <h3>Every node should have a recovery partner.</h3>
+            <p>Forkalope can use commodity dedicated servers, edge services, or a Sysop’s own provider account. None of those vendors is the resilience plan. The resilience plan is authorized replicas, reserved capacity, tested restore procedures, and operators who know how to help one another.</p>
+            <a href="../developer/#recovery">See the recovery model ↗</a>
           </aside>
         </section>
 
@@ -242,7 +242,7 @@
             <a href="https://sourcehut.org/" target="_blank" rel="noreferrer">SourceHut <span>open suite + workflow ↗</span></a>
             <a href="https://docs.onedev.io/" target="_blank" rel="noreferrer">OneDev docs <span>self-hosted CI/CD ↗</span></a>
             <a href="https://github.com/gitbucket/gitbucket" target="_blank" rel="noreferrer">GitBucket repository <span>API compatibility ↗</span></a>
-            <a href="https://developers.cloudflare.com/pages/functions/pricing/" target="_blank" rel="noreferrer">Cloudflare Pages pricing <span>static + Functions limits ↗</span></a>
+            <a href="https://docs.hetzner.com/robot/dedicated-server/servers/" target="_blank" rel="noreferrer">Hetzner dedicated servers <span>commodity infrastructure ↗</span></a>
           </div>
           <p class="scope-note">Scope note: this is a product landscape, not an exhaustive catalog of every Git forge. It prioritizes active, open-source projects with meaningful overlap in UI, self-hosting, collaboration, or distributed ownership. Capabilities and availability change; the links above are the source of truth.</p>
         </section>

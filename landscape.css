@@ -112,13 +112,13 @@ tbody tr:hover:not(.group-row) .forkalope-column { background: rgba(241, 116, 95
 .gap-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 330px); gap: clamp(40px, 8vw, 120px); margin-top: 94px; padding: 26px 0 0; border-top: 1px solid var(--landscape-line); }
 .positioning-copy h2 { max-width: 650px; font-size: clamp(31px, 4.6vw, 56px); }
 .positioning-copy > p:not(.eyebrow) { max-width: 670px; margin: 21px 0 0; color: var(--soft); font-size: 14px; line-height: 1.65; }
-.cloudflare-note { align-self: start; padding: 16px; border: 1px solid rgba(167, 189, 145, 0.28); border-radius: 6px; background: rgba(167, 189, 145, 0.06); }
+.network-note { align-self: start; padding: 16px; border: 1px solid rgba(167, 189, 145, 0.28); border-radius: 6px; background: rgba(167, 189, 145, 0.06); }
 .note-topline { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .note-topline > span:last-child { display: inline-flex; align-items: center; gap: 6px; color: var(--faint); font-weight: 650; letter-spacing: 0; text-transform: none; }
-.cloudflare-note h3 { margin: 25px 0 0; color: var(--ink); font-size: 20px; letter-spacing: -0.045em; line-height: 1.05; }
-.cloudflare-note p { margin: 16px 0 0; color: var(--soft); font-size: 12px; line-height: 1.55; }
-.cloudflare-note a { display: inline-block; margin-top: 20px; color: var(--green); font-size: 11px; font-weight: 750; text-decoration: none; }
-.cloudflare-note a:hover { text-decoration: underline; }
+.network-note h3 { margin: 25px 0 0; color: var(--ink); font-size: 20px; letter-spacing: -0.045em; line-height: 1.05; }
+.network-note p { margin: 16px 0 0; color: var(--soft); font-size: 12px; line-height: 1.55; }
+.network-note a { display: inline-block; margin-top: 20px; color: var(--green); font-size: 11px; font-weight: 750; text-decoration: none; }
+.network-note a:hover { text-decoration: underline; }
 
 .sources-section { margin-top: 90px; padding: 26px 0 0; border-top: 1px solid var(--landscape-line); }
 .sources-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--landscape-line); }
@@ -133,7 +133,7 @@ tbody tr:hover:not(.group-row) .forkalope-column { background: rgba(241, 116, 95
   .heading-note { margin-bottom: 0; }
   .project-list { grid-template-columns: 1fr; }
   .gap-section { grid-template-columns: 1fr; }
-  .cloudflare-note { max-width: 560px; }
+  .network-note { max-width: 560px; }
 }
 
 @media (max-width: 720px) {

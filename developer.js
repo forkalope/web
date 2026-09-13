@@ -4,8 +4,8 @@ const planDetails = {
   "three-tines": { name: "Node Steward", price: "$90", units: "3 Tines" },
 };
 
-// Add the real Stripe Payment Link URLs here when the account is configured.
-const stripePaymentLinks = window.FORKALOPE_STRIPE_PAYMENT_LINKS || {};
+// Payment integration will be added after the membership terms are finalized.
+const paymentLinks = window.FORKALOPE_PAYMENT_LINKS || {};
 const planButtons = document.querySelectorAll("[data-plan]");
 const pricing = document.querySelector(".developer-pricing");
 const checkout = document.querySelector("#checkout");
@@ -20,18 +20,18 @@ function selectPlan(plan) {
   checkout.hidden = false;
   checkout.dataset.plan = plan;
   checkoutSummary.textContent = `${details.name} · ${details.units} · ${details.price}/month. Your membership helps sponsor the open Forkalope network; it is not an investment or a share in project revenue.`;
-  checkoutStatus.textContent = stripePaymentLinks[plan]
-    ? "You’ll continue to Stripe to enter your payment details."
+  checkoutStatus.textContent = paymentLinks[plan]
+    ? "You’ll continue to the configured payment provider."
     : "Enrollment is not open yet. No account has been created and no payment has been taken.";
-  checkoutSubmit.disabled = !stripePaymentLinks[plan];
-  checkoutSubmit.setAttribute("aria-disabled", String(!stripePaymentLinks[plan]));
+  checkoutSubmit.disabled = !paymentLinks[plan];
+  checkoutSubmit.setAttribute("aria-disabled", String(!paymentLinks[plan]));
   checkout.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 planButtons.forEach((button) => button.addEventListener("click", () => selectPlan(button.dataset.plan)));
 
 checkoutSubmit?.addEventListener("click", () => {
-  const url = stripePaymentLinks[checkout?.dataset.plan];
+  const url = paymentLinks[checkout?.dataset.plan];
   if (url) window.location.assign(url);
 });
 
