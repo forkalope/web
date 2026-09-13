@@ -1,0 +1,10 @@
+{
+  "name": "forkalope-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:release",
+    "build:release": "node scripts/build-site.js"
+  }
+}
