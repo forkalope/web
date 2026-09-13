@@ -12,10 +12,12 @@ const files = [
   "landscape.css",
   "developer.css",
   "developer.js",
+  "legal.css",
+  "network.css",
   "CNAME",
 ];
 
-const directories = ["public", "landscape", "developer"];
+const directories = ["public", "landscape", "developer", "privacy", "terms"];
 
 rmSync(dist, { force: true, recursive: true });
 mkdirSync(dist, { recursive: true });

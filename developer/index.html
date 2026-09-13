@@ -43,6 +43,8 @@
         <nav>
           <a class="is-active" href="#plans">Plans</a>
           <a href="#stewardship">What you get</a>
+          <a href="#sysops">Independent Sysops</a>
+          <a href="#recovery">Shared recovery</a>
           <a href="#business">For business</a>
           <a href="#principles">The rules</a>
         </nav>
@@ -56,7 +58,7 @@
             <h1>Put a node on the map.</h1>
             <p class="developer-lede">Forkalope is free software. Co-Sysops help sponsor the shared network, get a visible relationship to the infrastructure, and help decide what gets built next.</p>
           </div>
-          <p class="developer-heading-note"><i aria-hidden="true"></i> Monthly membership · Stripe-ready</p>
+          <p class="developer-heading-note">Proposed plans · not yet open</p>
         </header>
 
         <section class="developer-workspace" id="plans" aria-labelledby="plans-title">
@@ -66,7 +68,7 @@
                 <h2 id="plans-title">Choose your Tine count</h2>
                 <p>One Tine is one $30/month infrastructure sponsorship unit.</p>
               </div>
-              <span>No free plan · software stays free</span>
+              <span>Paid sponsorship · software stays free</span>
             </div>
             <p class="plans-status" role="status" aria-live="polite"></p>
 
@@ -79,13 +81,13 @@
                   <li>Sponsor one infrastructure unit</li>
                   <li>Co-Sysop dashboard and node affiliation</li>
                   <li>Release notes and operator discussions</li>
-                  <li>Eligible for paid bounties and partner work</li>
+                  <li>Help shape the shared network</li>
                 </ul>
                 <button class="plan-action" type="button" data-plan="one-tine">Choose 1 Tine <span aria-hidden="true">↗</span></button>
               </article>
 
               <article class="developer-plan developer-plan-featured" data-plan-card="two-tines">
-                <p class="plan-badge">2 Tines · popular</p>
+                <p class="plan-badge">2 Tines</p>
                 <div class="plan-heading"><h3>Network Builder</h3><p>Help bring another node online.</p></div>
                 <div class="plan-price"><strong>$60</strong><span>/ month</span></div>
                 <ul>
@@ -98,7 +100,7 @@
               </article>
 
               <article class="developer-plan" data-plan-card="three-tines">
-                <p class="plan-badge">3 Tines · full node</p>
+                <p class="plan-badge">3 Tines · node stewardship</p>
                 <div class="plan-heading"><h3>Node Steward</h3><p>Make one node feel like yours.</p></div>
                 <div class="plan-price"><strong>$90</strong><span>/ month</span></div>
                 <ul>
@@ -115,7 +117,7 @@
           </div>
 
           <aside class="stewardship-inspector" aria-label="Example node stewardship view">
-            <div class="inspector-topline"><span>Your network view</span><span class="inspector-state"><i aria-hidden="true"></i> healthy</span></div>
+            <div class="inspector-topline"><span>Example node view</span><span class="inspector-state">Illustrative data</span></div>
             <div class="node-identity"><span class="node-code">fra-07</span><strong>“Longhorn”</strong><span>Falkenstein, Germany</span></div>
             <div class="node-health"><div><span>Uptime</span><strong>184 days</strong></div><div><span>Stewards</span><strong>3 Co-Sysops</strong></div><div><span>Capacity</span><strong>68%</strong></div></div>
             <p class="inspector-copy">You help fund the node. Forkalope administers the machine, handles upgrades, and keeps the operational keys.</p>
@@ -133,9 +135,38 @@
           </div>
         </section>
 
+        <section class="business-section" id="sysops" aria-labelledby="sysops-title">
+          <div class="business-copy">
+            <p class="eyebrow">An operating role / proposed program</p>
+            <h2 id="sysops-title">Become an Independent Sysop.</h2>
+            <p>Rent a server in your own name, administer it yourself, and coordinate the Co-Sysops who help support your node. You hold the provider account, pay the infrastructure bill, and keep the administrative keys.</p>
+            <p>Joining the shared network would require an operator agreement and approval. It is a separate responsibility, not a higher-priced Tine plan. Installing the software alone does not enroll your machine or authorize it to receive customer data.</p>
+          </div>
+          <div class="business-options">
+            <div><span>Your responsibility</span><strong>Run a dependable node</strong><p>Security, upgrades, backups, capacity, abuse response, and incident participation under published network requirements.</p></div>
+            <div><span>Your community</span><strong>Give Co-Sysops a home</strong><p>Coordinate stewardship and share appropriate node health information. Sponsorship never grants access to private customer repositories.</p></div>
+            <div><span>Your compensation</span><strong>Get paid for delivered service</strong><p>Approved capacity and recovery work could earn an agreed service fee. Sponsorship allocations and billing would be set in the operator agreement, with no recruitment commissions.</p></div>
+            <a class="text-link" href="/terms/#sysops">Draft operator principles <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+
+        <section class="business-section" id="recovery" aria-labelledby="recovery-title">
+          <div class="business-copy">
+            <p class="eyebrow">The network we’re building</p>
+            <h2 id="recovery-title">Someone else has room when your node needs help.</h2>
+            <p>The proposed recovery network pairs approved operators, prepares authorized replicas, and reserves spare capacity. If a node fails, its recovery partner would help restore service while its operator repairs the original machine.</p>
+            <p>Recovery needs more than copied Git repositories: account state, permissions, other stored data, and routing must recover consistently too. We need tested procedures before enabling automatic failover or promising recovery times.</p>
+          </div>
+          <div class="business-options">
+            <div><span>Prepare</span><strong>Replicas and spare capacity</strong><p>Use approved locations and operators, with customer data permissions respected. Plan for provider failures as well as individual server failures.</p></div>
+            <div><span>Practice</span><strong>Test the whole recovery</strong><p>Measure restore time and possible data loss. Shared recovery is a planned capability, not a current availability guarantee.</p></div>
+            <a class="text-link" href="/privacy/#nodes">How private replicas should work <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+
         <section class="business-section" id="business" aria-labelledby="business-title">
           <div class="business-copy">
-            <p class="eyebrow">A separate lane</p>
+            <p class="eyebrow">Proposed business services</p>
             <h2 id="business-title">Businesses pay for service.</h2>
             <p>Co-Sysop dues support the commons. A company pays Forkalope for managed hosting, backups, updates, migration, and someone accountable when something goes wrong.</p>
             <p>The software stays free to deploy yourself. Managed, dedicated, and bring-your-own-infrastructure options can grow around the same open platform.</p>
@@ -143,20 +174,22 @@
           <div class="business-options">
             <div><span>Managed</span><strong>Forkalope operates it</strong><p>Organization-level pricing, unlimited humans, support, updates, and standard backups.</p></div>
             <div><span>Dedicated / BYO</span><strong>You choose the home</strong><p>Dedicated capacity or your Cloudflare/Hetzner account, with Forkalope operating the software.</p></div>
+            <p class="plan-note">Business prices, capacity limits, and service commitments will be published before enrollment.</p>
             <a class="text-link" href="../#business">Read the business model <span aria-hidden="true">↗</span></a>
           </div>
         </section>
 
         <section class="principles-section" id="principles" aria-labelledby="principles-title">
           <div class="principles-heading"><p class="eyebrow">The rules</p><h2 id="principles-title">No downlines. Only uplinks.</h2></div>
-          <div class="principles-copy"><p>Co-Sysops never earn money by recruiting another Co-Sysop. Everyone starts at zero, and everyone follows the same published rules.</p><p>Separate partner commissions, paid bounties, migration work, and support work compensate people for real value they create for real customers or for the project. Membership itself is not an investment or an entitlement to Forkalope revenue.</p><p class="legal-note">Final membership, partner, and payout terms should be reviewed by counsel before cash programs launch.</p></div>
+          <div class="principles-copy"><p>The proposed rules: no commissions for recruiting Co-Sysops or Sysops, no downlines, and no founder multipliers. The same published opportunity applies regardless of when you join or how many Tines you sponsor.</p><p>Separate partner commissions, paid bounties, migration work, support, and approved infrastructure work would compensate people for services actually delivered. Paid membership would not be required to apply. Rates and eligibility will be set before these programs launch.</p><p>Membership itself is not an investment or an entitlement to Forkalope revenue.</p><p class="legal-note">Read the <a href="/terms/">draft terms</a> and <a href="/privacy/">draft privacy policy</a>. Final membership, operator, and payout agreements need review before launch.</p></div>
         </section>
 
         <section class="checkout-section" id="checkout" aria-labelledby="checkout-title" hidden>
           <button class="checkout-back" type="button">← Back to plans</button>
-          <p class="eyebrow">Stripe checkout</p>
-          <h2 id="checkout-title">Join Forkalope.</h2>
+          <p class="eyebrow">Membership preview</p>
+          <h2 id="checkout-title">Your proposed plan.</h2>
           <p class="checkout-summary"></p>
+          <p class="plan-note">Review our <a href="/terms/">draft terms</a> and <a href="/privacy/">draft privacy policy</a>. Final terms and cancellation details will be provided before enrollment.</p>
           <button class="checkout-submit" type="button">Continue to Stripe <span aria-hidden="true">↗</span></button>
           <p class="checkout-status" role="status" aria-live="polite">Stripe Payment Links will be connected here before launch.</p>
         </section>
@@ -165,7 +198,7 @@
 
     <footer class="site-footer">
       <div class="footer-brand"><a class="brand" href="../" aria-label="Forkalope home"><img class="brand-mark" src="../public/logo.png" alt="" /><span class="brand-name">forkalope</span></a><p>Code that roams free.</p></div>
-      <div class="footer-links"><a href="../#why">Why Forkalope</a><a href="../landscape/">The landscape</a><a href="./">Co-Sysops</a><a href="#business">For business</a></div>
+      <div class="footer-links"><a href="../#why">Why Forkalope</a><a href="../landscape/">The landscape</a><a href="./">Co-Sysops</a><a href="#business">For business</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
       <div class="footer-meta"><span>Early build · 2026</span><span>Built in the open</span></div>
     </footer>
 

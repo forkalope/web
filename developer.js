@@ -22,10 +22,9 @@ function selectPlan(plan) {
   checkoutSummary.textContent = `${details.name} · ${details.units} · ${details.price}/month. Your membership helps sponsor the open Forkalope network; it is not an investment or a share in project revenue.`;
   checkoutStatus.textContent = stripePaymentLinks[plan]
     ? "You’ll continue to Stripe to enter your payment details."
-    : "Stripe Payment Links will be connected here before launch.";
+    : "Enrollment is not open yet. No account has been created and no payment has been taken.";
   checkoutSubmit.disabled = !stripePaymentLinks[plan];
   checkoutSubmit.setAttribute("aria-disabled", String(!stripePaymentLinks[plan]));
-  pricing?.setAttribute("aria-hidden", "true");
   checkout.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -38,6 +37,5 @@ checkoutSubmit?.addEventListener("click", () => {
 
 checkoutBack?.addEventListener("click", () => {
   checkout.hidden = true;
-  pricing?.removeAttribute("aria-hidden");
   pricing?.scrollIntoView({ behavior: "smooth", block: "start" });
 });
