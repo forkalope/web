@@ -14,6 +14,15 @@
 .partner-callout > div:last-child { max-width: 635px; padding-top: 4px; }
 .partner-callout > div:last-child > p { margin: 0 0 22px; color: var(--soft); font-size: 18px; line-height: 1.65; }
 .partner-callout .text-link { color: var(--coral-bright); }
+.faq-section { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); gap: clamp(58px, 10vw, 150px); padding: 88px 0 96px; border-bottom: 1px solid var(--line); scroll-margin-top: 88px; }
+.faq-section h2 { max-width: 560px; font-size: clamp(38px, 5vw, 66px); }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { display: flex; min-height: 58px; align-items: center; justify-content: space-between; gap: 18px; color: var(--ink); cursor: pointer; font-size: 15px; font-weight: 650; list-style: none; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; color: var(--coral-bright); font-size: 20px; font-weight: 400; }
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list details p { max-width: 630px; margin: 0 35px 20px 0; color: var(--soft); font-size: 14px; line-height: 1.65; }
 .network-body .network-caveat { margin-top: 24px; color: var(--soft); font-size: 12px; line-height: 1.65; }
 .membership-section { padding: 100px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
 .membership-intro { max-width: 600px; margin: 28px 0 36px; color: var(--soft); font-size: 17px; line-height: 1.65; }
@@ -27,26 +36,18 @@
 .membership-grid .text-link { padding-top: 18px; margin-top: auto; color: var(--coral-bright); }
 .membership-footnote { max-width: 800px; margin: 24px 0 0; color: var(--soft); font-size: 12px; line-height: 1.65; }
 .source-section { border-bottom: 1px solid var(--line); }
-.earnings-section { border-bottom: 0; }
-.earnings-example { margin: 30px 0; padding: 24px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg-raised); }
-.earnings-example .eyebrow { font-size: 9px; color: var(--coral-bright); }
-.earnings-example > div { display: flex; justify-content: space-between; gap: 22px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 14px; line-height: 1.5; }
-.earnings-example span { color: var(--soft); }
-.earnings-example strong { flex-shrink: 0; }
-.earnings-example > p:last-child { margin: 17px 0 0; color: var(--soft); font-size: 12px; line-height: 1.65; }
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(62px, 11vw, 96px); }
   .membership-grid { gap: 12px; }
   .membership-grid article { padding: 20px; }
-  .current-build-section, .partner-callout { grid-template-columns: 1fr; gap: 36px; }
+  .current-build-section, .partner-callout, .faq-section { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (max-width: 720px) {
   .hero h1 { font-size: clamp(47px, 12.5vw, 74px); }
   .membership-section { padding: 74px 0; }
-  .current-build-section, .partner-callout { padding: 70px 0 76px; }
+  .current-build-section, .partner-callout, .faq-section { padding: 70px 0 76px; }
   .membership-grid { grid-template-columns: 1fr; }
   .membership-grid article { padding: 25px; }
   .hero-visual .visual-node strong { max-width: 115px; line-height: 1.4; }
-  .earnings-example { padding: 18px; }
 }
