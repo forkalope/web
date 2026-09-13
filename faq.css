@@ -1,0 +1,19 @@
+.faq-main { width: min(var(--max), calc(100% - 64px)); margin: 0 auto; }
+.faq-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; padding: 92px 0 56px; border-bottom: 1px solid var(--line); }
+.faq-heading h1 { max-width: 740px; font-size: clamp(55px, 8vw, 105px); }
+.faq-heading h1 em { color: var(--coral); font-style: normal; }
+.faq-lede { max-width: 670px; margin: 28px 0 0; color: var(--soft); font-size: 19px; line-height: 1.6; }
+.faq-note { flex: 0 0 auto; margin: 0 0 6px; color: var(--faint); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.faq-content { max-width: 900px; margin: 0 auto; padding: 34px 0 95px; }
+.faq-content details { border-bottom: 1px solid var(--line); }
+.faq-content summary { display: flex; min-height: 74px; align-items: center; justify-content: space-between; gap: 24px; color: var(--ink); cursor: pointer; font-size: 18px; font-weight: 650; list-style: none; }
+.faq-content summary::-webkit-details-marker { display: none; }
+.faq-content summary::after { content: "+"; color: var(--coral-bright); font-size: 24px; font-weight: 350; }
+.faq-content details[open] summary::after { content: "−"; }
+.faq-content details p { max-width: 780px; margin: 0 40px 26px 0; color: var(--soft); font-size: 16px; line-height: 1.75; }
+.faq-content details strong { color: var(--ink); font-weight: 650; }
+.faq-next { display: grid; grid-template-columns: minmax(250px, .8fr) minmax(0, 1.2fr); gap: clamp(50px, 9vw, 140px); padding: 82px 0 96px; border-top: 1px solid var(--line); }
+.faq-next h2 { max-width: 570px; font-size: clamp(38px, 5vw, 66px); }
+.faq-next-actions { display: flex; flex-wrap: wrap; align-items: center; align-content: start; gap: 22px; }
+@media (max-width: 960px) { .faq-heading { align-items: start; flex-direction: column; gap: 24px; } .faq-next { grid-template-columns: 1fr; gap: 34px; } }
+@media (max-width: 720px) { .faq-main { width: min(calc(100% - 36px), 560px); } .faq-heading { padding: 62px 0 43px; } .faq-heading h1 { font-size: clamp(46px, 13vw, 72px); } .faq-lede { font-size: 17px; } .faq-content { padding: 22px 0 68px; } .faq-content summary { min-height: 65px; font-size: 16px; } .faq-content details p { margin-right: 20px; font-size: 15px; } .faq-next { padding: 70px 0 76px; } }

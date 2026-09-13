@@ -15,10 +15,11 @@ const files = [
   "legal.css",
   "network.css",
   "business.css",
+  "faq.css",
   "CNAME",
 ];
 
-const directories = ["public", "landscape", "co-sysops", "developer", "business", "partners", "privacy", "terms"];
+const directories = ["public", "landscape", "co-sysops", "developer", "business", "partners", "faq", "privacy", "terms"];
 
 rmSync(dist, { force: true, recursive: true });
 mkdirSync(dist, { recursive: true });
