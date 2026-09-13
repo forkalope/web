@@ -118,9 +118,36 @@ const renderLegalHeader = (page) => `<header class="site-header legal-header">
       <nav class="legal-nav" aria-label="Legal navigation"><a href="/privacy/"${page.navCurrent === "privacy" ? ' aria-current="page"' : ""}>Privacy</a><a href="/terms/"${page.navCurrent === "terms" ? ' aria-current="page"' : ""}>Terms</a><a href="/">Home ↗</a></nav>
     </header>`;
 
+const renderRepoHeader = () => `<header class="forge-header">
+      <div class="forge-header-primary">
+        <button class="forge-menu-button" type="button" aria-expanded="false" aria-controls="forge-mobile-nav" aria-label="Open navigation">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+        <a class="forge-brand" href="/" aria-label="Forkalope home"><img src="/public/logo.png" alt="" /><span>Forkalope</span></a>
+        <span class="forge-header-divider" aria-hidden="true"></span>
+        <div class="forge-context"><a href="/">forkalope</a><b>/</b><strong>forge</strong><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5" /></svg></div>
+        <nav class="forge-header-actions" aria-label="Account and repository actions">
+          <label class="forge-search">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
+            <span class="sr-only">Search repository files</span>
+            <input id="repo-search" type="search" placeholder="Search this repository..." autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+          <a class="forge-header-button forge-create" href="https://github.com/forkalope/web" target="_blank" rel="noreferrer"><span aria-hidden="true">+</span> Contribute <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 7 5 5-5 5" /></svg></a>
+          <a class="forge-header-button forge-inbox" href="https://github.com/forkalope/web/issues" target="_blank" rel="noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16l2 9v5H2v-5l2-9Z" /><path d="M2 14h5l2 3h6l2-3h5" /></svg><span>Issues</span></a>
+          <a class="forge-account" href="https://github.com/forkalope" target="_blank" rel="noreferrer" aria-label="Forkalope on GitHub">FL</a>
+        </nav>
+      </div>
+      <nav class="forge-mobile-nav" id="forge-mobile-nav" aria-label="Mobile navigation" hidden>
+        <a href="#readme">README</a><a href="#status">Status</a><a href="#network">Network</a><a href="/co-sysops/">Co-Sysops</a><a href="/business/">Business</a><a href="/faq/">FAQ</a>
+      </nav>
+    </header>`;
+
 const renderHeader = (page) => page.header === "legal"
   ? renderLegalHeader(page)
-  : renderSiteHeader(page);
+  : page.header === "repo"
+    ? renderRepoHeader()
+    : renderSiteHeader(page);
 
 const footerLinks = [
   { href: "/landscape/", label: "The landscape" },
@@ -133,6 +160,16 @@ const footerLinks = [
 ];
 
 const renderFooter = (page) => {
+  if (page.footer === "repo") {
+    return `<footer class="forge-footer">
+      <div class="forge-footer-inner">
+        <div class="forge-footer-brand"><a href="/" aria-label="Forkalope home"><img src="/public/logo.png" alt="" /><span>Forkalope</span></a><p>Open-source forge for the distributed web.</p><span>© 2026 Forkalope</span></div>
+        <nav aria-label="Project"><b>Project</b><a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer">Source</a><a href="/landscape/">Landscape</a><a href="/faq/">FAQ</a><a href="/partners/">Partners</a></nav>
+        <nav aria-label="Legal"><b>Legal</b><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a></nav>
+        <nav aria-label="Follow"><b>Follow</b><a href="https://github.com/forkalope" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.reddit.com/r/forkalope/" target="_blank" rel="noreferrer">Reddit</a><a href="https://discord.gg/forkalope" target="_blank" rel="noreferrer">Discord</a><a href="https://x.com/forkalope" target="_blank" rel="noreferrer">X</a></nav>
+      </div>
+    </footer>`;
+  }
   const links = page.footer === "legal"
     ? footerLinks.filter((link) => ["/co-sysops/", "/business/", "/partners/"].includes(link.href))
     : footerLinks;

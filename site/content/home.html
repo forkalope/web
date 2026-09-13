@@ -1,147 +1,108 @@
-<main>
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Git was distributed. Let’s act like it.</p>
-          <h1 id="hero-title">The familiar code forge,<br />without one home.</h1>
-          <p class="hero-lede">
-            Forkalope is an open-source, GitHub-shaped forge you can run anywhere. Repositories, issues, pull requests, Actions, packages, and APIs—without committing your work to one operator.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/forkalope/web" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#current-build">See the current build <span aria-hidden="true">→</span></a>
-          </div>
-          <p class="hero-note">Your workday shouldn’t depend on somebody else’s status page.</p>
-        </div>
+<main class="repo-home" id="code">
+  <svg class="repo-icon-sprite" aria-hidden="true">
+    <symbol id="i-branch" viewBox="0 0 24 24"><path d="M6 3v12a3 3 0 1 0 2 2.83V8.5A5.5 5.5 0 0 1 13.5 3H16"/><circle cx="19" cy="3" r="3"/><circle cx="6" cy="18" r="3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14"/></symbol>
+    <symbol id="i-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-pull" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><path d="M6 7v10M18 7v3a3 3 0 0 1-3 3H9M12 10l-3 3 3 3"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M4 7h16v13H4zM3 3h18v4H3zM9 11h6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6a5 5 0 0 0-4-2H3v15h5a5 5 0 0 1 4 2m0-15a5 5 0 0 1 4-2h5v15h-5a5 5 0 0 0-4 2z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8 8 9 4.6-1 8-4 8-9V6l-8-3Z"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="6" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 9v3M6 16v-2h12v2"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M12 12l7-7M19 13v6H5V5h6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </svg>
 
-        <div class="hero-visual reveal reveal-delay" role="img" aria-label="Planned network: independently operated nodes connected for authorized replication and mutual recovery, not a live status display">
-          <svg class="network-lines" viewBox="0 0 560 440" aria-hidden="true">
-            <path d="M282 223 C210 165 150 120 78 92" />
-            <path d="M282 223 C357 169 418 120 485 85" />
-            <path d="M282 223 C357 280 420 327 493 356" />
-            <path d="M282 223 C208 285 147 330 72 359" />
-            <circle cx="78" cy="92" r="5" />
-            <circle cx="485" cy="85" r="5" />
-            <circle cx="493" cy="356" r="5" />
-            <circle cx="72" cy="359" r="5" />
-          </svg>
-          <div class="visual-orbit orbit-one"></div>
-          <div class="visual-orbit orbit-two"></div>
-          <div class="visual-node node-one"><span>Your node</span><strong>A home for your code</strong></div>
-          <div class="visual-node node-two"><span>Partner node</span><strong>An authorized replica</strong></div>
-          <div class="visual-node node-three"><span>Another operator</span><strong>Room to help recover</strong></div>
-          <div class="visual-logo"><img src="/public/logo.png" alt="" /></div>
-          <p class="visual-caption">Network concept / mutual recovery</p>
-        </div>
-      </section>
+  <section class="repo-identity" aria-labelledby="repo-title">
+    <div class="repo-title-mark"><svg aria-hidden="true"><use href="#i-branch"/></svg></div>
+    <div class="repo-identity-main">
+      <div class="repo-title-lockup"><h1 id="repo-title">forkalope/forge</h1><span>Public</span></div>
+      <div class="repo-summary-line"><p>The familiar code forge, without one home. Open-source Git hosting you can run anywhere.</p><div class="repo-topics"><span>free-software</span><span>distributed</span><span>self-hosted</span></div></div>
+    </div>
+    <div class="repo-actions" aria-label="Repository actions">
+      <a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-eye"/></svg>Watch</a>
+      <a href="https://github.com/forkalope/web/fork" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-pull"/></svg>Fork</a>
+      <a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-star"/></svg>Star</a>
+    </div>
+  </section>
 
-      <section class="familiarity-band" aria-label="Forkalope principles">
-        <p>Free software</p>
-        <span aria-hidden="true">/</span>
-        <p>Independent operators</p>
-        <span aria-hidden="true">/</span>
-        <p>Shared responsibility</p>
-      </section>
+  <div class="repo-workspace">
+    <aside class="repo-section-sidebar">
+      <p>Repository</p>
+      <nav aria-label="Repository sections">
+        <a class="active" href="#code" aria-current="page"><svg aria-hidden="true"><use href="#i-code"/></svg><span>Code</span></a>
+        <a href="https://github.com/forkalope/web/issues" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-circle"/></svg><span>Issues</span></a>
+        <a href="https://github.com/forkalope/web/pulls" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-pull"/></svg><span>Pull requests</span></a>
+        <a href="#status"><svg aria-hidden="true"><use href="#i-activity"/></svg><span>Actions</span></a>
+        <a href="/partners/"><svg aria-hidden="true"><use href="#i-box"/></svg><span>Projects</span></a>
+        <a href="/faq/"><svg aria-hidden="true"><use href="#i-book"/></svg><span>Wiki</span></a>
+        <a href="/privacy/"><svg aria-hidden="true"><use href="#i-shield"/></svg><span>Security</span></a>
+        <a href="/landscape/"><svg aria-hidden="true"><use href="#i-network"/></svg><span>Insights</span></a>
+        <a href="/business/"><svg aria-hidden="true"><use href="#i-settings"/></svg><span>Settings</span></a>
+      </nav>
+    </aside>
 
-      <section class="current-build-section" id="current-build" aria-labelledby="current-build-title">
-        <div class="section-heading"><p class="section-number">Now / What you can verify</p><h2 id="current-build-title">The project is early.<br />The source is open.</h2></div>
-        <div class="build-status-panel">
-          <div class="build-status-top"><span>Public build status</span><span class="build-status-label">In the open</span></div>
-          <div class="build-status-row"><span>Website and product direction</span><strong>Live</strong></div>
-          <div class="build-status-row"><span>Open-source forge</span><strong>In development</strong></div>
-          <div class="build-status-row"><span>Shared recovery network</span><strong>Designing and testing</strong></div>
-          <div class="build-status-row"><span>Co-Sysop enrollment</span><strong>Waitlist</strong></div>
-          <div class="build-status-actions"><a class="button button-primary" href="https://github.com/forkalope/web" target="_blank" rel="noreferrer">Open GitHub <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/forkalope/web/issues/new?title=Co-Sysop%20waitlist%20interest" target="_blank" rel="noreferrer">Join the Co-Sysop waitlist <span aria-hidden="true">↗</span></a></div>
-        </div>
-      </section>
+    <section class="repo-primary" aria-label="Repository contents">
+      <div class="repo-toolbar">
+        <div class="branch-controls"><span class="branch-button"><svg aria-hidden="true"><use href="#i-branch"/></svg>main <span aria-hidden="true">⌄</span></span><a href="https://github.com/forkalope/web/branches" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-branch"/></svg>1 Branch</a><span><svg aria-hidden="true"><use href="#i-box"/></svg>Open source</span></div>
+        <div class="repo-tool-actions"><button class="go-to-file" type="button"><svg aria-hidden="true"><use href="#i-search"/></svg>Go to file <kbd>T</kbd></button><a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-file"/></svg>View source <span aria-hidden="true">↗</span></a><a class="clone-trigger" href="https://github.com/forkalope/web.git"><svg aria-hidden="true"><use href="#i-terminal"/></svg>Clone</a></div>
+      </div>
 
-      <section class="content-section split-section" id="why" aria-labelledby="why-title">
-        <div class="section-heading reveal">
-          <p class="section-number">01 / Why we’re building this</p>
-          <h2 id="why-title">You had work to ship.</h2>
-        </div>
-        <div class="section-body reveal">
-          <p class="section-lede">
-            Instead, you’re refreshing a status page. A blocked review. A stalled build. Another interruption you can’t do anything about.
-          </p>
-          <p>
-            In the GitHub migration discussion, developers describe broken workflows and the cost of moving when they’re already busy. Others point out that self-hosting brings its own operational work. Both are reasons to build something better together.
-          </p>
-          <p>Forkalope’s answer is a familiar Git workflow on software you can run, with a network of people who help operate it. More control over where your code lives, who runs it, and how you recover.</p>
-          <a class="text-link" href="https://www.reddit.com/r/github/comments/1vz3l4r/github_is_down_again_lets_discuss_migration_away/">Read the community discussion <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
+      <section class="commit-panel" aria-label="Latest project update"><div class="commit-avatar">FL</div><strong>forkalope</strong><span>build the forge in the open</span><span class="commit-ref">main · early build</span><a href="#status"><svg aria-hidden="true"><use href="#i-activity"/></svg>View status</a></section>
 
-      <section class="content-section network-section" id="network" aria-labelledby="network-title">
-        <div class="section-heading reveal">
-          <p class="section-number">02 / The network</p>
-          <h2 id="network-title">Our servers.<br />Our cloud.<br />Each other’s back.</h2>
-        </div>
-        <div class="network-body reveal">
-          <p class="section-lede">A node should come with neighbors. We’re designing a network where approved operators keep replicas and reserve room to help one another recover.</p>
-          <p>Forkalope operates some nodes. Independent Sysops operate others on infrastructure they rent themselves. Co-Sysops help fund the capacity that makes the network possible.</p>
-          <ol class="network-steps">
-            <li><span>01</span><div><strong>Prepare before anything breaks</strong><p>Pair approved nodes, keep authorized data replicas, and reserve recovery capacity across separate failure domains.</p></div></li>
-            <li><span>02</span><div><strong>Have a recovery partner ready</strong><p>When a node fails, its partner and operators would use the prepared replica to restore service. Recovery must preserve permissions and prevent conflicting writes.</p></div></li>
-            <li><span>03</span><div><strong>Prove it with recovery drills</strong><p>Test restores and failover, measure interruption and possible data loss, and publish the results before making availability promises.</p></div></li>
-          </ol>
-          <p class="network-caveat">The direction we’re building toward—not a live failover service. Replicas, routing, authentication, and spare capacity all need to work together. Shared providers can still fail, and private data belongs only on approved nodes.</p>
+      <section class="file-card" aria-label="Repository files">
+        <div class="file-list-heading"><span>Name</span><span>Latest change</span><span>Stage</span></div>
+        <div class="file-list" id="repo-file-list">
+          <a class="file-row" href="#readme" data-repo-file="readme introduction familiar code forge open source github"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>README.md</strong><span class="file-message">Explain the familiar forge without one home</span><time>start here</time></a>
+          <a class="file-row" href="#status" data-repo-file="status roadmap live development waitlist current build"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>STATUS.md</strong><span class="file-message">Publish what is live and what is still being built</span><time>current</time></a>
+          <a class="file-row" href="#why" data-repo-file="why outage status page migration control recovery"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>WHY.md</strong><span class="file-message">Make failure less capable of stranding developers</span><time>proposed</time></a>
+          <a class="file-row" href="#network" data-repo-file="network cloud nodes replicas recovery sysops architecture"><span class="file-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><strong>network/</strong><span class="file-message">Design authorized replication and mutual recovery</span><time>designing</time></a>
+          <a class="file-row" href="/co-sysops/" data-repo-file="co sysops membership tine fund support servers backups"><span class="file-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><strong>co-sysops/</strong><span class="file-message">Fund a piece of shared infrastructure</span><time>waitlist</time></a>
+          <a class="file-row" href="/business/" data-repo-file="business managed hosting migration unlimited members infrastructure"><span class="file-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><strong>business/</strong><span class="file-message">Pay for hosting and keep the way out</span><time>proposed</time></a>
+          <a class="file-row" href="/partners/" data-repo-file="partners migration support infrastructure referrals paid work"><span class="file-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><strong>partners/</strong><span class="file-message">Help a customer and get paid for the work</span><time>planned</time></a>
+          <a class="file-row" href="/faq/" data-repo-file="faq questions answers availability pricing privacy failover"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>FAQ.md</strong><span class="file-message">Start with the hard questions</span><time>10 answers</time></a>
+          <a class="file-row" href="/LICENSE" data-repo-file="license gpl open source free software"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>LICENSE</strong><span class="file-message">Keep the forge free software</span><time>GPL-3.0</time></a>
+          <p class="file-empty" id="repo-file-empty" hidden>No files match this search.</p>
         </div>
       </section>
 
-      <section class="membership-section" id="co-sysops" aria-labelledby="membership-title">
-        <div class="section-heading"><p class="section-number">03 / Fund a piece of it</p><h2 id="membership-title">“That’s the node<br />I help keep running.”</h2></div>
-        <div class="membership-intro"><p>Become a Co-Sysop. A Tine is a $30 monthly unit of support for servers, backups, bandwidth, and the people keeping things healthy.</p><p>Proposed memberships · enrollment is not open yet.</p></div>
-        <div class="membership-grid">
-          <article><p class="eyebrow">1 Tine / Co-Sysop</p><h3>$30<span> / month</span></h3><p>Join a node’s stewards. Follow its health, see what your support makes possible, and take part in operator discussions.</p><a class="text-link" href="/co-sysops/#plans">Explore 1 Tine <span aria-hidden="true">→</span></a></article>
-          <article><p class="eyebrow">2 Tines / Network Builder</p><h3>$60<span> / month</span></h3><p>Support two units of capacity, request a region, and get earlier access to the tools used to test the growing recovery network.</p><a class="text-link" href="/co-sysops/#plans">Explore 2 Tines <span aria-hidden="true">→</span></a></article>
-          <article><p class="eyebrow">3 Tines / Node Steward</p><h3>$90<span> / month</span></h3><p>Become the primary named steward of a logical node. The node can move between machines; your stewardship relationship follows it.</p><a class="text-link" href="/co-sysops/#plans">Explore 3 Tines <span aria-hidden="true">→</span></a></article>
+      <article class="readme" id="readme" aria-labelledby="readme-title">
+        <header class="readme-header"><span><svg aria-hidden="true"><use href="#i-book"/></svg>README.md</span><a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer">View source <svg aria-hidden="true"><use href="#i-external"/></svg></a></header>
+        <div class="readme-body">
+          <div class="readme-brand"><img src="/public/logo.png" alt=""/><span>Forkalope</span></div>
+          <h2 id="readme-title">The familiar code forge,<br/>without one home.</h2>
+          <p class="readme-lede">Forkalope is an open-source, GitHub-shaped forge you can run anywhere. Repositories, issues, pull requests, Actions, packages, and APIs—without committing your work to one operator.</p>
+          <p>Your workday shouldn’t depend on somebody else’s status page.</p>
+          <p><a class="readme-button" href="https://github.com/forkalope/web" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a> <a href="/co-sysops/">Find your place in Forkalope →</a></p>
+
+          <hr/>
+          <section id="status"><h3>What you can verify now</h3><p>The project is early. The source is open.</p><div class="status-table" role="table" aria-label="Public build status"><div role="row"><span role="cell">Website and product direction</span><strong role="cell"><svg aria-hidden="true"><use href="#i-check"/></svg>Live</strong></div><div role="row"><span role="cell">Open-source forge</span><strong role="cell">In development</strong></div><div role="row"><span role="cell">Shared recovery network</span><strong role="cell">Designing and testing</strong></div><div role="row"><span role="cell">Co-Sysop enrollment</span><strong role="cell">Waitlist</strong></div></div></section>
+
+          <hr/>
+          <section id="why"><h3>Why we’re building this</h3><h4>You had work to ship.</h4><p>Instead, you’re refreshing a status page. A blocked review. A stalled build. Another interruption you can’t do anything about.</p><p>In the GitHub migration discussion, developers describe broken workflows and the cost of moving when they’re already busy. Others point out that self-hosting brings its own operational work. Both are reasons to build something better together.</p><p>Forkalope’s answer is a familiar Git workflow on software you can run, with a network of people who help operate it. More control over where your code lives, who runs it, and how you recover.</p><p><a href="https://www.reddit.com/r/github/comments/1vz3l4r/github_is_down_again_lets_discuss_migration_away/" target="_blank" rel="noreferrer">Read the community discussion ↗</a></p></section>
+
+          <hr/>
+          <section id="network"><h3>The network</h3><h4>Our servers. Our cloud. Each other’s back.</h4><p>A node should come with neighbors. We’re designing a network where approved operators keep replicas and reserve room to help one another recover.</p><p>Forkalope operates some nodes. Independent Sysops operate others on infrastructure they rent themselves. Co-Sysops help fund the capacity that makes the network possible.</p><ol class="network-steps"><li><strong>Prepare before anything breaks</strong><span>Pair approved nodes, keep authorized data replicas, and reserve recovery capacity across separate failure domains.</span></li><li><strong>Have a recovery partner ready</strong><span>When a node fails, its partner and operators would use the prepared replica to restore service. Recovery must preserve permissions and prevent conflicting writes.</span></li><li><strong>Prove it with recovery drills</strong><span>Test restores and failover, measure interruption and possible data loss, and publish the results before making availability promises.</span></li></ol><blockquote>The direction we’re building toward—not a live failover service. Replicas, routing, authentication, and spare capacity all need to work together. Shared providers can still fail, and private data belongs only on approved nodes.</blockquote></section>
+
+          <hr/>
+          <section id="participate"><h3>Choose how you participate</h3><dl class="participation-list"><div><dt><a href="/co-sysops/">Co-Sysop →</a></dt><dd>A Tine is a proposed $30 monthly unit of support for servers, backups, bandwidth, and the people keeping things healthy.</dd></div><div><dt><a href="/co-sysops/#sysops">Independent Sysop →</a></dt><dd>Rent a machine in your own name, run Forkalope, and coordinate the Co-Sysops who help support your node.</dd></div><div><dt><a href="/business/">Bring your team →</a></dt><dd>Choose managed Git hosting, migration help, backups, updates, and someone accountable for operations—or run it on infrastructure your company rents.</dd></div><div><dt><a href="/partners/">Work with Forkalope →</a></dt><dd>Help customers with migrations, support, infrastructure operation, and referrals. Get paid for work that creates real value.</dd></div></dl></section>
+
+          <hr/>
+          <section class="readme-final"><h3>Fork the whole thing. Build it with us.</h3><p>Sponsor a node. Become an Independent Sysop. Help build a cloud that more of us have a hand in running.</p><p><a class="readme-button" href="/co-sysops/">Explore Co-Sysops <span aria-hidden="true">→</span></a></p></section>
         </div>
-        <p class="membership-footnote">You steward the node; its operator administers the machine. Sponsorship supports pooled infrastructure, not ownership of a physical server, root access, or access to private customer data.</p>
-      </section>
+      </article>
+    </section>
 
-      <section class="content-section" id="sysops" aria-labelledby="sysops-title">
-        <div class="section-heading"><p class="section-number">04 / Run a piece of it</p><h2 id="sysops-title">Your server.<br />Your name on<br />the contract.</h2></div>
-        <div class="section-body"><p class="eyebrow">Introducing Independent Sysops</p><p class="section-lede">Want to operate the machine yourself? Rent it in your own name, run Forkalope, and coordinate the Co-Sysops who help support your node.</p><p>You hold the provider account and administrative keys. You’re responsible for the bill, updates, security, and incident response. Joining the shared network would mean meeting published operator requirements and agreeing to how sponsorship, customer data, and recovery duties are handled.</p><p>This is an operating role with its own agreement and responsibilities. Approved hosting and recovery work could be paid for services delivered.</p><a class="text-link" href="/co-sysops/#sysops">Explore the Sysop role <span aria-hidden="true">→</span></a></div>
-      </section>
-
-      <section class="content-section source-section" id="business" aria-labelledby="source-title">
-        <div class="section-heading reveal">
-          <p class="section-number">05 / Bring your team</p>
-          <h2 id="source-title">Pay for hosting.<br />Keep your<br />way out.</h2>
-        </div>
-        <div class="source-body reveal">
-          <p class="section-lede">Companies need their tools to work. Our proposed business offering is managed Git hosting, migration help, backups, updates, and someone accountable for operations.</p>
-          <div class="business-entry-list">
-            <div>
-              <span>Managed hosting</span>
-              <strong>Your team. Our operations.</strong>
-              <p><strong>Pay for the service you use, not the number of people on your team.</strong> Our business pricing direction is unlimited members, with published limits for storage, compute, bandwidth, runners, replicas, retention, and support.</p>
-              <a class="text-link" href="/business/">Business options <span aria-hidden="true">→</span></a>
-            </div>
-            <div>
-              <span>Your infrastructure</span>
-              <strong>Your account. Your control.</strong>
-              <p>Run the open-source software yourself, or arrange management on infrastructure your company rents. Keep control of the provider account and the ability to take over operations.</p>
-              <a class="text-link" href="/business/">Explore deployment options <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="faq-section" aria-labelledby="faq-title">
-        <div class="section-heading"><p class="section-number">06 / Questions people ask first</p><h2 id="faq-title">Start with the<br />hard questions.</h2></div>
-        <div class="faq-teaser"><p>What is live today? How is a shared cloud different from a pile of mirrors? What happens to the rest of your forge when you change hosts? Will adding developer 51 add another seat charge?</p><a class="text-link" href="/faq/">Read all ten answers <span aria-hidden="true">→</span></a></div>
-      </section>
-
-      <section class="partner-callout" aria-labelledby="partner-title">
-        <div><p class="section-number">07 / Work with Forkalope</p><h2 id="partner-title">Help a customer.<br />Get paid for the work.</h2></div>
-        <div><p>Partner programs for migrations, support, infrastructure operation, and customer referrals are planned separately from Co-Sysop membership.</p><a class="text-link" href="/partners/">Explore partner opportunities <span aria-hidden="true">→</span></a></div>
-      </section>
-
-      <section class="start-section reveal" id="start" aria-labelledby="start-title">
-        <p class="section-number">Next / Come build it</p>
-        <h2 id="start-title">Fork the whole thing.<br />Build it with us.</h2>
-        <p>Sponsor a node. Become an Independent Sysop. Help build a cloud that more of us have a hand in running.</p>
-        <a class="button button-primary" href="/co-sysops/">Find your place in Forkalope <span aria-hidden="true">↗</span></a>
-      </section>
-    </main>
+    <aside class="repo-details">
+      <section><header><div><span>Repository</span><h2>About</h2></div><svg aria-hidden="true"><use href="#i-settings"/></svg></header><p>The open-source home for your code—and a network designed so failure doesn’t strand you.</p><a class="detail-link" href="#network"><svg aria-hidden="true"><use href="#i-book"/></svg><span>docs/network.md</span></a><div class="detail-facts"><a href="#readme"><svg aria-hidden="true"><use href="#i-book"/></svg>README</a><a href="/LICENSE"><svg aria-hidden="true"><use href="#i-shield"/></svg>GPL-3.0 license</a><a href="#status"><svg aria-hidden="true"><use href="#i-activity"/></svg>Public build status</a></div><div class="repo-stats"><span><svg aria-hidden="true"><use href="#i-star"/></svg>free software</span><span><svg aria-hidden="true"><use href="#i-eye"/></svg>built in public</span></div><div class="release-summary"><div><span>Latest release</span><strong>Early build</strong></div><a href="#status">Status</a></div></section>
+      <section class="details-links"><h2>Useful links</h2><a href="/faq/">Read the FAQ <span>→</span></a><a href="/landscape/">Explore the landscape <span>→</span></a><a href="/co-sysops/">Join the waitlist <span>→</span></a></section>
+    </aside>
+  </div>
+</main>

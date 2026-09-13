@@ -16,7 +16,9 @@ const files = [
   "network.css",
   "business.css",
   "faq.css",
+  "repo-home.css",
   "CNAME",
+  "LICENSE",
 ];
 
 const directories = ["public"];
