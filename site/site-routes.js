@@ -1,7 +1,11 @@
 export const SITE = {
   origin: "https://forkalope.com",
   name: "forkalope",
-  ogImage: "/public/og-image.jpg",
+  author: "forkalope",
+  ogImage: "/public/og-image2.jpg",
+  ogImageType: "image/jpeg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
   ogImageAlt: "Forkalope: a cloud we build together",
 };
 
@@ -113,4 +117,3 @@ export const SITE_PAGES = [
     redirectTo: "/co-sysops/",
   },
 ];
-

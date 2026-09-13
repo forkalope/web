@@ -44,6 +44,7 @@ const renderHead = (page) => {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="${escapeHtml(page.themeColor ?? SITE.themeColor ?? "#101211")}" />
     <meta name="description" content="${description}" />
+    <meta name="author" content="${escapeHtml(SITE.author)}" />
     <meta name="robots" content="${escapeHtml(page.robots ?? "index, follow")}" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="${escapeHtml(SITE.name)}" />
@@ -51,11 +52,15 @@ const renderHead = (page) => {
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />
     <meta property="og:image" content="${SITE.origin}${SITE.ogImage}" />
+    <meta property="og:image:type" content="${escapeHtml(SITE.ogImageType)}" />
+    <meta property="og:image:width" content="${SITE.ogImageWidth}" />
+    <meta property="og:image:height" content="${SITE.ogImageHeight}" />
     <meta property="og:image:alt" content="${escapeHtml(SITE.ogImageAlt)}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${title}" />
     <meta name="twitter:description" content="${description}" />
     <meta name="twitter:image" content="${SITE.origin}${SITE.ogImage}" />
+    <meta name="twitter:image:alt" content="${escapeHtml(SITE.ogImageAlt)}" />
     <link rel="canonical" href="${canonicalUrl}" />
     <link rel="icon" href="/public/logo.png" type="image/png" />
 ${["styles.css", ...(page.styles ?? [])]
