@@ -8,14 +8,23 @@
 .proof-label, .business-options-grid article > span { color: var(--coral-bright); font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .business-proof strong { display: block; margin-top: 25px; color: var(--ink); font-size: 27px; letter-spacing: -.055em; line-height: 1.03; }
 .business-proof p { margin: 17px 0 0; color: var(--soft); font-size: 13px; line-height: 1.6; }
+.business-principle { display: grid; grid-template-columns: minmax(250px, .9fr) minmax(0, 1.1fr); gap: clamp(50px, 9vw, 140px); padding: 72px 0 84px; border-bottom: 1px solid var(--line); background: linear-gradient(90deg, rgba(241,116,95,.08), transparent 72%); }
+.business-principle h2 { max-width: 600px; margin-top: 18px; font-size: clamp(38px, 5.3vw, 67px); }
+.business-principle h2 em { color: var(--coral); font-style: normal; }
+.business-principle-copy { max-width: 680px; }
+.business-principle-copy .business-lede { margin-top: 0; }
+.business-principle-copy > p:not(.business-lede):not(.principle-note) { margin: 20px 0 0; color: var(--soft); font-size: 16px; line-height: 1.7; }
+.principle-note { margin: 22px 0 0; color: var(--faint); font-size: 11px; line-height: 1.6; }
 .business-section { display: grid; grid-template-columns: minmax(240px, .78fr) minmax(0, 1.22fr); gap: clamp(50px, 9vw, 140px); padding: 98px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
 .business-section-heading h2 { max-width: 590px; font-size: clamp(38px, 5.3vw, 67px); }
 .business-options-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .business-options-grid article { display: flex; min-height: 270px; flex-direction: column; padding: 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg-raised); }
 .business-options-grid h3 { margin: 24px 0 0; font-size: 18px; letter-spacing: -.035em; }
 .business-options-grid article > p:not(.option-note) { margin: 14px 0 0; color: var(--soft); font-size: 13px; line-height: 1.6; }
+.business-options-grid .option-note strong { color: var(--ink); font-weight: 650; }
 .business-options-grid .text-link { margin-top: auto; padding-top: 18px; color: var(--coral-bright); }
 .option-note, .pilot-note { margin: 14px 0 0; color: var(--faint); font-size: 11px; line-height: 1.55; }
+.pilot-faq-link { display: inline-block; margin: 21px 0 0 22px; color: var(--coral-bright); }
 .business-light { background: linear-gradient(90deg, rgba(167,189,145,.035), transparent 72%); }
 .service-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; border-top: 1px solid var(--line); }
 .service-list > div { padding: 19px 0; border-bottom: 1px solid var(--line); }
@@ -23,5 +32,5 @@
 .service-list p { margin: 9px 0 0; color: var(--soft); font-size: 13px; line-height: 1.6; }
 .pilot-section { border-bottom: 0; }
 .pilot-section > div:last-child { max-width: 660px; }
-@media (max-width: 960px) { .business-hero, .business-section { grid-template-columns: 1fr; gap: 42px; } .business-options-grid { grid-template-columns: 1fr; } .business-options-grid article { min-height: 0; } }
-@media (max-width: 720px) { .business-main { width: min(calc(100% - 36px), 560px); } .business-hero { padding: 63px 0 70px; } .business-hero h1 { font-size: clamp(46px, 13vw, 72px); } .business-lede { font-size: 17px; } .business-section { padding: 72px 0; gap: 34px; } .service-list { grid-template-columns: 1fr; } .business-proof { padding: 18px; } }
+@media (max-width: 960px) { .business-hero, .business-principle, .business-section { grid-template-columns: 1fr; gap: 42px; } .business-options-grid { grid-template-columns: 1fr; } .business-options-grid article { min-height: 0; } }
+@media (max-width: 720px) { .business-main { width: min(calc(100% - 36px), 560px); } .business-hero { padding: 63px 0 70px; } .business-hero h1 { font-size: clamp(46px, 13vw, 72px); } .business-lede { font-size: 17px; } .business-section { padding: 72px 0; gap: 34px; } .service-list { grid-template-columns: 1fr; } .business-proof { padding: 18px; } .pilot-faq-link { margin-left: 0; } }
