@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101211" />
+    <meta
+      name="description"
+      content="A researched landscape of open-source Git forges, self-hosted GitHub alternatives, and distributed code collaboration projects."
+    />
+    <title>Landscape — forkalope</title>
+    <link rel="icon" href="../public/logo.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../landscape.css" />
+  </head>
+  <body class="landscape-page">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Forkalope home">
+        <img class="brand-mark" src="../public/logo.png" alt="" />
+        <span class="brand-name">forkalope</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../#why">Why Forkalope</a>
+        <a class="is-current" href="./" aria-current="page">The landscape</a>
+        <a href="../#source">Open source</a>
+        <a class="nav-action" href="../#start">Deploy yours <span aria-hidden="true">↗</span></a>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span>Menu</span>
+        <i aria-hidden="true"></i>
+      </button>
+
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+        <a href="../#why">Why Forkalope <span aria-hidden="true">↘</span></a>
+        <a href="./" aria-current="page">The landscape <span aria-hidden="true">↘</span></a>
+        <a href="../#source">Open source <span aria-hidden="true">↘</span></a>
+        <a href="../#start">Deploy yours <span aria-hidden="true">↘</span></a>
+      </nav>
+    </header>
+
+    <div class="landscape-layout">
+      <aside class="landscape-sidebar" aria-label="Landscape navigation">
+        <div class="sidebar-title"><strong>Landscape</strong><span>Open Git platforms</span></div>
+        <nav>
+          <a class="is-active" href="#overview">Overview</a>
+          <a href="#comparison">The comparison</a>
+          <a href="#projects">Field notes</a>
+          <a href="#gap">The opening</a>
+          <a href="#sources">Sources</a>
+        </nav>
+        <a class="sidebar-home" href="../"><span aria-hidden="true">←</span> Back to Forkalope</a>
+      </aside>
+
+      <main class="landscape-content">
+        <header class="landscape-heading reveal">
+          <div>
+            <p class="eyebrow">Landscape / Overview</p>
+            <h1 id="overview">Open Git platforms</h1>
+            <p class="landscape-lede">The field is full of capable forges. The open question is whether one can feel as familiar as GitHub, run anywhere, and still belong to a network instead of a single operator.</p>
+          </div>
+          <p class="heading-note"><i aria-hidden="true"></i> Researched September 2026</p>
+        </header>
+
+        <section class="signal-grid" aria-label="Landscape signals">
+          <article class="reveal reveal-delay">
+            <span>01 / The mature set</span>
+            <h2>Self-hosting is solved enough.</h2>
+            <p>GitLab, Forgejo, Gitea, OneDev, and others already prove that an open Git forge can run outside GitHub.</p>
+          </article>
+          <article class="reveal reveal-delay-two">
+            <span>02 / The missing layer</span>
+            <h2>Most homes are still islands.</h2>
+            <p>Mirrors move repository data. They do not automatically make identity, issues, reviews, and discovery portable.</p>
+          </article>
+          <article class="reveal reveal-delay-three">
+            <span>03 / The Forkalope bet</span>
+            <h2>Fork the home, then connect it.</h2>
+            <p>Make the familiar forge easy to deploy, with the network model treated as a product feature from the start.</p>
+          </article>
+        </section>
+
+        <section class="comparison" id="comparison" aria-labelledby="comparison-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="comparison-title">The comparison</h2>
+              <p>A directional read of the projects closest to the thesis.</p>
+            </div>
+            <span class="legend">✓ current focus · ~ partial or adjacent · — not the center</span>
+          </div>
+
+          <div class="table-wrap" tabindex="0" aria-label="Scrollable open Git platform comparison">
+            <table>
+              <caption>Comparison of Forkalope and major open-source Git forge projects.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Capability</th>
+                  <th scope="col" class="forkalope-column"><a href="../"><span class="project-badge">F</span><b>forkalope</b><small>proposed network</small></a></th>
+                  <th scope="col"><a href="https://gitlab.com/opensource/gitlab-ce" target="_blank" rel="noreferrer"><span class="project-badge">GL</span><b>GitLab CE</b><small>full DevOps forge</small></a></th>
+                  <th scope="col"><a href="https://forgejo.org/" target="_blank" rel="noreferrer"><span class="project-badge">FJ</span><b>Forgejo</b><small>community forge</small></a></th>
+                  <th scope="col"><a href="https://about.gitea.com/products/gitea/" target="_blank" rel="noreferrer"><span class="project-badge">G</span><b>Gitea</b><small>lightweight forge</small></a></th>
+                  <th scope="col"><a href="https://onedev.io/" target="_blank" rel="noreferrer"><span class="project-badge">1D</span><b>OneDev</b><small>integrated DevOps</small></a></th>
+                  <th scope="col"><a href="https://sourcehut.org/" target="_blank" rel="noreferrer"><span class="project-badge">SH</span><b>SourceHut</b><small>Unix-style suite</small></a></th>
+                  <th scope="col"><a href="https://radicle.xyz/" target="_blank" rel="noreferrer"><span class="project-badge">R</span><b>Radicle</b><small>peer-to-peer forge</small></a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group-row"><th colspan="8" scope="colgroup">Foundation</th></tr>
+                <tr>
+                  <th scope="row">Open-source software</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Planned">plan</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Self-hostable</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Planned">plan</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Possible, but not the main path">~</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">GitHub-familiar UI</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-partial" aria-label="Different workflow">~</span></td><td><span class="mark mark-partial" aria-label="Different workflow">~</span></td>
+                </tr>
+
+                <tr class="group-row"><th colspan="8" scope="colgroup">Collaboration surface</th></tr>
+                <tr>
+                  <th scope="row">Issues + pull / merge requests</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Issues and patch review, different workflow">~</span></td><td><span class="mark mark-partial" aria-label="Issues and patches, different workflow">~</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">CI/CD + packages</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Not an all-in-one suite">~</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">API + migration tooling</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Available, with a different emphasis">~</span></td><td><span class="mark mark-partial" aria-label="Available via hut CLI">~</span></td><td><span class="mark mark-partial" aria-label="Protocol and CLI, different model">~</span></td>
+                </tr>
+
+                <tr class="group-row"><th colspan="8" scope="colgroup">Network relationship</th></tr>
+                <tr>
+                  <th scope="row">Replication beyond mirrors</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-partial" aria-label="Mirrors and federation proposal">~</span></td><td><span class="mark mark-partial" aria-label="Federation is experimental">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-yes" aria-label="Peer-to-peer replication">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Portable identity + social data</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-partial" aria-label="Federation proposal">~</span></td><td><span class="mark mark-partial" aria-label="Experimental federation">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-yes" aria-label="Signed, local-first artifacts">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Cloudflare-native deployment</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core target">core</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td><td><span class="mark mark-no" aria-label="Not the target runtime">—</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="scroll-hint">Swipe horizontally to compare all platforms <span aria-hidden="true">→</span></p>
+          <p class="table-footnote">This is a directional comparison, not a product certification. “✓” means the capability is part of a project’s current center of gravity; “plan,” “target,” and “core” describe Forkalope’s proposed direction.</p>
+        </section>
+
+        <section class="field-notes" id="projects" aria-labelledby="projects-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="projects-title">Field notes</h2>
+              <p>The lesson each project brings to the table.</p>
+            </div>
+          </div>
+
+          <div class="project-list">
+            <article>
+              <div class="project-title"><span class="project-badge">FJ</span><h3>Forgejo</h3><span class="project-category">closest familiar analogue</span></div>
+              <p>Forgejo is a community-driven Free Software forge similar to GitHub and a drop-in replacement for Gitea. Its primary federation goal is the clearest proof that an open, familiar forge can also think beyond one server—but Forgejo documents federation as experimental, with moderation and access-control work still unfinished. <a href="https://forgejo.org/faq/" target="_blank" rel="noreferrer">Read the federation status ↗</a></p>
+              <strong>Takeaway: make the familiar surface and the network protocol deliberate parts of the same product.</strong>
+            </article>
+            <article>
+              <div class="project-title"><span class="project-badge">R</span><h3>Radicle</h3><span class="project-category">closest network analogue</span></div>
+              <p>Radicle is an open-source, peer-to-peer code collaboration stack built on Git. It gives each node a role in replication, uses cryptographic identities, and stores issues and patches as signed collaborative objects. It is the strongest architectural reference here, while its CLI/local-first workflow is intentionally unlike a drop-in GitHub UI. <a href="https://radicle.xyz/" target="_blank" rel="noreferrer">Visit Radicle ↗</a></p>
+              <strong>Takeaway: decentralization should improve ownership without making everyday collaboration feel foreign.</strong>
+            </article>
+            <article>
+              <div class="project-title"><span class="project-badge">G</span><h3>Gitea</h3><span class="project-category">lightweight baseline</span></div>
+              <p>Gitea is the lightweight, self-hosted all-in-one baseline: code hosting, code review, team collaboration, package registry, and CI/CD in a small service. Its strength is the simple install and familiar UI; its center is still the independently operated instance rather than a shared network. <a href="https://docs.gitea.com/next/" target="_blank" rel="noreferrer">Read the Gitea docs ↗</a></p>
+              <strong>Takeaway: deployment has to be easy enough that “run your own” is a normal choice.</strong>
+            </article>
+            <article>
+              <div class="project-title"><span class="project-badge">GL</span><h3>GitLab Community Edition</h3><span class="project-category">feature-complete benchmark</span></div>
+              <p>GitLab CE sets the breadth benchmark: repository management, access control, merge requests, issues, wikis, and a large integrated DevOps surface. It is powerful, but its operational weight and open-core split make it a useful contrast for Forkalope’s goal of keeping the complete deployable core understandable. <a href="https://gitlab.com/opensource/gitlab-ce" target="_blank" rel="noreferrer">See GitLab CE ↗</a></p>
+              <strong>Takeaway: “100% the features” also means respecting the cost of running and upgrading them.</strong>
+            </article>
+            <article>
+              <div class="project-title"><span class="project-badge">SH</span><h3>SourceHut</h3><span class="project-category">different workflow, strong values</span></div>
+              <p>SourceHut takes a modular, Unix-style approach with Git and Mercurial hosting, mailing lists, patch review, CI, wikis, and a CLI. Its no-tracking, no-JavaScript-friendly posture and export tooling are valuable ownership references, even though its email-first workflow is not the UI everyone already knows. <a href="https://sourcehut.org/" target="_blank" rel="noreferrer">Explore SourceHut ↗</a></p>
+              <strong>Takeaway: openness is also a product experience, not only a license.</strong>
+            </article>
+            <article>
+              <div class="project-title"><span class="project-badge">1D</span><h3>OneDev</h3><span class="project-category">integrated alternative</span></div>
+              <p>OneDev packages Git hosting, issue management, Kanban, packages, and CI/CD into a self-hosted service. Its integrated workflow is close to the “one place for the whole team” expectation, but clustering is an enterprise feature and the platform remains a traditional server deployment. <a href="https://docs.onedev.io/" target="_blank" rel="noreferrer">Start with OneDev ↗</a></p>
+              <strong>Takeaway: a distributed product needs a better answer for operations, not only a distributed slogan.</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="adjacent-section" aria-labelledby="adjacent-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="adjacent-title">Also on the radar</h2>
+              <p>Smaller or more specialized forges that sharpen the comparison.</p>
+            </div>
+          </div>
+          <div class="adjacent-list">
+            <a href="https://github.com/gitbucket/gitbucket" target="_blank" rel="noreferrer"><span><b>GitBucket</b><small>GitHub API-compatible Scala platform with repositories, issues, pull requests, wiki, and plugins.</small></span><span>GitHub-shaped ↗</span></a>
+            <a href="https://github.com/gogs/gogs" target="_blank" rel="noreferrer"><span><b>Gogs</b><small>The lightweight ancestor: simple, stable, extensible self-hosted Git with issues, pull requests, wiki, and mirroring.</small></span><span>Minimal baseline ↗</span></a>
+            <a href="https://phorge.it/" target="_blank" rel="noreferrer"><span><b>Phorge</b><small>Community-maintained suite for code hosting, code review, task management, and opinionated team workflows.</small></span><span>Review-centric ↗</span></a>
+            <a href="https://allura.apache.org/" target="_blank" rel="noreferrer"><span><b>Apache Allura</b><small>Apache’s open-source forge for repositories, bug reports, discussions, wikis, and extensible project tools.</small></span><span>Extensible forge ↗</span></a>
+          </div>
+        </section>
+
+        <section class="gap-section" id="gap" aria-labelledby="gap-title">
+          <div class="positioning-copy">
+            <p class="eyebrow">The opening</p>
+            <h2 id="gap-title">Nobody has combined the three promises cleanly.</h2>
+            <p>Today’s strongest projects tend to optimize for one of these: a complete self-hosted suite, an unusually lightweight forge, or a genuinely distributed protocol. Forkalope can be interesting only if it treats all three as first-class.</p>
+            <p>The hard part is not putting a GitHub-like page on Cloudflare. It is making identity, permissions, issues, reviews, search, packages, actions, backups, moderation, and upgrades behave coherently across independently operated nodes.</p>
+          </div>
+          <aside class="cloudflare-note">
+            <div class="note-topline"><span>Deployment reality</span><span><i aria-hidden="true"></i> useful, not magic</span></div>
+            <h3>Cloudflare is a distribution layer, not a resilience guarantee.</h3>
+            <p>Cloudflare’s current free tiers make small nodes attractive: Pages serves static assets free and unlimited, Workers includes 100,000 requests per day, and R2 includes 10 GB-month of storage. Limits, quotas, and the shared dependency still make replication and export core product requirements.</p>
+            <a href="https://developers.cloudflare.com/workers/platform/pricing/" target="_blank" rel="noreferrer">Check current Workers limits ↗</a>
+          </aside>
+        </section>
+
+        <section class="sources-section" id="sources" aria-labelledby="sources-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="sources-title">Sources</h2>
+              <p>Primary project documentation and repositories used for this first pass.</p>
+            </div>
+            <span>Checked September 2026</span>
+          </div>
+          <div class="sources-grid">
+            <a href="https://forgejo.org/faq/" target="_blank" rel="noreferrer">Forgejo FAQ <span>federation status ↗</span></a>
+            <a href="https://radicle.xyz/guides/protocol/" target="_blank" rel="noreferrer">Radicle protocol guide <span>peer-to-peer model ↗</span></a>
+            <a href="https://docs.gitea.com/next/" target="_blank" rel="noreferrer">Gitea documentation <span>feature surface ↗</span></a>
+            <a href="https://gitlab.com/opensource/gitlab-ce" target="_blank" rel="noreferrer">GitLab CE repository <span>open-source edition ↗</span></a>
+            <a href="https://sourcehut.org/" target="_blank" rel="noreferrer">SourceHut <span>open suite + workflow ↗</span></a>
+            <a href="https://docs.onedev.io/" target="_blank" rel="noreferrer">OneDev docs <span>self-hosted CI/CD ↗</span></a>
+            <a href="https://github.com/gitbucket/gitbucket" target="_blank" rel="noreferrer">GitBucket repository <span>API compatibility ↗</span></a>
+            <a href="https://developers.cloudflare.com/pages/functions/pricing/" target="_blank" rel="noreferrer">Cloudflare Pages pricing <span>static + Functions limits ↗</span></a>
+          </div>
+          <p class="scope-note">Scope note: this is a product landscape, not an exhaustive catalog of every Git forge. It prioritizes active, open-source projects with meaningful overlap in UI, self-hosting, collaboration, or distributed ownership. Capabilities and availability change; the links above are the source of truth.</p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="brand" href="../" aria-label="Forkalope home">
+          <img class="brand-mark" src="../public/logo.png" alt="" />
+          <span class="brand-name">forkalope</span>
+        </a>
+        <p>Code that roams free.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../#why">Why Forkalope</a>
+        <a href="./">The landscape</a>
+        <a href="../#source">Open source</a>
+      </div>
+      <div class="footer-meta">
+        <span>Early build · 2026</span>
+        <span>Built in the open</span>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
