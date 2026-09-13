@@ -377,6 +377,13 @@ h2 { max-width: 560px; font-size: clamp(38px, 5vw, 66px); }
 .source-note p { max-width: 440px; margin: 0; }
 .note-mark { color: var(--coral); font-size: 17px; line-height: 1.2; }
 
+.business-entry-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 38px; }
+.business-entry-list > div { padding-top: 15px; border-top: 1px solid var(--line); }
+.business-entry-list > div > span { color: var(--coral-bright); font-size: 9px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.business-entry-list strong { display: block; margin-top: 17px; color: var(--ink); font-size: 15px; }
+.business-entry-list p { margin: 10px 0 0; color: var(--soft); font-size: 13px; line-height: 1.55; }
+.business-entry-list .text-link { margin-top: 18px; color: var(--coral-bright); }
+
 .start-section {
   padding: 72px 0 87px;
   border-top: 1px solid var(--line);
@@ -466,6 +473,7 @@ h2 { max-width: 560px; font-size: clamp(38px, 5vw, 66px); }
   h2 { font-size: clamp(36px, 11vw, 50px); }
   .section-body .section-lede, .network-body .section-lede, .source-body .section-lede { font-size: 18px; }
   .section-body p, .network-body > p, .source-body > p { font-size: 15px; }
+  .business-entry-list { grid-template-columns: 1fr; gap: 34px; margin-top: 30px; }
   .network-steps { margin-top: 31px; }
   .source-note { margin-top: 30px; }
   .start-section { padding: 61px 0 69px; }
