@@ -87,10 +87,19 @@ body.repo-home-page {
 .forge-search input::placeholder { color: var(--repo-subtle); }
 .forge-search kbd,
 .repo-tool-actions kbd { padding: 1px 6px; border: 1px solid var(--repo-border); border-radius: 4px; color: var(--repo-subtle); font: 11px ui-monospace, SFMono-Regular, Consolas, monospace; }
-.forge-header-button { display: inline-flex; min-height: 40px; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid var(--repo-border); border-radius: 8px; background: var(--repo-surface); color: var(--repo-muted); font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.forge-header-button { display: inline-flex; min-height: 40px; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid var(--repo-border); border-radius: 8px; background: var(--repo-surface); color: var(--repo-muted); font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; cursor: pointer; }
 .forge-header-button:hover { border-color: var(--repo-border-strong); background: var(--repo-raised); color: var(--repo-text); }
 .forge-header-button svg { width: 16px; height: 16px; }
 .forge-create > span { color: var(--repo-accent); font-size: 22px; font-weight: 400; line-height: 0; }
+.forge-create > svg { color: var(--repo-subtle); }
+.forge-create-wrap { position: relative; }
+.forge-create-menu { position: absolute; z-index: 40; top: calc(100% + 9px); right: 0; width: 270px; padding: 8px; border: 1px solid var(--repo-border-strong); border-radius: 10px; background: #202c31; box-shadow: 0 16px 38px #00000080; }
+.forge-create-menu[hidden] { display: none; }
+.forge-create-menu > p { margin: 5px 9px 8px; color: var(--repo-subtle); font-size: 10px; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+.forge-create-menu a { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; min-height: 42px; align-items: center; gap: 9px; padding: 0 9px; border-radius: 6px; color: var(--repo-muted); font-size: 13px; text-decoration: none; }
+.forge-create-menu a:hover { background: var(--repo-raised); color: var(--repo-text); }
+.forge-create-menu a svg { width: 19px; height: 19px; color: var(--repo-accent); }
+.forge-create-menu small { color: var(--repo-subtle); font-size: 10px; }
 .forge-inbox svg { width: 18px; height: 18px; }
 .forge-account { display: grid; width: 38px; height: 38px; flex: 0 0 38px; place-items: center; border: 1px solid #905340; border-radius: 50%; background: #1c1516; color: #ffc4b1 !important; font-size: 11px; font-weight: 800; text-decoration: none; }
 .forge-mobile-nav { padding: 8px 16px 14px; border-top: 1px solid var(--repo-line); }
@@ -128,10 +137,11 @@ body.repo-home-page {
 .repo-toolbar { display: flex; min-height: 49px; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 10px; }
 .branch-controls,
 .repo-tool-actions { display: flex; align-items: center; gap: 9px; }
+.repo-tool-actions { gap: 10px; }
 .branch-controls > span,
 .branch-controls > a,
 .repo-tool-actions > a,
-.repo-tool-actions > button { display: flex; min-height: 39px; align-items: center; gap: 7px; border: 0; background: transparent; color: var(--repo-muted); font-size: 12px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.repo-tool-actions > button { display: flex; min-height: 38px; align-items: center; gap: 7px; border: 0; background: transparent; color: var(--repo-muted); font-size: 12px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 .branch-controls > a:hover { color: var(--repo-text); }
 .branch-controls svg,
 .repo-tool-actions svg { width: 18px; height: 18px; color: var(--repo-subtle); }
@@ -157,7 +167,7 @@ body.repo-home-page {
 .file-card { margin-top: 10px; overflow: hidden; border: 1px solid var(--repo-border); border-radius: 9px; background: var(--repo-surface); }
 .file-list-heading,
 .file-row { display: grid; grid-template-columns: 32px minmax(130px, .9fr) minmax(190px, 1.5fr) 92px; align-items: center; gap: 8px; padding: 0 14px; }
-.file-list-heading { min-height: 35px; border-bottom: 1px solid var(--repo-line); background: var(--repo-raised); color: var(--repo-subtle); font-size: 9px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.file-list-heading { min-height: 34px; border-bottom: 1px solid var(--repo-line); background: var(--repo-raised); color: var(--repo-subtle); font-size: 9px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
 .file-list-heading span:first-child { grid-column: 1 / span 2; }
 .file-list-heading span:last-child { text-align: right; }
 .file-row { min-height: 47px; border-bottom: 1px solid var(--repo-line); color: var(--repo-muted); text-decoration: none; }
@@ -288,7 +298,7 @@ body.repo-home-page {
   .repo-section-sidebar nav { position: static; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
   .repo-section-sidebar nav::-webkit-scrollbar { display: none; }
   .repo-section-sidebar a { flex: 0 0 auto; min-height: 44px; }
-  .repo-toolbar { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .repo-toolbar { align-items: flex-start; flex-direction: column; gap: 9px; }
   .repo-tool-actions { width: 100%; }
   .repo-tool-actions > a,
   .repo-tool-actions > button { flex: 1; justify-content: center; }
@@ -297,7 +307,7 @@ body.repo-home-page {
 
 @media (max-width: 700px) {
   html { scroll-padding-top: 132px; }
-  .forge-header-primary { flex-wrap: wrap; padding-block: 11px; }
+  .forge-header-primary { flex-wrap: wrap; gap: 10px; padding: 12px 16px; }
   .forge-brand span { display: inline; font-size: 16px; }
   .forge-context,
   .forge-account { display: none; }
@@ -316,21 +326,24 @@ body.repo-home-page {
 }
 
 @media (max-width: 560px) {
-  .forge-menu-button { width: 40px; height: 40px; flex-basis: 40px; }
-  .forge-create { margin-left: auto; }
-  .forge-create svg { display: none; }
-  .repo-identity { grid-template-columns: 38px minmax(0, 1fr); gap: 11px; padding-block: 15px; }
+  .forge-menu-button { width: 38px; height: 38px; flex-basis: 38px; }
+  .forge-brand { gap: 9px; }
+  .forge-brand img { width: 32px; height: 32px; }
+  .forge-header-actions { gap: 7px; }
+  .forge-create { margin-left: auto; padding-inline: 11px; }
+  .repo-identity { grid-template-columns: 38px minmax(0, 1fr); gap: 11px; min-height: 0; padding-block: 15px; }
   .repo-title-mark { align-self: start; width: 38px; height: 38px; }
   .repo-home-page .repo-title-lockup h1 { font-size: 19px; }
   .repo-actions { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .repo-actions a { min-height: 44px; justify-content: center; }
+  .repo-actions a { min-height: 36px; justify-content: center; padding-inline: 6px; font-size: 10px; }
   .repo-topics { flex-wrap: wrap; }
+  .repo-section-sidebar a { min-height: 39px; }
   .repo-section-sidebar a span { display: none; }
   .repo-section-sidebar a.active span { display: inline; }
   .branch-controls { width: 100%; overflow-x: auto; }
   .repo-tool-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .repo-tool-actions .clone-trigger { grid-column: 1 / -1; }
-  .commit-panel { padding-inline: 12px; }
+  .commit-panel { min-height: 54px; padding-inline: 12px; }
   .commit-panel > span:first-of-type { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .commit-ref,
   .commit-panel a { display: none; }
@@ -339,7 +352,7 @@ body.repo-home-page {
   .file-list-heading span:nth-child(n+2),
   .file-message,
   .file-row time { display: none; }
-  .file-row { min-height: 50px; }
+  .file-row { min-height: 48px; }
   .readme-body { padding: 40px 20px 52px; }
   .repo-home-page .readme h2 { font-size: 36px; }
   .readme-body .readme-lede { font-size: 15px; }

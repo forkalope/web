@@ -36,6 +36,36 @@ if (forgeMenuButton && forgeMobileNav) {
   });
 }
 
+const forgeCreateWrap = document.querySelector(".forge-create-wrap");
+const forgeCreateButton = document.querySelector(".forge-create");
+const forgeCreateMenu = document.querySelector(".forge-create-menu");
+
+if (forgeCreateWrap && forgeCreateButton && forgeCreateMenu) {
+  const closeCreateMenu = () => {
+    forgeCreateButton.setAttribute("aria-expanded", "false");
+    forgeCreateMenu.hidden = true;
+  };
+
+  forgeCreateButton.addEventListener("click", () => {
+    const isOpen = forgeCreateButton.getAttribute("aria-expanded") === "true";
+    forgeCreateButton.setAttribute("aria-expanded", String(!isOpen));
+    forgeCreateMenu.hidden = isOpen;
+  });
+
+  forgeCreateMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeCreateMenu));
+
+  document.addEventListener("pointerdown", (event) => {
+    if (!forgeCreateWrap.contains(event.target)) closeCreateMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && forgeCreateButton.getAttribute("aria-expanded") === "true") {
+      closeCreateMenu();
+      forgeCreateButton.focus();
+    }
+  });
+}
+
 const repoSearch = document.querySelector("#repo-search");
 const repoFileRows = [...document.querySelectorAll("[data-repo-file]")];
 const repoFileEmpty = document.querySelector("#repo-file-empty");

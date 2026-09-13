@@ -133,7 +133,15 @@ const renderRepoHeader = () => `<header class="forge-header">
             <input id="repo-search" type="search" placeholder="Search this repository..." autocomplete="off" />
             <kbd>/</kbd>
           </label>
-          <a class="forge-header-button forge-create" href="https://github.com/forkalope/web" target="_blank" rel="noreferrer"><span aria-hidden="true">+</span> Contribute <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 7 5 5-5 5" /></svg></a>
+          <div class="forge-create-wrap">
+            <button class="forge-header-button forge-create" type="button" aria-expanded="false" aria-controls="forge-create-menu" aria-haspopup="menu"><span aria-hidden="true">+</span> Create <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5" /></svg></button>
+            <div class="forge-create-menu" id="forge-create-menu" role="menu" hidden>
+              <p>Create in Forkalope</p>
+              <a href="https://github.com/forkalope/web/issues/new" target="_blank" rel="noreferrer" role="menuitem"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1"/></svg><span>New issue</span><small>GitHub ↗</small></a>
+              <a href="https://github.com/forkalope/web/fork" target="_blank" rel="noreferrer" role="menuitem"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 4v12M17 4v4a4 4 0 0 1-4 4H7M4 16l3 3 3-3"/></svg><span>Fork repository</span><small>GitHub ↗</small></a>
+              <a href="/co-sysops/" role="menuitem"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 20v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Join a node</span><small>Explore →</small></a>
+            </div>
+          </div>
           <a class="forge-header-button forge-inbox" href="https://github.com/forkalope/web/issues" target="_blank" rel="noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16l2 9v5H2v-5l2-9Z" /><path d="M2 14h5l2 3h6l2-3h5" /></svg><span>Issues</span></a>
           <a class="forge-account" href="https://github.com/forkalope" target="_blank" rel="noreferrer" aria-label="Forkalope on GitHub">FL</a>
         </nav>
