@@ -67,7 +67,10 @@ thead th a b { font-size: 11px; font-weight: 760; letter-spacing: -0.02em; }
 thead th a small { color: var(--faint); font-size: 8px; font-weight: 600; line-height: 1; }
 .forkalope-column { background: rgba(241, 116, 95, 0.065) !important; box-shadow: inset 1px 0 rgba(241, 116, 95, 0.22), inset -1px 0 rgba(241, 116, 95, 0.22); }
 thead .forkalope-column { background: rgba(241, 116, 95, 0.15) !important; }
-.project-badge { display: inline-grid; width: 28px; height: 28px; place-items: center; border: 1px solid rgba(167, 189, 145, 0.45); border-radius: 5px; background: rgba(167, 189, 145, 0.11); color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: -0.03em; }
+.project-badge { display: inline-grid; width: 28px; height: 28px; flex: 0 0 28px; place-items: center; overflow: hidden; border: 1px solid rgba(167, 189, 145, 0.45); border-radius: 5px; background: rgba(255, 255, 255, 0.9); color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: -0.03em; }
+.project-badge img { display: block; width: 20px; height: 20px; object-fit: contain; }
+thead .forkalope-column .project-badge, .project-title .project-badge { border-color: rgba(241, 116, 95, 0.55); background: rgba(241, 116, 95, 0.12); color: var(--coral-bright); }
+thead .forkalope-column .project-badge img { width: 22px; height: 22px; }
 thead .forkalope-column .project-badge, .project-title .project-badge { border-color: rgba(241, 116, 95, 0.55); background: rgba(241, 116, 95, 0.12); color: var(--coral-bright); }
 tbody th { color: var(--soft); font-size: 11px; font-weight: 650; line-height: 1.25; }
 tbody td { color: var(--faint); font-size: 10px; line-height: 1.2; }
@@ -99,8 +102,11 @@ tbody tr:hover:not(.group-row) .forkalope-column { background: rgba(241, 116, 95
 .adjacent-list { border-top: 1px solid var(--landscape-line); }
 .adjacent-list a { display: grid; grid-template-columns: minmax(0, 1fr) 150px; align-items: center; gap: 26px; padding: 15px 4px; border-bottom: 1px solid var(--landscape-line); color: var(--soft); text-decoration: none; transition: color 180ms ease, padding 180ms ease; }
 .adjacent-list a:hover, .adjacent-list a:focus-visible { padding-left: 8px; color: var(--ink); }
-.adjacent-list b { display: inline-block; margin-right: 12px; color: var(--ink); font-size: 13px; }
+.adjacent-list b { display: inline-block; color: var(--ink); font-size: 13px; }
 .adjacent-list small { color: var(--faint); font-size: 12px; line-height: 1.4; }
+.adjacent-project { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+.adjacent-project b { flex: 0 0 auto; }
+.adjacent-project small { min-width: 0; }
 .adjacent-list a > span:last-child { color: var(--coral-bright); font-size: 10px; font-weight: 750; text-align: right; }
 
 .gap-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 330px); gap: clamp(40px, 8vw, 120px); margin-top: 94px; padding: 26px 0 0; border-top: 1px solid var(--landscape-line); }
