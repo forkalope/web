@@ -1,64 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#101211" />
-    <meta
-      name="description"
-      content="A researched landscape of open-source Git forges and the design space for a shared cloud of independently operated Forkalope nodes."
-    />
-    <meta property="og:image" content="/public/og-image.jpg" />
-    <meta
-      property="og:description"
-      content="A researched landscape of open-source Git forges and the design space for a shared cloud of independently operated Forkalope nodes."
-    />
-    <title>Landscape — forkalope</title>
-    <link rel="icon" href="../public/logo.png" type="image/png" />
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../landscape.css" />
-  </head>
-  <body class="landscape-page">
-    <header class="site-header">
-      <a class="brand" href="../" aria-label="Forkalope home">
-        <img class="brand-mark" src="../public/logo.png" alt="" />
-        <span class="brand-name">forkalope</span>
-      </a>
-
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="../#why">Why Forkalope</a>
-        <a class="is-current" href="./" aria-current="page">The landscape</a>
-        <a href="../co-sysops/">Co-Sysops</a>
-        <a class="nav-action" href="../business/">For business <span aria-hidden="true">↗</span></a>
-      </nav>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
-        <span>Menu</span>
-        <i aria-hidden="true"></i>
-      </button>
-
-      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
-        <a href="../#why">Why Forkalope <span aria-hidden="true">↘</span></a>
-        <a href="./" aria-current="page">The landscape <span aria-hidden="true">↘</span></a>
-        <a href="../co-sysops/">Co-Sysops <span aria-hidden="true">↘</span></a>
-        <a href="../business/">For business <span aria-hidden="true">↘</span></a>
-      </nav>
-    </header>
-
-    <div class="landscape-layout">
-      <aside class="landscape-sidebar" aria-label="Landscape navigation">
-        <div class="sidebar-title"><strong>Landscape</strong><span>Open Git platforms</span></div>
-        <nav>
-          <a class="is-active" href="#overview">Overview</a>
-          <a href="#comparison">The comparison</a>
-          <a href="#projects">Field notes</a>
-          <a href="#gap">The opening</a>
-          <a href="#sources">Sources</a>
-        </nav>
-        <a class="sidebar-home" href="../"><span aria-hidden="true">←</span> Back to Forkalope</a>
-      </aside>
-
-      <main class="landscape-content">
+<main class="landscape-content">
         <header class="landscape-heading reveal">
           <div>
             <p class="eyebrow">Landscape / Overview</p>
@@ -101,7 +41,7 @@
               <thead>
                 <tr>
                   <th scope="col">Capability</th>
-                  <th scope="col" class="forkalope-column"><a href="../"><span class="project-badge"><img src="../public/logo.png" alt="" /></span><b>forkalope</b><small>proposed network</small></a></th>
+                  <th scope="col" class="forkalope-column"><a href="/"><span class="project-badge"><img src="/public/logo.png" alt="" /></span><b>forkalope</b><small>proposed network</small></a></th>
                   <th scope="col"><a href="https://gitlab.com/opensource/gitlab-ce" target="_blank" rel="noreferrer"><span class="project-badge"><img src="https://gitlab.com/favicon.ico" alt="" /></span><b>GitLab CE</b><small>full DevOps forge</small></a></th>
                   <th scope="col"><a href="https://forgejo.org/" target="_blank" rel="noreferrer"><span class="project-badge"><img src="https://forgejo.org/favicon.svg" alt="" /></span><b>Forgejo</b><small>community forge</small></a></th>
                   <th scope="col"><a href="https://about.gitea.com/products/gitea/" target="_blank" rel="noreferrer"><span class="project-badge"><img src="https://about.gitea.com/gitea.svg" alt="" /></span><b>Gitea</b><small>lightweight forge</small></a></th>
@@ -227,7 +167,7 @@
             <div class="note-topline"><span>Forkalope’s opening</span><span><i aria-hidden="true"></i> a cloud with neighbors</span></div>
             <h3>Every node should have a recovery partner.</h3>
             <p>Forkalope can use commodity dedicated servers, edge services, or a Sysop’s own provider account. None of those vendors is the resilience plan. The resilience plan is authorized replicas, reserved capacity, tested restore procedures, and operators who know how to help one another.</p>
-            <a href="../co-sysops/#recovery">See the recovery model ↗</a>
+            <a href="/co-sysops/#recovery">See the recovery model ↗</a>
           </aside>
         </section>
 
@@ -252,31 +192,3 @@
           <p class="scope-note">Scope note: this is a product landscape, not an exhaustive catalog of every Git forge. It prioritizes active, open-source projects with meaningful overlap in UI, self-hosting, collaboration, or distributed ownership. Capabilities and availability change; the links above are the source of truth.</p>
         </section>
       </main>
-    </div>
-
-    <footer class="site-footer">
-      <div class="footer-brand">
-        <a class="brand" href="../" aria-label="Forkalope home">
-          <img class="brand-mark" src="../public/logo.png" alt="" />
-          <span class="brand-name">forkalope</span>
-        </a>
-        <p>Code that roams free.</p>
-      </div>
-      <div class="footer-links">
-        <a href="../#why">Why Forkalope</a>
-        <a href="./">The landscape</a>
-        <a href="../co-sysops/">Co-Sysops</a>
-        <a href="../business/">For business</a>
-        <a href="../partners/">Partners</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-      </div>
-      <div class="footer-meta">
-        <span>Early build · 2026</span>
-        <span>Built in the open</span>
-      </div>
-    </footer>
-
-    <script src="../script.js"></script>
-  </body>
-</html>

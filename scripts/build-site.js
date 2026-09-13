@@ -1,12 +1,12 @@
 import { cpSync, existsSync, mkdirSync, rmSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildSitePages } from "./build-site-pages.js";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = resolve(root, "dist");
 
 const files = [
-  "index.html",
   "styles.css",
   "script.js",
   "landscape.css",
@@ -19,7 +19,7 @@ const files = [
   "CNAME",
 ];
 
-const directories = ["public", "landscape", "co-sysops", "developer", "business", "partners", "faq", "privacy", "terms"];
+const directories = ["public"];
 
 rmSync(dist, { force: true, recursive: true });
 mkdirSync(dist, { recursive: true });
@@ -29,5 +29,7 @@ for (const entry of [...files, ...directories]) {
   if (!existsSync(source)) continue;
   cpSync(source, resolve(dist, entry), { recursive: true });
 }
+
+await buildSitePages({ outputDirectory: dist });
 
 console.log(`Built static site in ${dist}`);

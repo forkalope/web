@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "npm run build:release",
+    "build:pages": "node scripts/build-site-pages.js",
     "build:release": "node scripts/build-site.js"
   }
 }
