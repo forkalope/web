@@ -17,12 +17,12 @@
           <article class="reveal reveal-delay-two">
             <span>02 / The missing layer</span>
             <h2>Most homes are still islands.</h2>
-            <p>Mirrors move repository data. They do not automatically make identity, permissions, issues, reviews, routing, and recovery portable.</p>
+            <p>Federation, replication, and recovery are separate problems. Mirrors move repository data; they do not automatically move identity, permissions, issues, reviews, routing, or a working service.</p>
           </article>
           <article class="reveal reveal-delay-three">
             <span>03 / The Forkalope bet</span>
             <h2>Fork the home, then connect it.</h2>
-            <p>Make the familiar forge easy to deploy, then make shared operations and recovery part of the product from the start.</p>
+            <p>Make the familiar forge easy to deploy, then make shared access, operations, and recovery part of the product from the start.</p>
           </article>
         </section>
 
@@ -32,7 +32,7 @@
               <h2 id="comparison-title">The comparison</h2>
               <p>A directional read of the projects closest to the thesis.</p>
             </div>
-            <span class="legend">✓ current focus · ~ partial or adjacent · — not the center</span>
+            <span class="legend">✓ current focus · ~ partial or adjacent · ? unverified · — not the center</span>
           </div>
 
           <div class="table-wrap" tabindex="0" aria-label="Scrollable open Git platform comparison">
@@ -48,55 +48,65 @@
                   <th scope="col"><a href="https://onedev.io/" target="_blank" rel="noreferrer"><span class="project-badge"><img src="https://onedev.io/img/logo.png" alt="" /></span><b>OneDev</b><small>integrated DevOps</small></a></th>
                   <th scope="col"><a href="https://sourcehut.org/" target="_blank" rel="noreferrer"><span class="project-badge"><img src="https://sourcehut.org/logo.svg" alt="" /></span><b>SourceHut</b><small>Unix-style suite</small></a></th>
                   <th scope="col"><a href="https://radicle.xyz/" target="_blank" rel="noreferrer"><span class="project-badge"><img src="https://radicle.dev/assets/images/radicle.svg" alt="" /></span><b>Radicle</b><small>peer-to-peer forge</small></a></th>
+                  <th scope="col"><a href="https://docs.tangled.org/" target="_blank" rel="noreferrer"><span class="project-badge project-badge-text">T</span><b>Tangled</b><small>AT Protocol forge</small></a></th>
+                  <th scope="col"><a href="https://github.com/harness/gitness" target="_blank" rel="noreferrer"><span class="project-badge project-badge-text">H</span><b>Harness Open Source</b><small>formerly Gitness</small></a></th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="group-row"><th colspan="8" scope="colgroup">Foundation</th></tr>
+                <tr class="group-row"><th colspan="10" scope="colgroup">Foundation</th></tr>
                 <tr>
                   <th scope="row">Open-source software</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Planned">plan</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Planned">plan</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
                 </tr>
                 <tr>
                   <th scope="row">Self-hostable</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Planned">plan</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Possible, but not the main path">~</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Planned">plan</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
                 </tr>
                 <tr>
                   <th scope="row">GitHub-familiar UI</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-partial" aria-label="Different workflow">~</span></td><td><span class="mark mark-partial" aria-label="Different workflow">~</span></td>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-yes" aria-label="Strong overlap">✓</span></td><td><span class="mark mark-partial" aria-label="Different workflow">~</span></td><td><span class="mark mark-partial" aria-label="Different workflow">~</span></td><td><span class="mark mark-partial" aria-label="Shared web application, different model">~</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
                 </tr>
 
-                <tr class="group-row"><th colspan="8" scope="colgroup">Collaboration surface</th></tr>
+                <tr class="group-row"><th colspan="10" scope="colgroup">Collaboration surface</th></tr>
                 <tr>
                   <th scope="row">Issues + pull / merge requests</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Issues and patch review, different workflow">~</span></td><td><span class="mark mark-partial" aria-label="Issues and patches, different workflow">~</span></td>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Issues and patch review, different workflow">~</span></td><td><span class="mark mark-partial" aria-label="Issues and patches, different workflow">~</span></td><td><span class="mark mark-partial" aria-label="Collaboration interface, exact issue and review scope to verify">~</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
                 </tr>
                 <tr>
-                  <th scope="row">CI/CD + packages</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Not an all-in-one suite">~</span></td>
+                  <th scope="row">CI/CD</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Not an all-in-one suite">~</span></td><td><span class="mark mark-yes" aria-label="Spindles CI system">✓</span></td><td><span class="mark mark-yes" aria-label="Pipelines available">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Package registries</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not established in reviewed scope">—</span></td><td><span class="mark mark-yes" aria-label="Artifact registry available">✓</span></td>
                 </tr>
                 <tr>
                   <th scope="row">API + migration tooling</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Available, with a different emphasis">~</span></td><td><span class="mark mark-partial" aria-label="Available via hut CLI">~</span></td><td><span class="mark mark-partial" aria-label="Protocol and CLI, different model">~</span></td>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Target">target</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td><td><span class="mark mark-partial" aria-label="Available, with a different emphasis">~</span></td><td><span class="mark mark-partial" aria-label="Available via hut CLI">~</span></td><td><span class="mark mark-partial" aria-label="Protocol and CLI, different model">~</span></td><td><span class="mark mark-partial" aria-label="Protocol and shared app, migration scope to verify">~</span></td><td><span class="mark mark-yes" aria-label="Available">✓</span></td>
                 </tr>
 
-                <tr class="group-row"><th colspan="8" scope="colgroup">Network relationship</th></tr>
+                <tr class="group-row"><th colspan="10" scope="colgroup">Network relationship</th></tr>
+                <tr>
+                  <th scope="row">Federation / shared access</th>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-partial" aria-label="Federation proposal">~</span></td><td><span class="mark mark-partial" aria-label="Federation is experimental">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-yes" aria-label="Peer-to-peer network">✓</span></td><td><span class="mark mark-yes" aria-label="Shared web application across knots">✓</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td>
+                </tr>
                 <tr>
                   <th scope="row">Replication beyond mirrors</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-partial" aria-label="Mirrors and federation proposal">~</span></td><td><span class="mark mark-partial" aria-label="Federation is experimental">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-yes" aria-label="Peer-to-peer replication">✓</span></td>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-partial" aria-label="Mirrors and federation proposal">~</span></td><td><span class="mark mark-partial" aria-label="Federation is experimental">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-yes" aria-label="Peer-to-peer replication">✓</span></td><td><span class="mark mark-yes" aria-label="Distributed knots and protocol">✓</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td>
                 </tr>
                 <tr>
                   <th scope="row">Portable identity + social data</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-partial" aria-label="Federation proposal">~</span></td><td><span class="mark mark-partial" aria-label="Experimental federation">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-yes" aria-label="Signed, local-first artifacts">✓</span></td>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-partial" aria-label="Federation proposal">~</span></td><td><span class="mark mark-partial" aria-label="Experimental federation">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-yes" aria-label="Signed, local-first artifacts">✓</span></td><td><span class="mark mark-yes" aria-label="AT Protocol identity and data model">✓</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td>
                 </tr>
                 <tr>
                   <th scope="row">Mutual recovery network</th>
-                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-partial" aria-label="Federation is experimental">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-partial" aria-label="Peer-to-peer, different recovery model">~</span></td>
+                  <td class="forkalope-column"><span class="mark mark-roadmap" aria-label="Core thesis">core</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-partial" aria-label="Federation is experimental">~</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td><td><span class="mark mark-partial" aria-label="Peer-to-peer, different recovery model">~</span></td><td><span class="mark mark-unverified" aria-label="Unverified in reviewed documentation">?</span></td><td><span class="mark mark-no" aria-label="Not the center">—</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p class="scroll-hint">Swipe horizontally to compare all platforms <span aria-hidden="true">→</span></p>
-          <p class="table-footnote">This is a directional comparison, not a product certification. “✓” means the capability is part of a project’s current center of gravity; “plan,” “target,” and “core” describe Forkalope’s proposed direction.</p>
+          <p class="table-footnote">This is a directional comparison, not a product certification. “✓” means the capability is part of a project’s current center of gravity; “~” is partial or adjacent; “?” means the reviewed documentation was not enough to verify the claim; “plan,” “target,” and “core” describe Forkalope’s proposed direction.</p>
         </section>
 
         <section class="field-notes" id="projects" aria-labelledby="projects-title">
@@ -110,7 +120,7 @@
           <div class="project-list">
             <article>
               <div class="project-title"><span class="project-badge"><img src="https://forgejo.org/favicon.svg" alt="" /></span><h3>Forgejo</h3><span class="project-category">closest familiar analogue</span></div>
-              <p>Forgejo is a community-driven Free Software forge similar to GitHub and a drop-in replacement for Gitea. Its primary federation goal is the clearest proof that an open, familiar forge can also think beyond one server—but Forgejo documents federation as experimental, with moderation and access-control work still unfinished. <a href="https://forgejo.org/faq/" target="_blank" rel="noreferrer">Read the federation status ↗</a></p>
+              <p>Forgejo is a community-driven fork of Gitea, now developed independently, with migration options that depend on the source version. Its federation work is the clearest proof that an open, familiar forge can think beyond one server—but Forgejo documents federation as experimental, with moderation and access-control work still unfinished. <a href="https://forgejo.org/docs/latest/admin/upgrade/" target="_blank" rel="noreferrer">Read the upgrade guide ↗</a></p>
               <strong>Takeaway: make the familiar surface and the network protocol deliberate parts of the same product.</strong>
             </article>
             <article>
@@ -130,13 +140,23 @@
             </article>
             <article>
               <div class="project-title"><span class="project-badge"><img src="https://sourcehut.org/logo.svg" alt="" /></span><h3>SourceHut</h3><span class="project-category">different workflow, strong values</span></div>
-              <p>SourceHut takes a modular, Unix-style approach with Git and Mercurial hosting, mailing lists, patch review, CI, wikis, and a CLI. Its no-tracking, no-JavaScript-friendly posture and export tooling are valuable ownership references, even though its email-first workflow is not the UI everyone already knows. <a href="https://sourcehut.org/" target="_blank" rel="noreferrer">Explore SourceHut ↗</a></p>
+              <p>SourceHut takes a modular, Unix-style approach with Git and Mercurial hosting, mailing lists, patch review, CI, wikis, and a CLI. Its no-tracking, no-JavaScript-friendly posture, export tooling, and entirely open-source software that can run on your own infrastructure are valuable ownership references, even though its email-first workflow is not the UI everyone already knows. <a href="https://sourcehut.org/" target="_blank" rel="noreferrer">Explore SourceHut ↗</a></p>
               <strong>Takeaway: openness is also a product experience, not only a license.</strong>
             </article>
             <article>
               <div class="project-title"><span class="project-badge"><img src="https://onedev.io/img/logo.png" alt="" /></span><h3>OneDev</h3><span class="project-category">integrated alternative</span></div>
               <p>OneDev packages Git hosting, issue management, Kanban, packages, and CI/CD into a self-hosted service. Its integrated workflow is close to the “one place for the whole team” expectation, but clustering is an enterprise feature and the platform remains a traditional server deployment. <a href="https://docs.onedev.io/" target="_blank" rel="noreferrer">Start with OneDev ↗</a></p>
               <strong>Takeaway: a distributed product needs a better answer for operations, not only a distributed slogan.</strong>
+            </article>
+            <article class="project-note-featured">
+              <div class="project-title"><span class="project-badge project-badge-text">T</span><h3>Tangled</h3><span class="project-category">closest Forkalope overlap</span></div>
+              <p>Tangled combines lightweight Git repository servers called knots with a shared web application built around AT Protocol, so repositories can appear across independently hosted servers. Its open-source, self-hostable stack also includes Spindles, a CI system with self-hosting instructions. The reviewed documentation establishes distributed hosting and shared access; an equivalent cross-operator mutual-recovery commitment remains <em>unverified</em>. <a href="https://docs.tangled.org/" target="_blank" rel="noreferrer">Read the Tangled docs ↗</a> <a href="https://docs.tangled.org/spindles.html" target="_blank" rel="noreferrer">See Spindles ↗</a></p>
+              <strong>Takeaway: the differentiation is not “distributed Git plus a web app has never been combined”; it is making coordinated recovery explicit.</strong>
+            </article>
+            <article class="project-note-featured">
+              <div class="project-title"><span class="project-badge project-badge-text">H</span><h3>Harness Open Source</h3><span class="project-category">formerly Gitness</span></div>
+              <p>Harness Open Source is the next evolution of Gitness: an Apache-2.0-licensed, self-hostable development platform with code hosting, automated pipelines, Gitspaces development environments, and artifact registries. Compare this open-source repository and product surface—not the wider commercial Harness portfolio. <a href="https://github.com/harness/gitness" target="_blank" rel="noreferrer">Read the repository ↗</a></p>
+              <strong>Takeaway: a modern forge comparison should count integrated build and artifact infrastructure when it ships in the open core.</strong>
             </article>
           </div>
         </section>
@@ -153,15 +173,47 @@
             <a href="https://github.com/gogs/gogs" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge"><img src="https://gogs.io/mintlify-assets/_mintlify/favicons/unknwon/QW55vOu9whFz9uXZ/_generated/favicon/favicon-32x32.png" alt="" /></span><b>Gogs</b><small>The lightweight ancestor: simple, stable, extensible self-hosted Git with issues, pull requests, wiki, and mirroring.</small></span><span>Minimal baseline ↗</span></a>
             <a href="https://phorge.it/" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge"><img src="https://we.phorge.it/res/www-phorge-it/1f596a1c/image/logo.png" alt="" /></span><b>Phorge</b><small>Community-maintained suite for code hosting, code review, task management, and opinionated team workflows.</small></span><span>Review-centric ↗</span></a>
             <a href="https://allura.apache.org/" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge"><img src="https://allura.apache.org/favicon.ico" alt="" /></span><b>Apache Allura</b><small>Apache’s open-source forge for repositories, bug reports, discussions, wikis, and extensible project tools.</small></span><span>Extensible forge ↗</span></a>
+            <a href="https://www.gerritcodereview.com/" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">G</span><b>Gerrit Code Review</b><small>Open-source, self-hostable Git hosting and review with fine-grained permissions, CI integration, replication, and clustering capabilities.</small></span><span>Review-focused ↗</span></a>
+            <a href="https://scm-manager.org/" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">S</span><b>SCM-Manager</b><small>Extensible repository-management platform for Git, Mercurial, and Subversion, with APIs, permissions, and plugin-based pull / merge requests.</small></span><span>Plugin platform ↗</span></a>
+            <a href="https://rhodecode.com/features/community-vs-enterprise" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">R</span><b>RhodeCode Community Edition</b><small>Open-source core with repository hosting, pull requests, code review, and access controls; enterprise integrations and HA remain commercial extensions.</small></span><span>Open core ↗</span></a>
+            <a href="https://kallithea-scm.org/" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">K</span><b>Kallithea</b><small>GPLv3, self-hostable Git and Mercurial platform with access controls, forks, and pull-request review.</small></span><span>Git + Mercurial ↗</span></a>
+            <a href="https://github.com/yuki-kimoto/gitprep" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">P</span><b>GitPrep</b><small>Smaller Perl-based, self-hosted GitHub-like system with repositories, pull requests, issues, and wikis.</small></span><span>Smaller option ↗</span></a>
+            <a href="https://github.com/gitblit/gitblit" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">B</span><b>Gitblit</b><small>Apache-2.0 Java software for managing, viewing, and serving Git repositories over Git, HTTP, and SSH.</small></span><span>Git server ↗</span></a>
+          </div>
+        </section>
+
+        <section class="adjacent-section related-section" aria-labelledby="related-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="related-title">Related approaches</h2>
+              <p>Protocols, experiments, and specialized services that clarify the boundaries.</p>
+            </div>
+          </div>
+          <div class="adjacent-list">
+            <a href="https://forgefed.org/" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">F</span><b>ForgeFed / Vervis</b><small>ForgeFed is a federation protocol for cross-instance issues and code review; Vervis is its reference implementation and demonstration platform, not a mature drop-in GitHub replacement.</small></span><span>Protocol + reference ↗</span></a>
+            <a href="https://github.com/charmbracelet/soft-serve" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">S</span><b>Soft Serve</b><small>Charm’s self-hostable SSH Git server with a terminal interface, repository browsing, access controls, and Git LFS support.</small></span><span>Specialized server ↗</span></a>
+          </div>
+        </section>
+
+        <section class="adjacent-section status-section" aria-labelledby="status-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="status-title">Status caveats</h2>
+              <p>Names worth knowing, but not unqualified current recommendations.</p>
+            </div>
+          </div>
+          <div class="adjacent-list">
+            <a href="https://fedoramagazine.org/whats-next-for-pagure-io/" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">P</span><b>Pagure</b><small>Fedora announced a planned pagure.io decommission at the end of July 2026. That is a hosted-service transition note, not proof that all Pagure software development has ended.</small></span><span>Historical / transition ↗</span></a>
+            <a href="https://tuleap.net/" target="_blank" rel="noreferrer"><span class="adjacent-project"><span class="project-badge project-badge-text">T</span><b>Tuleap Community Edition</b><small>The official development site currently says Community Edition development and releases are no longer public. Previously released open-source versions should not be described as having ceased to be open source.</small></span><span>Availability caveat ↗</span></a>
           </div>
         </section>
 
         <section class="gap-section" id="gap" aria-labelledby="gap-title">
           <div class="positioning-copy">
             <p class="eyebrow">The opening</p>
-            <h2 id="gap-title">Nobody has combined the three promises cleanly.</h2>
-            <p>Today’s strongest projects tend to optimize for one of these: a complete self-hosted suite, an unusually lightweight forge, or a genuinely distributed protocol. Forkalope can be interesting only if it treats all three as first-class.</p>
-            <p>The hard part is not putting a GitHub-like page on a cheap server. It is making identity, permissions, issues, reviews, search, packages, actions, backups, moderation, upgrades, and recovery behave coherently across independently operated nodes.</p>
+            <h2 id="gap-title">Forkalope’s focus: familiar collaboration, independent hosting, and coordinated recovery.</h2>
+            <p>Projects such as Tangled show that independent repository hosting and a connected collaboration experience can already coexist. Forkalope’s goal is narrower and more operational: make cross-operator recovery an explicit part of the system—not simply an infrastructure task left to each administrator.</p>
+            <p>Federation, replication, and recovery are different requirements. The hard part is making identity, permissions, issues, reviews, search, packages, actions, backups, moderation, upgrades, and a successfully restored service behave coherently across independently operated nodes.</p>
           </div>
           <aside class="network-note">
             <div class="note-topline"><span>Forkalope’s opening</span><span><i aria-hidden="true"></i> a cloud with neighbors</span></div>
@@ -187,6 +239,17 @@
             <a href="https://sourcehut.org/" target="_blank" rel="noreferrer">SourceHut <span>open suite + workflow ↗</span></a>
             <a href="https://docs.onedev.io/" target="_blank" rel="noreferrer">OneDev docs <span>self-hosted CI/CD ↗</span></a>
             <a href="https://github.com/gitbucket/gitbucket" target="_blank" rel="noreferrer">GitBucket repository <span>API compatibility ↗</span></a>
+            <a href="https://docs.tangled.org/" target="_blank" rel="noreferrer">Tangled docs <span>knots + shared app ↗</span></a>
+            <a href="https://docs.tangled.org/spindles.html" target="_blank" rel="noreferrer">Tangled Spindles <span>self-hosted CI ↗</span></a>
+            <a href="https://github.com/harness/gitness" target="_blank" rel="noreferrer">Harness Open Source repository <span>code + pipelines + registries ↗</span></a>
+            <a href="https://www.harness.io/blog/gitness-your-ultimate-open-source-development-platform" target="_blank" rel="noreferrer">Harness announcement <span>formerly Gitness ↗</span></a>
+            <a href="https://www.gerritcodereview.com/" target="_blank" rel="noreferrer">Gerrit Code Review <span>review + operations ↗</span></a>
+            <a href="https://scm-manager.org/" target="_blank" rel="noreferrer">SCM-Manager <span>plugins + repositories ↗</span></a>
+            <a href="https://rhodecode.com/features/community-vs-enterprise" target="_blank" rel="noreferrer">RhodeCode editions <span>community vs enterprise ↗</span></a>
+            <a href="https://forgefed.org/" target="_blank" rel="noreferrer">ForgeFed <span>federation protocol ↗</span></a>
+            <a href="https://forgejo.org/docs/latest/admin/upgrade/" target="_blank" rel="noreferrer">Forgejo upgrade guide <span>migration limits ↗</span></a>
+            <a href="https://fedoramagazine.org/whats-next-for-pagure-io/" target="_blank" rel="noreferrer">Fedora on Pagure <span>service transition ↗</span></a>
+            <a href="https://tuleap.net/" target="_blank" rel="noreferrer">Tuleap development site <span>CE status ↗</span></a>
             <a href="https://docs.hetzner.com/robot/dedicated-server/servers/" target="_blank" rel="noreferrer">Hetzner dedicated servers <span>commodity infrastructure ↗</span></a>
           </div>
           <p class="scope-note">Scope note: this is a product landscape, not an exhaustive catalog of every Git forge. It prioritizes active, open-source projects with meaningful overlap in UI, self-hosting, collaboration, or distributed ownership. Capabilities and availability change; the links above are the source of truth.</p>

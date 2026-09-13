@@ -52,7 +52,7 @@
 .legend { max-width: 260px; }
 .table-wrap { overflow-x: auto; border: 1px solid rgba(232, 232, 223, 0.14); border-radius: 7px; background: rgba(23, 26, 24, 0.72); scrollbar-color: rgba(241, 116, 95, 0.55) rgba(255, 255, 255, 0.06); scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
 .table-wrap:focus-visible { outline: 2px solid var(--coral-bright); outline-offset: 3px; }
-table { width: 100%; min-width: 1220px; border-collapse: collapse; table-layout: fixed; }
+table { width: 100%; min-width: 1500px; border-collapse: collapse; table-layout: fixed; }
 caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 th, td { padding: 12px 9px; border-right: 1px solid rgba(232, 232, 223, 0.07); border-bottom: 1px solid rgba(232, 232, 223, 0.07); text-align: center; vertical-align: middle; }
 th:first-child, td:first-child { width: 205px; text-align: left; }
@@ -69,6 +69,7 @@ thead th a small { color: var(--faint); font-size: 8px; font-weight: 600; line-h
 thead .forkalope-column { background: rgba(241, 116, 95, 0.15) !important; }
 .project-badge { display: inline-grid; width: 28px; height: 28px; flex: 0 0 28px; place-items: center; overflow: hidden; border: 1px solid rgba(167, 189, 145, 0.45); border-radius: 5px; background: rgba(255, 255, 255, 0.9); color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: -0.03em; }
 .project-badge img { display: block; width: 20px; height: 20px; object-fit: contain; }
+.project-badge-text { background: rgba(167, 189, 145, 0.08); color: var(--green); font-size: 13px; }
 thead .forkalope-column .project-badge, .project-title .project-badge { border-color: rgba(241, 116, 95, 0.55); background: rgba(241, 116, 95, 0.12); color: var(--coral-bright); }
 thead .forkalope-column .project-badge img { width: 22px; height: 22px; }
 thead .forkalope-column .project-badge, .project-title .project-badge { border-color: rgba(241, 116, 95, 0.55); background: rgba(241, 116, 95, 0.12); color: var(--coral-bright); }
@@ -82,6 +83,7 @@ tbody tr:hover:not(.group-row) .forkalope-column { background: rgba(241, 116, 95
 .mark { display: inline-grid; min-width: 22px; min-height: 22px; padding: 3px; place-items: center; border-radius: 50%; font-size: 13px; font-weight: 800; line-height: 1; }
 .mark-yes { background: rgba(167, 189, 145, 0.11); color: var(--green); }
 .mark-partial { background: rgba(221, 181, 99, 0.1); color: #e4c67d; }
+.mark-unverified { background: rgba(221, 181, 99, 0.08); color: #d8b970; }
 .mark-no { color: #4d554f; }
 .mark-roadmap { min-width: 42px; border: 1px solid rgba(241, 116, 95, 0.4); border-radius: 4px; color: var(--coral-bright); font-size: 8px; letter-spacing: 0.04em; text-transform: uppercase; }
 .table-footnote, .scope-note { margin: 11px 4px 0; color: var(--faint); font-size: 10px; line-height: 1.55; }
@@ -97,6 +99,8 @@ tbody tr:hover:not(.group-row) .forkalope-column { background: rgba(241, 116, 95
 .project-list article > p a { color: var(--coral-bright); text-decoration: none; white-space: nowrap; }
 .project-list article > p a:hover { text-decoration: underline; }
 .project-list article > strong { display: block; margin-top: 15px; color: var(--green); font-size: 11px; line-height: 1.45; }
+.project-note-featured { border-left: 1px solid rgba(241, 116, 95, 0.42); padding-left: 16px !important; }
+.project-list article > p em { color: #e4c67d; font-style: normal; }
 
 .adjacent-section { margin-top: 94px; padding-top: 25px; border-top: 1px solid var(--landscape-line); }
 .adjacent-list { border-top: 1px solid var(--landscape-line); }
