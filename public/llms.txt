@@ -17,8 +17,11 @@
 - SRE is the external career category; DevOps is useful adjacent language. “Forkalope Operator” is the internal qualification and identity.
 - The program is designed around ground school, failure simulators, supervised operating hours, and a final checkride.
 - Graduates leave with inspectable evidence: runbooks, incident reports, reviewed changes, drill history, and checkride results.
+- The homepage includes a demonstration prototype for a failed Git-push incident; it is not a live customer environment.
 - Qualified graduates may later contribute to the forge, mentor students, join the operator network, or apply for paid work. None of those outcomes is guaranteed by tuition.
 - The first cohort is still being designed. Paid enrollment is not open yet.
+- People can register private interest with their experience and learning goals; no payment is required.
+- Forkalope is currently founder-led by Andrew Arrow, who is building the forge and will teach and review the initial cohort personally.
 
 ## Policies
 

@@ -44,6 +44,39 @@ searchInput?.addEventListener("input", (event) => {
 
 document.querySelectorAll(".school-sidebar a[href]").forEach((link) => link.addEventListener("click", () => setSidebar(false)));
 
+const interestForm = document.querySelector("[data-interest-form]");
+interestForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const values = new FormData(interestForm);
+  const name = String(values.get("name") || "").trim();
+  const email = String(values.get("email") || "").trim();
+  const experience = String(values.get("experience") || "").trim();
+  const goals = String(values.get("goals") || "").trim();
+  const subject = `First-cohort interest — ${name}`;
+  const body = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Current experience: ${experience}`,
+    "",
+    "What I want to learn:",
+    goals,
+  ].join("\n");
+  const status = interestForm.querySelector("[data-form-status]");
+  if (status) status.textContent = "Opening a private email draft…";
+  window.location.href = `mailto:hello@forkalope.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+document.querySelectorAll("[data-drill-question]").forEach((question) => {
+  const feedback = question.querySelector("[data-drill-feedback]");
+  question.querySelectorAll("[data-drill-choice]").forEach((choice) => choice.addEventListener("click", () => {
+    const isSafe = choice.dataset.drillChoice === "safe";
+    question.querySelectorAll("[data-drill-choice]").forEach((button) => button.classList.toggle("is-selected", button === choice));
+    if (feedback) feedback.textContent = isSafe
+      ? "Good first move. Establish scope and evidence before restarting a service."
+      : "Too early. A restart might change the evidence and hide the blast radius."
+  }));
+});
+
 function setCurrentSection(id) {
   const currentSection = document.querySelector(`#${id}`);
   if (!currentSection) return;

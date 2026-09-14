@@ -9,7 +9,7 @@
   <aside class="school-sidebar" id="school-sidebar">
     <form class="school-search" role="search" onsubmit="return false">
       <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 5 5" /></svg>
-      <input id="school-search" type="search" placeholder="Search this page..." aria-label="Search this page" autocomplete="off" />
+      <input id="school-search" type="search" placeholder="Find a section..." aria-label="Find a section" autocomplete="off" />
       <span class="search-shortcut">⌘K</span>
     </form>
 
@@ -20,6 +20,7 @@
           <a class="nav-link is-current" href="#introduction" data-group="Start here">Introduction</a>
           <a class="nav-link" href="#why" data-group="Start here">Why a flight school</a>
           <a class="nav-link" href="#for-you" data-group="Start here">Who it is for</a>
+          <a class="nav-link" href="#interest" data-group="Start here">First-cohort details</a>
         </nav>
       </section>
       <section class="nav-group">
@@ -27,6 +28,7 @@
         <nav aria-label="The program">
           <a class="nav-link" href="#program" data-group="The program">How it works</a>
           <a class="nav-link" href="#curriculum" data-group="The program">Curriculum</a>
+          <a class="nav-link" href="#drill" data-group="The program">Example drill</a>
           <a class="nav-link" href="#evaluation" data-group="The program">The checkride</a>
           <a class="nav-link" href="#pricing" data-group="The program">Pricing principle</a>
         </nav>
@@ -43,6 +45,7 @@
         <h2>About</h2>
         <nav aria-label="About the school">
           <a class="nav-link" href="#status" data-group="About">Current status</a>
+          <a class="nav-link" href="#founder" data-group="About">Who is building this</a>
           <a class="nav-link" href="#questions" data-group="About">Common questions</a>
         </nav>
       </section>
@@ -56,7 +59,9 @@
       <header class="page-header tracked-section" id="introduction" data-title="Introduction" data-group="Start here">
         <p class="page-kicker">Start here</p>
         <h1>Introduction</h1>
-        <p class="page-lede">Train for SRE and DevOps work on real systems, build production judgment under pressure, and qualify as a Forkalope Operator.</p>
+        <p class="page-lede">We’re building hands-on site reliability engineering (SRE) training around realistic failures, safe recovery, and reviewed operational work.</p>
+        <p class="page-support">Practice on an open-source Git platform. Build a record of how you diagnose problems, make changes, and restore service.</p>
+        <div class="opening-actions"><a class="primary-action" href="#interest">Get first-cohort details <span aria-hidden="true">↓</span></a><span>Founding cohort in development · enrollment is not open yet.</span></div>
       </header>
 
       <section class="intro-copy" aria-label="Introduction">
@@ -76,7 +81,20 @@
           <li><strong>Observed judgment.</strong> Mentors review how you investigated, communicated, changed the system, and verified recovery.</li>
           <li><strong>Evidence over claims.</strong> Graduate with runbooks, incident reports, patches, and checkride results that show how you work.</li>
         </ul>
-        <p class="inline-cta">Want to help test the premise? <a href="https://github.com/forkalope/web/issues/new?title=First%20cohort%20interest" target="_blank" rel="noreferrer">Tell us what you want to learn <span aria-hidden="true">↗</span></a></p>
+        <p class="inline-cta">Want to help test the premise? <a href="#interest">Tell us what you want to learn <span aria-hidden="true">↓</span></a></p>
+      </section>
+
+      <section class="document-section tracked-section interest-section" id="interest" data-title="First-cohort details" data-group="Start here">
+        <p class="section-kicker">First-cohort details</p>
+        <h2>Raise your hand before enrollment opens.</h2>
+        <p>We’re collecting a small group of people who want to train for SRE work and help shape the first version of the program. No payment is required to register interest.</p>
+        <form class="interest-form" data-interest-form>
+          <div class="form-grid"><label>Name<input name="name" type="text" autocomplete="name" required /></label><label>Email<input name="email" type="email" autocomplete="email" required /></label></div>
+          <label>Current experience<select name="experience"><option>Developer moving toward SRE</option><option>DevOps or platform engineer</option><option>Systems administrator or support engineer</option><option>Self-taught operator</option><option>Other technical background</option></select></label>
+          <label>What do you want to learn?<textarea name="goals" rows="4" placeholder="For example: incident response, Linux, networking, safe deploys..." required></textarea></label>
+          <div class="form-actions"><button class="primary-action" type="submit">Prepare private email <span aria-hidden="true">↗</span></button><span class="form-note">This opens a private email draft to Forkalope. No payment required.</span></div>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
       </section>
 
       <section class="document-section tracked-section" id="for-you" data-title="Who it is for" data-group="Start here">
@@ -97,9 +115,24 @@
         <ol class="program-steps">
           <li><span>01</span><div><strong>Ground school</strong><p>Short, practical instruction on systems, networks, storage, security, observability, change management, and incident response. Every concept ends in a decision you will later make in a lab.</p></div></li>
           <li><span>02</span><div><strong>Simulator</strong><p>Purpose-built scenarios introduce known failures: a bad deploy, an expired certificate, a full disk, a lost secret, a slow dependency, a broken restore. You can pause, inspect, reset, and try again.</p></div></li>
-          <li><span>03</span><div><strong>Supervised flight hours</strong><p>Work on the open-source Forkalope forge and school-operated services with bounded access, a written plan, and mentor review. Production access is earned gradually; risky changes are never made alone.</p></div></li>
+          <li><span>03</span><div><strong>Supervised flight hours</strong><p>During training, work in isolated labs and designated school training environments—not customer production—with a written plan and mentor review. After passing the practical assessment, graduates may apply for separately authorized, supervised operational roles as those opportunities become available.</p></div></li>
           <li><span>04</span><div><strong>Checkride</strong><p>Handle an unfamiliar scenario from first signal through recovery and follow-up. The standard includes technical execution, safety, communication, and the quality of the record you leave behind.</p></div></li>
         </ol>
+      </section>
+
+      <section class="document-section tracked-section" id="drill" data-title="Example drill" data-group="The program">
+        <p class="section-kicker">Demonstration prototype</p>
+        <h2>Example drill: Git pushes have stopped working.</h2>
+        <p>This is the kind of exercise the first public drill will make concrete. It is a prototype scenario, not a live customer environment: the point is to show the shape of the work and the evidence a reviewer would look for.</p>
+        <div class="drill-grid">
+          <div><span class="drill-label">Incident brief</span><strong>Developers are receiving 502 errors when pushing. Reads are healthy. The last deploy was 18 minutes ago.</strong><pre class="incident-log"><code>11:42:08 push-api 502 upstream connect error
+11:42:10 web      GET /repo/forkalope 200
+11:42:13 storage  latency p95 84ms (normal)
+11:42:17 edge     origin connection refused</code></pre></div>
+          <div class="drill-question" data-drill-question><span class="drill-label">First decision</span><p>What do you check before changing anything?</p><div class="drill-choices"><button type="button" data-drill-choice="fast">Restart push-api</button><button type="button" data-drill-choice="safe">Confirm the edge-to-origin path and blast radius</button></div><p class="drill-feedback" data-drill-feedback role="status" aria-live="polite"></p></div>
+          <div><span class="drill-label">What the student submits</span><ol class="drill-submissions"><li><strong>Investigation</strong><span>Evidence, working theory, and the next safe check.</span></li><li><strong>Recovery</strong><span>The smallest reversible change that restores pushes.</span></li><li><strong>Record</strong><span>A timeline, customer update, verification, and prevention recommendation.</span></li></ol></div>
+        </div>
+        <aside class="callout"><span class="callout-label">Reviewer feedback</span><strong>“You found the broken edge connection quickly. Next time, state the blast radius before restarting anything.”</strong><p>The useful lesson is not that someone memorized a command. It is that they can make a safe decision, explain it, and improve the system afterward.</p></aside>
       </section>
 
       <section class="document-section tracked-section" id="curriculum" data-title="Curriculum" data-group="The program">
@@ -133,15 +166,11 @@
 
       <section class="document-section tracked-section" id="pricing" data-title="Pricing principle" data-group="The program">
         <p class="section-kicker">Pricing principle</p>
-        <h2>Charge for the school we have earned the right to be.</h2>
-        <p>A serious, mentored program can eventually justify a serious price. But the first students should not pay a mature-school price for an unproven curriculum, an untested checkride, or a network that is still being formed.</p>
-        <div class="price-principles">
-          <div><strong>Founding cohort</strong><p>A smaller, clearly published price in exchange for close access, rough edges, and meaningful influence on the program.</p></div>
-          <div><strong>Price grows with proof</strong><p>Tuition can rise as the instruction, mentor time, lab environment, graduate outcomes, and operator network become demonstrably more valuable.</p></div>
-          <div><strong>No mystery checkout</strong><p>Before anyone pays, Forkalope will publish the schedule, prerequisites, mentor access, included attempts, refund terms, and exactly what completion means.</p></div>
-        </div>
-        <p>There is no $10,000 promise hiding behind “apply.” If Forkalope ever charges at that level, it should be because the program has the depth, support, reputation, and outcomes to make the price legible.</p>
-        <p class="inline-cta">Founding-cohort pricing is still being shaped. <a href="https://github.com/forkalope/web/issues/new?title=First%20cohort%20interest" target="_blank" rel="noreferrer">Join the conversation <span aria-hidden="true">↗</span></a></p>
+        <h2>Founding-cohort details are still being finalized.</h2>
+        <p>We’re finalizing the format, schedule, expected time commitment, instructor access, and tuition for the first cohort. Join the interest list to receive those details before enrollment opens.</p>
+        <div class="enrollment-panel"><div><span>What we will publish</span><strong>Curriculum, schedule, mentor access, price, and cancellation terms.</strong></div><div><span>Current stage</span><strong>Interest list only. No payment required.</strong></div></div>
+        <p>Not having the offer finalized yet is intentional. We want the first students to see the complete commitment before deciding whether it is right for them.</p>
+        <p class="inline-cta">Want the details when they’re ready? <a href="#interest">Join the private interest list <span aria-hidden="true">↓</span></a></p>
       </section>
 
       <section class="document-section tracked-section" id="outcomes" data-title="What you can prove" data-group="After graduation">
@@ -168,7 +197,7 @@
           <div><span>03</span><strong>Operators strengthen the network and mentor the next cohort.</strong></div>
           <div><span>04</span><strong>Customer work creates better scenarios, tools, and opportunities.</strong></div>
         </div>
-        <p>Graduation can be the beginning of a relationship, not the end of a course. Qualified graduates may contribute to the forge, help run drills, support later students, or apply for paid customer and infrastructure work as those programs open.</p>
+        <p>Graduation can be the beginning of a relationship, not the end of a course. Qualified graduates may contribute to the forge, help run drills, support later students, or apply for paid customer and infrastructure work as those programs open. The training should still be worth buying even if a graduate never works for Forkalope.</p>
         <p class="fine-print">Network participation and paid work are separate decisions with their own review, responsibilities, and agreements. Tuition never buys a job, production access, or customer data.</p>
       </section>
 
@@ -181,7 +210,7 @@
           <div><span>Hire</span><strong>Meet graduates whose work has been observed.</strong><p>Review artifacts and rubric results, then run your own hiring process. Forkalope does not replace your judgment.</p></div>
           <div><span>Partner</span><strong>Help make the scenarios more honest.</strong><p>Contribute anonymized failure patterns, review curriculum, host a talk, or help define what trustworthy entry-level operation looks like.</p></div>
         </div>
-        <p class="inline-cta">Building an operations team? <a href="https://github.com/forkalope/web/issues/new?title=Flight%20school%20team%20interest" target="_blank" rel="noreferrer">Start a team conversation <span aria-hidden="true">↗</span></a></p>
+        <p class="inline-cta">Building an operations team? <a href="#interest">Start a private conversation <span aria-hidden="true">↓</span></a></p>
       </section>
 
       <section class="document-section tracked-section" id="status" data-title="Current status" data-group="About">
@@ -193,19 +222,27 @@
           <div role="row"><span role="cell">Open-source training system</span><strong role="cell">In development</strong></div>
           <div role="row"><span role="cell">Founding student interviews</span><strong role="cell">Open now</strong></div>
           <div role="row"><span role="cell">Paid enrollment</span><strong role="cell">Not open</strong></div>
-          <div role="row"><span role="cell">Graduate operator network</span><strong role="cell">Follows the first cohort</strong></div>
+          <div role="row"><span role="cell">Forkalope Operator network</span><strong role="cell">Follows the first cohort</strong></div>
         </div>
-        <div class="action-row"><a class="primary-action" href="https://github.com/forkalope/web/issues/new?title=First%20cohort%20interest" target="_blank" rel="noreferrer">Raise your hand for the first cohort <span aria-hidden="true">↗</span></a><a href="https://github.com/forkalope" target="_blank" rel="noreferrer">Follow the build on GitHub →</a></div>
+        <div class="action-row"><a class="primary-action" href="#interest">Join the first-cohort interest list <span aria-hidden="true">↓</span></a><a href="https://github.com/forkalope" target="_blank" rel="noreferrer">Follow the build on GitHub →</a></div>
+      </section>
+
+      <section class="document-section tracked-section founder-section" id="founder" data-title="Who is building this" data-group="About">
+        <p class="section-kicker">Who is building this</p>
+        <h2>Founder-led, in public.</h2>
+        <p>I’m <strong>Andrew Arrow</strong>, the founder of Forkalope. I’m building the open-source forge, writing the first training scenarios, and designing the operating rubric in public.</p>
+        <p>I will teach and review the initial cohort personally. If the program grows, the mentor group and operator agreements will grow with it—and those roles will be named, scoped, and published rather than implied.</p>
+        <p class="fine-print">The first cohort is not staffed by a hidden institution. You are talking directly to the person building the school.</p>
       </section>
 
       <section class="document-section tracked-section" id="questions" data-title="Common questions" data-group="About">
         <p class="section-kicker">Common questions</p>
         <h2>The honest version.</h2>
         <div class="question-list">
-          <details><summary>Is Forkalope still building a code forge?</summary><p>Yes, but the forge is no longer the whole pitch. It is the open-source system students learn on and operators can eventually help run. The school gives the software a focused first customer and gives the future network a way to develop trusted people.</p></details>
+          <details><summary>Is Forkalope still building a code forge?</summary><p>Yes, but the forge is no longer the whole pitch. It is the open-source system students learn on and Forkalope Operators can eventually help run. The school gives the software a focused first customer and gives the future network a way to develop trusted people.</p></details>
           <details><summary>Is this SRE or DevOps training?</summary><p>Primarily SRE: reliability, production systems, observability, incidents, recovery, and responsible change. DevOps is useful adjacent language because the work also touches delivery, automation, and collaboration across development and operations.</p></details>
           <details><summary>Is this a coding bootcamp?</summary><p>No. The program begins after basic coding, Git, and command-line foundations. It focuses on operating software safely: diagnosis, change, recovery, security, communication, and accountability.</p></details>
-          <details><summary>Will I work on real customer systems?</summary><p>Not as an unreviewed beginner. Early practice happens in labs and on school-owned systems. Any later customer work requires demonstrated readiness, explicit access, supervision appropriate to the risk, and a separate agreement.</p></details>
+          <details><summary>Will I work on real customer systems?</summary><p>During training, students work in isolated labs and designated school training environments—not customer production. After passing the practical assessment, graduates may apply for separately authorized, supervised operational roles as those opportunities become available. Graduation alone does not grant production access or employment.</p></details>
           <details><summary>Does graduation guarantee paid work?</summary><p>No. The goal is to create credible evidence and a path into a trusted network. Hiring, contracting, and operator access remain separate decisions.</p></details>
           <details><summary>When does the first cohort start?</summary><p>The date, format, schedule, tuition, and prerequisites are still being designed. People who register interest will help shape those decisions and hear when the founding cohort is ready.</p></details>
         </div>
@@ -220,13 +257,16 @@
     <nav>
       <a class="is-current" href="#introduction">Introduction</a>
       <a href="#why">Why a flight school</a>
+      <a href="#interest">First-cohort details</a>
       <a href="#program">How it works</a>
       <a href="#curriculum">Curriculum</a>
+      <a href="#drill">Example drill</a>
       <a href="#pricing">Pricing</a>
       <a href="#outcomes">Outcomes</a>
       <a href="#network">Operator network</a>
       <a href="#teams">For teams</a>
       <a href="#status">Current status</a>
+      <a href="#founder">Who is building this</a>
     </nav>
   </aside>
 </main>
