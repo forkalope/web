@@ -1,0 +1,28 @@
+# forkalope
+
+> forkalope is an open-source Git forge and a cloud operated together by its users, contributors, Co-Sysops, and independent node operators.
+
+## Start here
+
+- [forkalope/forge](https://forkalope.com/): Explore the current open-source Git hosting build.
+- [The landscape](https://forkalope.com/landscape/): Research into open-source Git forges and the design space for a shared cloud of independently operated nodes.
+- [FAQ](https://forkalope.com/faq/): Answers about the forge, shared recovery, Co-Sysops, and business hosting.
+- [Co-Sysops](https://forkalope.com/co-sysops/): Learn how to help fund or operate the shared cloud.
+- [For business](https://forkalope.com/business/): Hosting options for businesses, including managed, dedicated, and customer infrastructure.
+- [Partners](https://forkalope.com/partners/): Partner programs for migrations, support, infrastructure operation, and related work.
+
+## Project
+
+- forkalope is designed as an open-source home for code that does not depend on one company's status page.
+- The project explores a network of independently operated nodes with shared recovery and a common user experience.
+- Co-Sysops help fund and operate the shared cloud; Independent Sysops can operate nodes.
+- The project is an early build. Plans described on the site are plans, not shipped features.
+
+## Policies
+
+- [Privacy](https://forkalope.com/privacy/): Draft privacy policy for the website, repositories, and network of independent operators.
+- [Terms](https://forkalope.com/terms/): Starter terms for Co-Sysop memberships, node operators, managed hosting, and related work.
+
+## Source
+
+- [Forkalope web repository](https://github.com/forkalope/web): Public source for the website and current forge build.

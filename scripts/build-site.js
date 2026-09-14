@@ -22,6 +22,7 @@ const files = [
 ];
 
 const directories = ["public"];
+const rootPublicFiles = ["robots.txt", "llms.txt"];
 
 rmSync(dist, { force: true, recursive: true });
 mkdirSync(dist, { recursive: true });
@@ -30,6 +31,12 @@ for (const entry of [...files, ...directories]) {
   const source = resolve(root, entry);
   if (!existsSync(source)) continue;
   cpSync(source, resolve(dist, entry), { recursive: true });
+}
+
+for (const entry of rootPublicFiles) {
+  const source = resolve(root, "public", entry);
+  if (!existsSync(source)) continue;
+  cpSync(source, resolve(dist, entry));
 }
 
 await buildSitePages({ outputDirectory: dist });
