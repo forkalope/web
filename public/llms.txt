@@ -1,6 +1,6 @@
 # forkalope
 
-> forkalope is a hands-on flight school for software operators. Students learn on real systems, prove their judgment through observed work, and can graduate into a trusted operator network.
+> forkalope is hands-on SRE and DevOps training. Students learn on real systems, prove their production judgment through observed work, and can qualify as Forkalope Operators before joining a trusted operator network.
 
 ## Start here
 
@@ -14,6 +14,7 @@
 ## Flight school
 
 - The school is the first product. The open-source Forkalope forge is the training aircraft.
+- SRE is the external career category; DevOps is useful adjacent language. “Forkalope Operator” is the internal qualification and identity.
 - The program is designed around ground school, failure simulators, supervised operating hours, and a final checkride.
 - Graduates leave with inspectable evidence: runbooks, incident reports, reviewed changes, drill history, and checkride results.
 - Qualified graduates may later contribute to the forge, mentor students, join the operator network, or apply for paid work. None of those outcomes is guaranteed by tuition.

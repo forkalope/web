@@ -6,7 +6,7 @@ export const SITE = {
   ogImageType: "image/png",
   ogImageWidth: 1200,
   ogImageHeight: 630,
-  ogImageAlt: "Forkalope flight school: learn to operate real software",
+  ogImageAlt: "Forkalope flight school: train for SRE, qualify as a Forkalope Operator",
 };
 
 const common = {
@@ -24,8 +24,8 @@ export const SITE_PAGES = [
     id: "home",
     path: "/",
     content: "home",
-    pageTitle: "Forkalope flight school — learn to operate real software",
-    description: "Forkalope is a hands-on flight school for software operators. Learn on real systems, prove your judgment, and graduate into a trusted operator network.",
+    pageTitle: "Forkalope flight school — hands-on SRE & DevOps training",
+    description: "Hands-on SRE and DevOps training on realistic production failures. Build experience with Linux, networking, observability, incidents, and recovery, then qualify as a Forkalope Operator.",
     bodyClass: "school-home-page",
     themeColor: "#08090a",
     header: "school",
