@@ -21,6 +21,18 @@ const indent = (value, spaces) => value
 
 const pageUrl = (page) => `${SITE.origin}${page.canonicalPath ?? page.path}`;
 
+const renderCriticalStyles = (page) => page.id === "home"
+  ? `    <style>
+      body.repo-home-page { margin: 0; min-width: 320px; background: #080c0f; color: #f4f7f8; }
+      .repo-home-page .forge-header { position: sticky; top: 0; border-bottom: 1px solid #26343b; background: rgba(8, 12, 15, .94); }
+      .repo-home-page .forge-header-primary { display: flex; align-items: center; gap: 16px; min-height: 72px; padding: 0 24px; }
+      .repo-home-page .forge-brand { display: inline-flex; align-items: center; gap: 10px; color: #f4f7f8; text-decoration: none; }
+      .repo-home-page .forge-brand img { width: 34px; height: 34px; object-fit: contain; }
+      .repo-home-page .readme-brand img { width: 38px; height: 38px; object-fit: contain; }
+      .repo-home-page .forge-footer-brand img { width: 40px; height: 40px; object-fit: contain; }
+    </style>`
+  : "";
+
 export const createSitemap = () => {
   const urls = SITE_PAGES
     .filter((page) => page.robots?.startsWith("index"))
@@ -63,6 +75,7 @@ const renderHead = (page) => {
     <meta name="twitter:image:alt" content="${escapeHtml(SITE.ogImageAlt)}" />
     <link rel="canonical" href="${canonicalUrl}" />
     <link rel="icon" href="/public/logo.png" type="image/png" />
+${renderCriticalStyles(page)}
 ${["styles.css", ...(page.styles ?? [])]
   .map((stylesheet) => `    <link rel="stylesheet" href="/${stylesheet}" />`)
   .join("\n")}
