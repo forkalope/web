@@ -141,7 +141,8 @@ body.school-home-page.no-scroll { overflow: hidden; }
 .topic-footer a:hover { color: var(--school-text); }
 
 .on-page { border-left: 1px solid var(--school-line); margin-top: 64px; max-height: 310px; padding: 0 20px; position: sticky; top: 98px; }
-.on-page h2 { font-size: 12px; font-weight: 500; margin: 0 0 15px; }
+.on-page h2 { align-items: center; display: flex; font-size: 12px; font-weight: 500; gap: 9px; margin: 0 0 15px; }
+.on-page h2 svg { color: var(--school-muted); flex: none; height: 15px; width: 15px; }
 .on-page nav { display: grid; gap: 11px; }
 .on-page a { color: var(--school-subtle); font-size: 12px; transition: color 180ms ease; }
 .on-page a:hover, .on-page a.is-current { color: var(--school-text); }
