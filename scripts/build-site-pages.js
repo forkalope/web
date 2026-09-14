@@ -23,13 +23,11 @@ const pageUrl = (page) => `${SITE.origin}${page.canonicalPath ?? page.path}`;
 
 const renderCriticalStyles = (page) => page.id === "home"
   ? `    <style>
-      body.repo-home-page { margin: 0; min-width: 320px; background: #080c0f; color: #f4f7f8; }
-      .repo-home-page .forge-header { position: sticky; top: 0; border-bottom: 1px solid #26343b; background: rgba(8, 12, 15, .94); }
-      .repo-home-page .forge-header-primary { display: flex; align-items: center; gap: 16px; min-height: 72px; padding: 0 24px; }
-      .repo-home-page .forge-brand { display: inline-flex; align-items: center; gap: 10px; color: #f4f7f8; text-decoration: none; }
-      .repo-home-page .forge-brand img { width: 34px; height: 34px; object-fit: contain; }
-      .repo-home-page .readme-brand img { width: 38px; height: 38px; object-fit: contain; }
-      .repo-home-page .forge-footer-brand img { width: 40px; height: 40px; object-fit: contain; }
+      body.school-home-page { margin: 0; min-width: 320px; background: #08090a; color: #f2f2ef; }
+      .school-header { align-items: center; display: grid; grid-template-columns: 300px minmax(0, 1fr) auto; height: 72px; padding: 0 28px 0 30px; }
+      .school-brand { align-items: center; display: inline-flex; gap: 10px; width: max-content; }
+      .school-brand img { display: block; height: 29px; object-fit: contain; width: 29px; }
+      @media (max-width: 880px) { .school-header { display: flex; height: 88px; justify-content: space-between; padding: 20px 36px 14px; } .school-top-nav, .school-header-actions { display: none; } }
     </style>`
   : "";
 
@@ -164,11 +162,20 @@ const renderRepoHeader = () => `<header class="forge-header">
       </nav>
     </header>`;
 
+const renderSchoolHeader = () => `<header class="school-header">
+      <a class="school-brand" href="/" aria-label="Forkalope home"><img src="/public/logo.png" alt="" /><span>forkalope <em>/ flight school</em></span></a>
+      <nav class="school-top-nav" aria-label="Primary navigation"><a class="is-current" href="#introduction">School</a><a href="#program">The program</a><a href="#teams">For teams</a></nav>
+      <div class="school-header-actions"><a href="https://github.com/forkalope" target="_blank" rel="noreferrer">GitHub</a><a class="join-link" href="https://github.com/forkalope/web/issues/new?title=First%20cohort%20interest" target="_blank" rel="noreferrer">Join the first cohort</a></div>
+      <div class="mobile-header-actions"><button type="button" class="mobile-search-toggle" aria-label="Search this page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></button></div>
+    </header>`;
+
 const renderHeader = (page) => page.header === "legal"
   ? renderLegalHeader(page)
   : page.header === "repo"
     ? renderRepoHeader()
-    : renderSiteHeader(page);
+    : page.header === "school"
+      ? renderSchoolHeader()
+      : renderSiteHeader(page);
 
 const footerLinks = [
   { href: "/landscape/", label: "The landscape" },
@@ -181,6 +188,9 @@ const footerLinks = [
 ];
 
 const renderFooter = (page) => {
+  if (page.footer === "school") {
+    return `<footer class="school-footer"><span>© 2026 forkalope</span><span>First cohort · forming</span><a href="https://github.com/forkalope" target="_blank" rel="noreferrer">Built in the open ↗</a></footer>`;
+  }
   if (page.footer === "repo") {
     return `<footer class="forge-footer">
       <div class="forge-footer-inner">

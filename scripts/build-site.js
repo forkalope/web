@@ -17,11 +17,13 @@ const files = [
   "business.css",
   "faq.css",
   "repo-home.css",
+  "flight-school.css",
+  "flight-school.js",
   "CNAME",
   "LICENSE",
 ];
 
-const directories = ["public"];
+const directories = ["public", "server"];
 const rootPublicFiles = ["robots.txt", "llms.txt"];
 
 rmSync(dist, { force: true, recursive: true });

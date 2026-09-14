@@ -1,22 +1,23 @@
 # forkalope
 
-> forkalope is an open-source Git forge and a cloud operated together by its users, contributors, Co-Sysops, and independent node operators.
+> forkalope is a hands-on flight school for software operators. Students learn on real systems, prove their judgment through observed work, and can graduate into a trusted operator network.
 
 ## Start here
 
-- [forkalope/forge](https://forkalope.com/): Explore the current open-source Git hosting build.
+- [Forkalope flight school](https://forkalope.com/): Read how the program, curriculum, checkride, pricing principle, and graduate operator network are being designed.
 - [The landscape](https://forkalope.com/landscape/): Research into open-source Git forges and the design space for a shared cloud of independently operated nodes.
 - [FAQ](https://forkalope.com/faq/): Answers about the forge, shared recovery, Co-Sysops, and business hosting.
 - [Co-Sysops](https://forkalope.com/co-sysops/): Learn how to help fund or operate the shared cloud.
 - [For business](https://forkalope.com/business/): Hosting options for businesses, including managed, dedicated, and customer infrastructure.
 - [Partners](https://forkalope.com/partners/): Partner programs for migrations, support, infrastructure operation, and related work.
 
-## Project
+## Flight school
 
-- forkalope is designed as an open-source home for code that does not depend on one company's status page.
-- The project explores a network of independently operated nodes with shared recovery and a common user experience.
-- Co-Sysops help fund and operate the shared cloud; Independent Sysops can operate nodes.
-- The project is an early build. Plans described on the site are plans, not shipped features.
+- The school is the first product. The open-source Forkalope forge is the training aircraft.
+- The program is designed around ground school, failure simulators, supervised operating hours, and a final checkride.
+- Graduates leave with inspectable evidence: runbooks, incident reports, reviewed changes, drill history, and checkride results.
+- Qualified graduates may later contribute to the forge, mentor students, join the operator network, or apply for paid work. None of those outcomes is guaranteed by tuition.
+- The first cohort is still being designed. Paid enrollment is not open yet.
 
 ## Policies
 

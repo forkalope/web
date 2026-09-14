@@ -1,108 +1,231 @@
-<main class="repo-home" id="code">
-  <svg class="repo-icon-sprite" aria-hidden="true">
-    <symbol id="i-branch" viewBox="0 0 24 24"><path d="M6 3v12a3 3 0 1 0 2 2.83V8.5A5.5 5.5 0 0 1 13.5 3H16"/><circle cx="19" cy="3" r="3"/><circle cx="6" cy="18" r="3"/></symbol>
-    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14"/></symbol>
-    <symbol id="i-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/></symbol>
-    <symbol id="i-pull" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><path d="M6 7v10M18 7v3a3 3 0 0 1-3 3H9M12 10l-3 3 3 3"/></symbol>
-    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h4l2-7 4 14 2-7h6"/></symbol>
-    <symbol id="i-box" viewBox="0 0 24 24"><path d="M4 7h16v13H4zM3 3h18v4H3zM9 11h6"/></symbol>
-    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6a5 5 0 0 0-4-2H3v15h5a5 5 0 0 1 4 2m0-15a5 5 0 0 1 4-2h5v15h-5a5 5 0 0 0-4 2z"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8 8 9 4.6-1 8-4 8-9V6l-8-3Z"/></symbol>
-    <symbol id="i-network" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="6" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 9v3M6 16v-2h12v2"/></symbol>
-    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
-    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z"/></symbol>
-    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h5"/></symbol>
-    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
-    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></symbol>
-    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M12 12l7-7M19 13v6H5V5h6"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-  </svg>
+<div class="mobile-breadcrumb">
+  <button class="crumb-menu" type="button" aria-label="Open school menu" aria-expanded="false">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+  </button>
+  <span>Start here</span><span class="crumb-chevron" aria-hidden="true">›</span><strong>Introduction</strong>
+</div>
 
-  <section class="repo-identity" aria-labelledby="repo-title">
-    <div class="repo-title-mark"><svg aria-hidden="true"><use href="#i-branch"/></svg></div>
-    <div class="repo-identity-main">
-      <div class="repo-title-lockup"><h1 id="repo-title">forkalope/forge</h1><span>Public</span></div>
-      <div class="repo-summary-line"><p>The familiar code forge, without one home. Open-source Git hosting you can run anywhere.</p><div class="repo-topics"><span>free-software</span><span>distributed</span><span>self-hosted</span></div></div>
+<main class="school-app">
+  <aside class="school-sidebar" id="school-sidebar">
+    <form class="school-search" role="search" onsubmit="return false">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 5 5" /></svg>
+      <input id="school-search" type="search" placeholder="Search this page..." aria-label="Search this page" autocomplete="off" />
+      <span class="search-shortcut">⌘K</span>
+    </form>
+
+    <div class="school-nav">
+      <section class="nav-group">
+        <h2>Start here</h2>
+        <nav aria-label="Start here">
+          <a class="nav-link is-current" href="#introduction" data-group="Start here">Introduction</a>
+          <a class="nav-link" href="#why" data-group="Start here">Why a flight school</a>
+          <a class="nav-link" href="#for-you" data-group="Start here">Who it is for</a>
+        </nav>
+      </section>
+      <section class="nav-group">
+        <h2>The program</h2>
+        <nav aria-label="The program">
+          <a class="nav-link" href="#program" data-group="The program">How it works</a>
+          <a class="nav-link" href="#curriculum" data-group="The program">Curriculum</a>
+          <a class="nav-link" href="#evaluation" data-group="The program">The checkride</a>
+          <a class="nav-link" href="#pricing" data-group="The program">Pricing principle</a>
+        </nav>
+      </section>
+      <section class="nav-group">
+        <h2>After graduation</h2>
+        <nav aria-label="After graduation">
+          <a class="nav-link" href="#outcomes" data-group="After graduation">What you can prove</a>
+          <a class="nav-link" href="#network" data-group="After graduation">Operator network</a>
+          <a class="nav-link" href="#teams" data-group="After graduation">For teams</a>
+        </nav>
+      </section>
+      <section class="nav-group">
+        <h2>About</h2>
+        <nav aria-label="About the school">
+          <a class="nav-link" href="#status" data-group="About">Current status</a>
+          <a class="nav-link" href="#questions" data-group="About">Common questions</a>
+        </nav>
+      </section>
     </div>
-    <div class="repo-actions" aria-label="Repository actions">
-      <a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-eye"/></svg>Watch</a>
-      <a href="https://github.com/forkalope/web/fork" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-pull"/></svg>Fork</a>
-      <a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-star"/></svg>Star</a>
-    </div>
-  </section>
 
-  <div class="repo-workspace">
-    <aside class="repo-section-sidebar">
-      <p>Repository</p>
-      <nav aria-label="Repository sections">
-        <a class="active" href="#code" aria-current="page"><svg aria-hidden="true"><use href="#i-code"/></svg><span>Code</span></a>
-        <a href="https://github.com/forkalope/web/issues" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-circle"/></svg><span>Issues</span></a>
-        <a href="https://github.com/forkalope/web/pulls" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-pull"/></svg><span>Pull requests</span></a>
-        <a href="#status"><svg aria-hidden="true"><use href="#i-activity"/></svg><span>Actions</span></a>
-        <a href="/partners/"><svg aria-hidden="true"><use href="#i-box"/></svg><span>Projects</span></a>
-        <a href="/faq/"><svg aria-hidden="true"><use href="#i-book"/></svg><span>Wiki</span></a>
-        <a href="/privacy/"><svg aria-hidden="true"><use href="#i-shield"/></svg><span>Security</span></a>
-        <a href="/landscape/"><svg aria-hidden="true"><use href="#i-network"/></svg><span>Insights</span></a>
-        <a href="/business/"><svg aria-hidden="true"><use href="#i-settings"/></svg><span>Settings</span></a>
-      </nav>
-    </aside>
+    <div class="sidebar-footer"><span class="status-dot" aria-hidden="true"></span> Program status<br /><strong>First cohort · forming</strong></div>
+  </aside>
 
-    <section class="repo-primary" aria-label="Repository contents">
-      <div class="repo-toolbar">
-        <div class="branch-controls"><span class="branch-button"><svg aria-hidden="true"><use href="#i-branch"/></svg>main <span aria-hidden="true">⌄</span></span><a href="https://github.com/forkalope/web/branches" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-branch"/></svg>1 Branch</a><span><svg aria-hidden="true"><use href="#i-box"/></svg>Open source</span></div>
-        <div class="repo-tool-actions"><button class="go-to-file" type="button"><svg aria-hidden="true"><use href="#i-search"/></svg>Go to file <kbd>T</kbd></button><a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer"><svg aria-hidden="true"><use href="#i-file"/></svg>View source <span aria-hidden="true">↗</span></a><a class="clone-trigger" href="https://github.com/forkalope/web.git"><svg aria-hidden="true"><use href="#i-terminal"/></svg>Clone</a></div>
-      </div>
+  <section class="school-main">
+    <article class="school-document" id="document">
+      <header class="page-header tracked-section" id="introduction" data-title="Introduction" data-group="Start here">
+        <p class="page-kicker">Start here</p>
+        <h1>Introduction</h1>
+        <p class="page-lede">Forkalope is a flight school for software operators: learn on real systems, build judgment under pressure, and graduate with work you can prove.</p>
+      </header>
 
-      <section class="commit-panel" aria-label="Latest project update"><div class="commit-avatar">FL</div><strong>forkalope</strong><span>build the forge in the open</span><span class="commit-ref">main · early build</span><a href="#status"><svg aria-hidden="true"><use href="#i-activity"/></svg>View status</a></section>
+      <section class="intro-copy" aria-label="Introduction">
+        <p>Software has no shortage of tutorials. What it lacks is a place to practice the whole job: taking responsibility for a service, understanding how it fails, communicating during an incident, and leaving it healthier than you found it.</p>
+        <p>Forkalope is being built as that place. The school is the first product. The open-source forge is the training aircraft: a real system students can inspect, change, break safely, recover, and eventually help operate.</p>
+        <aside class="plain-note"><strong>The short version</strong><span>Ground school teaches the systems. Labs build the reflexes. Supervised flight hours build judgment. A final checkride makes the work visible.</span></aside>
+      </section>
 
-      <section class="file-card" aria-label="Repository files">
-        <div class="file-list-heading"><span>Name</span><span>Latest change</span><span>Stage</span></div>
-        <div class="file-list" id="repo-file-list">
-          <a class="file-row" href="#readme" data-repo-file="readme introduction familiar code forge open source github"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>README.md</strong><span class="file-message">Explain the familiar forge without one home</span><time>start here</time></a>
-          <a class="file-row" href="#status" data-repo-file="status roadmap live development waitlist current build"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>STATUS.md</strong><span class="file-message">Publish what is live and what is still being built</span><time>current</time></a>
-          <a class="file-row" href="#why" data-repo-file="why outage status page migration control recovery"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>WHY.md</strong><span class="file-message">Make failure less capable of stranding developers</span><time>proposed</time></a>
-          <a class="file-row" href="#network" data-repo-file="network cloud nodes replicas recovery sysops architecture"><span class="file-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><strong>network/</strong><span class="file-message">Design authorized replication and mutual recovery</span><time>designing</time></a>
-          <a class="file-row" href="/co-sysops/" data-repo-file="co sysops membership tine fund support servers backups"><span class="file-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><strong>co-sysops/</strong><span class="file-message">Fund a piece of shared infrastructure</span><time>waitlist</time></a>
-          <a class="file-row" href="/business/" data-repo-file="business managed hosting migration unlimited members infrastructure"><span class="file-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><strong>business/</strong><span class="file-message">Pay for hosting and keep the way out</span><time>proposed</time></a>
-          <a class="file-row" href="/partners/" data-repo-file="partners migration support infrastructure referrals paid work"><span class="file-icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span><strong>partners/</strong><span class="file-message">Help a customer and get paid for the work</span><time>planned</time></a>
-          <a class="file-row" href="/faq/" data-repo-file="faq questions answers availability pricing privacy failover"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>FAQ.md</strong><span class="file-message">Start with the hard questions</span><time>10 answers</time></a>
-          <a class="file-row" href="/LICENSE" data-repo-file="license gpl open source free software"><span class="file-icon"><svg aria-hidden="true"><use href="#i-file"/></svg></span><strong>LICENSE</strong><span class="file-message">Keep the forge free software</span><time>GPL-3.0</time></a>
-          <p class="file-empty" id="repo-file-empty" hidden>No files match this search.</p>
+      <section class="document-section tracked-section" id="why" data-title="Why a flight school" data-group="Start here">
+        <p class="section-kicker">The premise</p>
+        <h2>Learn to operate, not just complete lessons.</h2>
+        <p>A course can show you how DNS, queues, backups, deployments, or access controls work. The job begins when several of them fail at once, the documentation is incomplete, and somebody needs a calm answer.</p>
+        <p>That kind of judgment is learned through practice. Pilots use ground school, simulators, supervised hours, checklists, and checkrides because knowing the material is different from being responsible for the outcome. Software operators deserve a training path with the same seriousness.</p>
+        <ul class="feature-list">
+          <li><strong>Real systems, bounded risk.</strong> Work inside an environment where mistakes become lessons instead of customer emergencies.</li>
+          <li><strong>Repetition, not theater.</strong> Diagnose failures, restore service, review what happened, then run the drill again.</li>
+          <li><strong>Observed judgment.</strong> Mentors review how you investigated, communicated, changed the system, and verified recovery.</li>
+          <li><strong>Evidence over claims.</strong> Graduate with runbooks, incident reports, patches, and checkride results that show how you work.</li>
+        </ul>
+        <p class="inline-cta">Want to help test the premise? <a href="https://github.com/forkalope/web/issues/new?title=First%20cohort%20interest" target="_blank" rel="noreferrer">Tell us what you want to learn <span aria-hidden="true">↗</span></a></p>
+      </section>
+
+      <section class="document-section tracked-section" id="for-you" data-title="Who it is for" data-group="Start here">
+        <p class="section-kicker">Fit</p>
+        <h2>For people ready to be trusted with the system.</h2>
+        <p>The first program is for developers, systems administrators, support engineers, and serious self-taught builders who know some fundamentals and want structured operating experience.</p>
+        <div class="fit-grid">
+          <div><span>Good fit</span><strong>You can read code and use a terminal.</strong><p>You do not need years of infrastructure experience. You do need the patience to investigate, document, ask for review, and try again.</p></div>
+          <div><span>Not the starting point</span><strong>This is not a learn-to-code bootcamp.</strong><p>If variables, Git, command-line tools, and basic networking are all new, a foundations course should come first.</p></div>
+        </div>
+        <p>It is also not a capture-the-flag contest, an exam-cram course, or a way to disguise unpaid customer work as education. The school should reward safe reasoning and clear communication, not speed for its own sake.</p>
+      </section>
+
+      <section class="document-section tracked-section" id="program" data-title="How it works" data-group="The program">
+        <p class="section-kicker">The program</p>
+        <h2>Ground school. Simulator. Flight hours. Checkride.</h2>
+        <p>Each phase adds responsibility only after the previous one is understood. Students can repeat drills, compare approaches, and see exactly what “ready” means before moving forward.</p>
+        <ol class="program-steps">
+          <li><span>01</span><div><strong>Ground school</strong><p>Short, practical instruction on systems, networks, storage, security, observability, change management, and incident response. Every concept ends in a decision you will later make in a lab.</p></div></li>
+          <li><span>02</span><div><strong>Simulator</strong><p>Purpose-built scenarios introduce known failures: a bad deploy, an expired certificate, a full disk, a lost secret, a slow dependency, a broken restore. You can pause, inspect, reset, and try again.</p></div></li>
+          <li><span>03</span><div><strong>Supervised flight hours</strong><p>Work on the open-source Forkalope forge and school-operated services with bounded access, a written plan, and mentor review. Production access is earned gradually; risky changes are never made alone.</p></div></li>
+          <li><span>04</span><div><strong>Checkride</strong><p>Handle an unfamiliar scenario from first signal through recovery and follow-up. The standard includes technical execution, safety, communication, and the quality of the record you leave behind.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="document-section tracked-section" id="curriculum" data-title="Curriculum" data-group="The program">
+        <p class="section-kicker">Curriculum</p>
+        <h2>The work around the code.</h2>
+        <p>The exact sequence will evolve with the first cohorts. These are the capabilities the school is being designed to teach and test.</p>
+        <div class="curriculum-table">
+          <div><span>01</span><strong>Systems</strong><p>Processes, filesystems, permissions, resource limits, service managers, and the path from source to a running service.</p></div>
+          <div><span>02</span><strong>Networks</strong><p>DNS, TLS, HTTP, ports, proxies, timeouts, and how to trace a request across boundaries.</p></div>
+          <div><span>03</span><strong>Observability</strong><p>Logs, metrics, traces, alerts, useful dashboards, and the difference between a symptom and a cause.</p></div>
+          <div><span>04</span><strong>Safe change</strong><p>Small releases, reviews, migrations, feature flags, rollbacks, maintenance windows, and verification.</p></div>
+          <div><span>05</span><strong>Recovery</strong><p>Backups, restores, replication, secrets, dependency failures, recovery objectives, and drills that prove the plan.</p></div>
+          <div><span>06</span><strong>Operations</strong><p>Triage, escalation, incident command, status updates, post-incident learning, runbooks, and customer judgment.</p></div>
+        </div>
+        <aside class="callout"><span class="callout-label">A typical lab</span><strong>The service is slow. The graph is loud. The first theory is wrong.</strong><p>Your job is not to guess faster. It is to narrow the problem, protect the system, communicate what is known, make the smallest safe intervention, and prove that recovery held.</p></aside>
+      </section>
+
+      <section class="document-section tracked-section" id="evaluation" data-title="The checkride" data-group="The program">
+        <p class="section-kicker">Evaluation</p>
+        <h2>The checkride measures how you think.</h2>
+        <p>A working service at the end is necessary, but it is not the whole result. A lucky command is not the same as sound operation. Review is based on a published rubric.</p>
+        <div class="rubric-list">
+          <div><span>Safety</span><p>Did you understand the blast radius, protect data, preserve a way back, and ask for help when the risk changed?</p></div>
+          <div><span>Diagnosis</span><p>Did you separate evidence from assumptions and update the working theory as new signals appeared?</p></div>
+          <div><span>Execution</span><p>Were changes small, observable, reversible, and checked against the intended result?</p></div>
+          <div><span>Communication</span><p>Could another operator and an affected customer understand the state of the incident without translating jargon?</p></div>
+          <div><span>Follow-through</span><p>Did you verify recovery, document the work, and improve the system so the next response is better?</p></div>
+        </div>
+        <p class="fine-print">The initial program will issue a Forkalope completion record, not an accredited degree or government license. The value has to come from the quality and inspectability of the work.</p>
+      </section>
+
+      <section class="document-section tracked-section" id="pricing" data-title="Pricing principle" data-group="The program">
+        <p class="section-kicker">Pricing principle</p>
+        <h2>Charge for the school we have earned the right to be.</h2>
+        <p>A serious, mentored program can eventually justify a serious price. But the first students should not pay a mature-school price for an unproven curriculum, an untested checkride, or a network that is still being formed.</p>
+        <div class="price-principles">
+          <div><strong>Founding cohort</strong><p>A smaller, clearly published price in exchange for close access, rough edges, and meaningful influence on the program.</p></div>
+          <div><strong>Price grows with proof</strong><p>Tuition can rise as the instruction, mentor time, lab environment, graduate outcomes, and operator network become demonstrably more valuable.</p></div>
+          <div><strong>No mystery checkout</strong><p>Before anyone pays, Forkalope will publish the schedule, prerequisites, mentor access, included attempts, refund terms, and exactly what completion means.</p></div>
+        </div>
+        <p>There is no $10,000 promise hiding behind “apply.” If Forkalope ever charges at that level, it should be because the program has the depth, support, reputation, and outcomes to make the price legible.</p>
+        <p class="inline-cta">Founding-cohort pricing is still being shaped. <a href="https://github.com/forkalope/web/issues/new?title=First%20cohort%20interest" target="_blank" rel="noreferrer">Join the conversation <span aria-hidden="true">↗</span></a></p>
+      </section>
+
+      <section class="document-section tracked-section" id="outcomes" data-title="What you can prove" data-group="After graduation">
+        <p class="section-kicker">Outcomes</p>
+        <h2>Graduate with evidence, not just a badge.</h2>
+        <p>The goal is a compact, reviewable body of work that gives another operator or hiring manager something real to inspect.</p>
+        <ul class="artifact-list">
+          <li><span>Runbooks</span><strong>Instructions another person can actually use under pressure.</strong></li>
+          <li><span>Incident reports</span><strong>Clear timelines, decisions, contributing conditions, and follow-up work.</strong></li>
+          <li><span>Reviewed changes</span><strong>Patches and operational improvements with plans, review, and verification.</strong></li>
+          <li><span>Drill record</span><strong>Scenarios attempted, feedback received, and demonstrated improvement over time.</strong></li>
+          <li><span>Checkride</span><strong>A final observed exercise scored against the published operating rubric.</strong></li>
+        </ul>
+        <p>Completion does not guarantee a job. It should make a graduate’s readiness easier to judge and harder to fake.</p>
+      </section>
+
+      <section class="document-section tracked-section" id="network" data-title="Operator network" data-group="After graduation">
+        <p class="section-kicker">The network</p>
+        <h2>The school produces the people the network needs.</h2>
+        <p>Forkalope’s longer-term advantage is not a library of videos. It is a growing group of people trained on the same operating principles, familiar with the same systems, and able to review one another’s work.</p>
+        <div class="flywheel" aria-label="Forkalope network flywheel">
+          <div><span>01</span><strong>Students practice on real systems.</strong></div>
+          <div><span>02</span><strong>Graduates become trusted operators.</strong></div>
+          <div><span>03</span><strong>Operators strengthen the network and mentor the next cohort.</strong></div>
+          <div><span>04</span><strong>Customer work creates better scenarios, tools, and opportunities.</strong></div>
+        </div>
+        <p>Graduation can be the beginning of a relationship, not the end of a course. Qualified graduates may contribute to the forge, help run drills, support later students, or apply for paid customer and infrastructure work as those programs open.</p>
+        <p class="fine-print">Network participation and paid work are separate decisions with their own review, responsibilities, and agreements. Tuition never buys a job, production access, or customer data.</p>
+      </section>
+
+      <section class="document-section tracked-section" id="teams" data-title="For teams" data-group="After graduation">
+        <p class="section-kicker">For teams</p>
+        <h2>Meet operators through work you can inspect.</h2>
+        <p>Hiring for operations is difficult because the most important skills appear when context is incomplete and consequences are real. Forkalope gives teams a more useful signal than a list of tools on a résumé.</p>
+        <div class="team-options">
+          <div><span>Train</span><strong>Send an engineer through the program.</strong><p>Build stronger operational habits without waiting for a production incident to become the classroom.</p></div>
+          <div><span>Hire</span><strong>Meet graduates whose work has been observed.</strong><p>Review artifacts and rubric results, then run your own hiring process. Forkalope does not replace your judgment.</p></div>
+          <div><span>Partner</span><strong>Help make the scenarios more honest.</strong><p>Contribute anonymized failure patterns, review curriculum, host a talk, or help define what trustworthy entry-level operation looks like.</p></div>
+        </div>
+        <p class="inline-cta">Building an operations team? <a href="https://github.com/forkalope/web/issues/new?title=Flight%20school%20team%20interest" target="_blank" rel="noreferrer">Start a team conversation <span aria-hidden="true">↗</span></a></p>
+      </section>
+
+      <section class="document-section tracked-section" id="status" data-title="Current status" data-group="About">
+        <p class="section-kicker">Current status</p>
+        <h2>Early enough to help shape it.</h2>
+        <p>Forkalope is in the program-design stage. The flight-school direction is clear; the first complete curriculum, mentor roster, calendar, tuition, and enrollment terms are not yet published.</p>
+        <div class="status-list" role="table" aria-label="Program build status">
+          <div role="row"><span role="cell">Program thesis and operating rubric</span><strong role="cell">Drafting in public</strong></div>
+          <div role="row"><span role="cell">Open-source training system</span><strong role="cell">In development</strong></div>
+          <div role="row"><span role="cell">Founding student interviews</span><strong role="cell">Open now</strong></div>
+          <div role="row"><span role="cell">Paid enrollment</span><strong role="cell">Not open</strong></div>
+          <div role="row"><span role="cell">Graduate operator network</span><strong role="cell">Follows the first cohort</strong></div>
+        </div>
+        <div class="action-row"><a class="primary-action" href="https://github.com/forkalope/web/issues/new?title=First%20cohort%20interest" target="_blank" rel="noreferrer">Raise your hand for the first cohort <span aria-hidden="true">↗</span></a><a href="https://github.com/forkalope" target="_blank" rel="noreferrer">Follow the build on GitHub →</a></div>
+      </section>
+
+      <section class="document-section tracked-section" id="questions" data-title="Common questions" data-group="About">
+        <p class="section-kicker">Common questions</p>
+        <h2>The honest version.</h2>
+        <div class="question-list">
+          <details><summary>Is Forkalope still building a code forge?</summary><p>Yes, but the forge is no longer the whole pitch. It is the open-source system students learn on and operators can eventually help run. The school gives the software a focused first customer and gives the future network a way to develop trusted people.</p></details>
+          <details><summary>Is this a coding bootcamp?</summary><p>No. The program begins after basic coding, Git, and command-line foundations. It focuses on operating software safely: diagnosis, change, recovery, security, communication, and accountability.</p></details>
+          <details><summary>Will I work on real customer systems?</summary><p>Not as an unreviewed beginner. Early practice happens in labs and on school-owned systems. Any later customer work requires demonstrated readiness, explicit access, supervision appropriate to the risk, and a separate agreement.</p></details>
+          <details><summary>Does graduation guarantee paid work?</summary><p>No. The goal is to create credible evidence and a path into a trusted network. Hiring, contracting, and operator access remain separate decisions.</p></details>
+          <details><summary>When does the first cohort start?</summary><p>The date, format, schedule, tuition, and prerequisites are still being designed. People who register interest will help shape those decisions and hear when the founding cohort is ready.</p></details>
         </div>
       </section>
 
-      <article class="readme" id="readme" aria-labelledby="readme-title">
-        <header class="readme-header"><span><svg aria-hidden="true"><use href="#i-book"/></svg>README.md</span><a href="https://github.com/forkalope/web" target="_blank" rel="noreferrer">View source <svg aria-hidden="true"><use href="#i-external"/></svg></a></header>
-        <div class="readme-body">
-          <div class="readme-brand"><img src="/public/logo.png" alt=""/><span>Forkalope</span></div>
-          <h2 id="readme-title">The familiar code forge,<br/>without one home.</h2>
-          <p class="readme-lede">Forkalope is an open-source, GitHub-shaped forge you can run anywhere. Repositories, issues, pull requests, Actions, packages, and APIs—without committing your work to one operator.</p>
-          <p>Your workday shouldn’t depend on somebody else’s status page.</p>
-          <p><a class="readme-button" href="https://github.com/forkalope/web" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a> <a href="/co-sysops/">Find your place in Forkalope →</a></p>
+      <footer class="topic-footer"><span>Last updated · September 2026</span><a href="#introduction">Back to introduction ↑</a></footer>
+    </article>
+  </section>
 
-          <hr/>
-          <section id="status"><h3>What you can verify now</h3><p>The project is early. The source is open.</p><div class="status-table" role="table" aria-label="Public build status"><div role="row"><span role="cell">Website and product direction</span><strong role="cell"><svg aria-hidden="true"><use href="#i-check"/></svg>Live</strong></div><div role="row"><span role="cell">Open-source forge</span><strong role="cell">In development</strong></div><div role="row"><span role="cell">Shared recovery network</span><strong role="cell">Designing and testing</strong></div><div role="row"><span role="cell">Co-Sysop enrollment</span><strong role="cell">Waitlist</strong></div></div></section>
-
-          <hr/>
-          <section id="why"><h3>Why we’re building this</h3><h4>You had work to ship.</h4><p>Instead, you’re refreshing a status page. A blocked review. A stalled build. Another interruption you can’t do anything about.</p><p>In the GitHub migration discussion, developers describe broken workflows and the cost of moving when they’re already busy. Others point out that self-hosting brings its own operational work. Both are reasons to build something better together.</p><p>Forkalope’s answer is a familiar Git workflow on software you can run, with a network of people who help operate it. More control over where your code lives, who runs it, and how you recover.</p><p><a href="https://www.reddit.com/r/github/comments/1vz3l4r/github_is_down_again_lets_discuss_migration_away/" target="_blank" rel="noreferrer">Read the community discussion ↗</a></p></section>
-
-          <hr/>
-          <section id="network"><h3>The network</h3><h4>Our servers. Our cloud. Each other’s back.</h4><p>A node should come with neighbors. We’re designing a network where approved operators keep replicas and reserve room to help one another recover.</p><p>Forkalope operates some nodes. Independent Sysops operate others on infrastructure they rent themselves. Co-Sysops help fund the capacity that makes the network possible.</p><ol class="network-steps"><li><strong>Prepare before anything breaks</strong><span>Pair approved nodes, keep authorized data replicas, and reserve recovery capacity across separate failure domains.</span></li><li><strong>Have a recovery partner ready</strong><span>When a node fails, its partner and operators would use the prepared replica to restore service. Recovery must preserve permissions and prevent conflicting writes.</span></li><li><strong>Prove it with recovery drills</strong><span>Test restores and failover, measure interruption and possible data loss, and publish the results before making availability promises.</span></li></ol><blockquote>The direction we’re building toward—not a live failover service. Replicas, routing, authentication, and spare capacity all need to work together. Shared providers can still fail, and private data belongs only on approved nodes.</blockquote></section>
-
-          <hr/>
-          <section id="participate"><h3>Choose how you participate</h3><dl class="participation-list"><div><dt><a href="/co-sysops/">Co-Sysop →</a></dt><dd>A Tine is a proposed $30 monthly unit of support for servers, backups, bandwidth, and the people keeping things healthy.</dd></div><div><dt><a href="/co-sysops/#sysops">Independent Sysop →</a></dt><dd>Rent a machine in your own name, run Forkalope, and coordinate the Co-Sysops who help support your node.</dd></div><div><dt><a href="/business/">Bring your team →</a></dt><dd>Choose managed Git hosting, migration help, backups, updates, and someone accountable for operations—or run it on infrastructure your company rents.</dd></div><div><dt><a href="/partners/">Work with Forkalope →</a></dt><dd>Help customers with migrations, support, infrastructure operation, and referrals. Get paid for work that creates real value.</dd></div></dl></section>
-
-          <hr/>
-          <section class="readme-final"><h3>Fork the whole thing. Build it with us.</h3><p>Sponsor a node. Become an Independent Sysop. Help build a cloud that more of us have a hand in running.</p><p><a class="readme-button" href="/co-sysops/">Explore Co-Sysops <span aria-hidden="true">→</span></a></p></section>
-        </div>
-      </article>
-    </section>
-
-    <aside class="repo-details">
-      <section><header><div><span>Repository</span><h2>About</h2></div><svg aria-hidden="true"><use href="#i-settings"/></svg></header><p>The open-source home for your code—and a network designed so failure doesn’t strand you.</p><a class="detail-link" href="#network"><svg aria-hidden="true"><use href="#i-book"/></svg><span>docs/network.md</span></a><div class="detail-facts"><a href="#readme"><svg aria-hidden="true"><use href="#i-book"/></svg>README</a><a href="/LICENSE"><svg aria-hidden="true"><use href="#i-shield"/></svg>GPL-3.0 license</a><a href="#status"><svg aria-hidden="true"><use href="#i-activity"/></svg>Public build status</a></div><div class="repo-stats"><span><svg aria-hidden="true"><use href="#i-star"/></svg>free software</span><span><svg aria-hidden="true"><use href="#i-eye"/></svg>built in public</span></div><div class="release-summary"><div><span>Latest release</span><strong>Early build</strong></div><a href="#status">Status</a></div></section>
-      <section class="details-links"><h2>Useful links</h2><a href="/faq/">Read the FAQ <span>→</span></a><a href="/landscape/">Explore the landscape <span>→</span></a><a href="/co-sysops/">Join the waitlist <span>→</span></a></section>
-    </aside>
-  </div>
+  <aside class="on-page" aria-label="On this page">
+    <h2><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h9" /></svg> On this page</h2>
+    <nav>
+      <a class="is-current" href="#introduction">Introduction</a>
+      <a href="#why">Why a flight school</a>
+      <a href="#program">How it works</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#network">Operator network</a>
+      <a href="#teams">For teams</a>
+      <a href="#status">Current status</a>
+    </nav>
+  </aside>
 </main>
