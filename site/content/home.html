@@ -73,6 +73,11 @@
           </div>
           <a href="#network">Meet the operator network <span aria-hidden="true">↓</span></a>
         </figcaption>
+        <div class="fleet-preview-scene">
+          <img src="/public/server-artwork/hetzner-falkenstein-aerial.webp" width="1600" height="1066" alt="Aerial view of Hetzner's Falkenstein data-center campus, with long rows of red-roofed buildings surrounded by fields" fetchpriority="high" decoding="async" />
+          <div class="fleet-scene-label"><span>One researched supply region</span><strong>Falkenstein, Germany</strong><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Provider facility photo ↗</a></div>
+          <div class="fleet-scene-stat"><strong>1,450</strong><span>concept build runners</span></div>
+        </div>
         <div class="fleet-preview-body">
           <div class="fleet-map-wrap">
             <svg class="fleet-map" viewBox="0 0 720 300" role="img" aria-labelledby="fleet-map-title fleet-map-description">
@@ -141,6 +146,10 @@
         <h2>Learn to operate, not just complete lessons.</h2>
         <p>A course can show you how DNS, queues, backups, deployments, or access controls work. The job begins when several of them fail at once, the documentation is incomplete, and somebody needs a calm answer.</p>
         <p>That kind of judgment is learned through practice. Pilots use ground school, simulators, supervised hours, checklists, and checkrides because knowing the material is different from being responsible for the outcome. SREs and DevOps engineers deserve a training path with the same seriousness.</p>
+        <figure class="story-photo story-photo-wide">
+          <img src="/public/server-artwork/hetzner-falkenstein-exterior.webp" width="1200" height="800" alt="Exterior of a gray and red Hetzner data-center building in Falkenstein, Germany" loading="lazy" decoding="async" />
+          <figcaption><span>Operations become real when the system has a place, a power feed, a network path, and someone responsible for it.</span><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Hetzner · Falkenstein facility photo ↗</a></figcaption>
+        </figure>
         <ul class="feature-list">
           <li><strong>Real systems, bounded risk.</strong> Work inside an environment where mistakes become lessons instead of customer emergencies.</li>
           <li><strong>Repetition, not theater.</strong> Diagnose failures, restore service, review what happened, then run the drill again.</li>
@@ -178,6 +187,16 @@
         <p class="section-kicker">The program</p>
         <h2>Ground school. Simulator. Flight hours. Checkride.</h2>
         <p>This is hands-on SRE and DevOps training. Each phase adds responsibility only after the previous one is understood. Students can repeat drills, compare approaches, and see exactly what “ready” means before moving forward.</p>
+        <div class="training-gallery" aria-label="People and hardware behind the training environment">
+          <figure>
+            <img src="/public/server-artwork/hetzner-server-tray.webp" width="1200" height="800" alt="Technician sliding a server tray into a rack" loading="lazy" decoding="async" />
+            <figcaption><strong>The machine is part of the lesson.</strong><span>Students learn what the software is asking the hardware to do.</span><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Hetzner operations photo ↗</a></figcaption>
+          </figure>
+          <figure>
+            <img src="/public/server-artwork/hetzner-server-aisle.webp" width="801" height="1200" alt="Long data-center aisle with server racks on both sides" loading="lazy" decoding="async" />
+            <figcaption><strong>One node is never the whole system.</strong><span>Trace dependencies, failure domains, and recovery paths.</span><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Hetzner facility photo ↗</a></figcaption>
+          </figure>
+        </div>
         <ol class="program-steps">
           <li><span>01</span><div><strong>Ground school</strong><p>Short, practical instruction on systems, networks, storage, security, observability, change management, and incident response. Every concept ends in a decision you will later make in a lab.</p></div></li>
           <li><span>02</span><div><strong>Simulator</strong><p>Purpose-built scenarios introduce known failures: a bad deploy, an expired certificate, a full disk, a lost secret, a slow dependency, a broken restore. You can pause, inspect, reset, and try again.</p></div></li>
@@ -190,6 +209,10 @@
         <p class="section-kicker">Demonstration prototype</p>
         <h2>Example drill: Git pushes have stopped working.</h2>
         <p>This is the kind of exercise the first public drill will make concrete. It is a prototype scenario, not a live customer environment: the point is to show the shape of the work and the evidence a reviewer would look for.</p>
+        <figure class="drill-scene">
+          <img src="/public/server-artwork/hetzner-technical-workbench.webp" width="1200" height="800" alt="Technician inspecting a circuit board under a bench-mounted camera and monitor" loading="lazy" decoding="async" />
+          <figcaption><span class="drill-scene-number">11:42</span><strong>Observe first. Change second.</strong><span>Preserve the evidence, narrow the fault, and leave the next operator a better system.</span><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Hetzner technical-workbench photo ↗</a></figcaption>
+        </figure>
         <div class="drill-grid">
           <div><span class="drill-label">Incident brief</span><strong>Developers are receiving 502 errors when pushing. Reads are healthy. The last deploy was 18 minutes ago.</strong><pre class="incident-log"><code>11:42:08 push-api 502 upstream connect error
 11:42:10 web      GET /repo/forkalope 200
@@ -205,6 +228,17 @@
         <p class="section-kicker">Curriculum</p>
         <h2>The work around the code.</h2>
         <p>The exact sequence will evolve with the first cohorts. These are the capabilities the school is being designed to teach and test.</p>
+        <div class="hardware-runway">
+          <div class="hardware-runway-heading"><span>Hardware library · concept preview</span><strong>Different boxes. One operating language.</strong></div>
+          <div class="hardware-track" aria-label="Examples of researched bare-metal server artwork">
+            <figure><div><img src="/public/server-artwork/digital-pacific-c6620.webp" width="900" height="290" alt="Front view of a Dell PowerEdge C6620 compute node" loading="lazy" decoding="async" /></div><figcaption><strong>PowerEdge C6620</strong><span>Digital Pacific · chassis photo</span></figcaption></figure>
+            <figure><div><img src="/public/server-artwork/digital-pacific-m630.webp" width="570" height="400" alt="Dell PowerEdge M630 blade server" loading="lazy" decoding="async" /></div><figcaption><strong>PowerEdge M630</strong><span>Digital Pacific · chassis photo</span></figcaption></figure>
+            <figure><div><img src="/public/server-artwork/digital-pacific-r620.webp" width="736" height="415" alt="Front view of a Dell PowerEdge R620 rack server" loading="lazy" decoding="async" /></div><figcaption><strong>PowerEdge R620</strong><span>Digital Pacific · chassis photo</span></figcaption></figure>
+            <figure><div><img src="/public/server-artwork/hetzner-ax-family.webp" width="1000" height="391" alt="Abstract processor artwork for Hetzner's AMD AX server family" loading="lazy" decoding="async" /></div><figcaption><strong>AX family</strong><span>Hetzner · provider illustration</span></figcaption></figure>
+            <figure><div><img src="/public/server-artwork/hetzner-sx-family.webp" width="1000" height="392" alt="Abstract hard-drive artwork for Hetzner's SX storage server family" loading="lazy" decoding="async" /></div><figcaption><strong>SX family</strong><span>Hetzner · provider illustration</span></figcaption></figure>
+          </div>
+          <p>Artwork shows chassis models or product families, not the exact physical machines in a future Forkalope fleet. <a href="https://www.digitalpacific.com.au/dedicated/dedicated-servers/" target="_blank" rel="noreferrer">Digital Pacific source ↗</a> <a href="https://www.hetzner.com/dedicated-rootserver/" target="_blank" rel="noreferrer">Hetzner source ↗</a></p>
+        </div>
         <div class="curriculum-table">
           <div><span>01</span><strong>Systems</strong><p>Processes, filesystems, permissions, resource limits, service managers, and the path from source to a running service.</p></div>
           <div><span>02</span><strong>Networks</strong><p>DNS, TLS, HTTP, ports, proxies, timeouts, and how to trace a request across boundaries.</p></div>
@@ -257,6 +291,13 @@
         <p class="section-kicker">The network</p>
         <h2>SREs train here. Forkalope Operators power the network.</h2>
         <p>Forkalope’s longer-term advantage is not a library of videos. It is a growing group of SRE-minded people trained on the same operating principles, familiar with the same systems, and able to review one another’s work.</p>
+        <div class="network-gallery" aria-label="Provider imagery from a possible worldwide bare-metal supply network">
+          <figure class="network-gallery-lead"><img src="/public/server-artwork/adentro-datacenter.webp" width="1200" height="761" alt="Technician working inside an orange-lit data-center aisle" loading="lazy" decoding="async" /><figcaption><strong>Brazil</strong><span>Adentro · operations photo</span></figcaption></figure>
+          <figure><img src="/public/server-artwork/hosterion-racks.webp" width="478" height="222" alt="Symmetrical aisle between densely cabled data-center racks" loading="lazy" decoding="async" /><figcaption><strong>Europe</strong><span>Hosterion · rack photo</span></figcaption></figure>
+          <figure class="network-gallery-art"><img src="/public/server-artwork/interserver-network.webp" width="526" height="526" alt="Illustration of a globe connected to operator workstations" loading="lazy" decoding="async" /><figcaption><strong>United States</strong><span>InterServer · network illustration</span></figcaption></figure>
+          <figure class="network-gallery-art"><img src="/public/server-artwork/interserver-dedicated.webp" width="384" height="305" alt="Illustration of a dedicated server connected to smaller systems" loading="lazy" decoding="async" /><figcaption><strong>Bare metal</strong><span>InterServer · product illustration</span></figcaption></figure>
+        </div>
+        <p class="image-provenance">Provider-supplied photography and illustrations show the kinds of infrastructure being researched. They do not represent a current Forkalope deployment. <a href="https://adentro.com.br/" target="_blank" rel="noreferrer">Adentro ↗</a> <a href="https://hosterion.com/dedicated-servers" target="_blank" rel="noreferrer">Hosterion ↗</a> <a href="https://www.interserver.net/dedicated/" target="_blank" rel="noreferrer">InterServer ↗</a></p>
         <div class="flywheel" aria-label="Forkalope network flywheel">
           <div><span>01</span><strong>Students practice on real systems.</strong></div>
           <div><span>02</span><strong>Graduates become trusted Forkalope Operators.</strong></div>
