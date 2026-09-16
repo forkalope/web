@@ -106,76 +106,140 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 880) setSidebar(false);
 });
 
-const chassisCatalog = {
-  c6620: {
-    label: "Rental example · Sydney, Australia",
-    title: "PowerEdge C6620",
-    description: "A compact compute node with a concrete storage decision: four SSDs, configured as RAID 10.",
-    facts: [["CPU", "16 physical cores"], ["Memory", "64 GB DDR5"], ["Storage", "960 GB usable"], ["Transfer", "5 TB / month"]],
+const fleetRegions = {
+  DE: {
+    country: "Germany", breadcrumb: "WORLD / EUROPE", nodes: "1,450", suppliers: "1 supplier", capacity: 82,
+    stats: [["Healthy", "1,369"], ["CPU avg", "60.3%"], ["Egress", "91.2 Gbps"]],
+    signals: [["warn", "DEGRADED 19"], ["", "DRAINING 27"], ["bad", "UNREACHABLE 7"]],
+    machines: [
+      ["de-hetzner-00042", "Hetzner · AX42", "build runner", "HEALTHY", ""],
+      ["de-hetzner-00317", "8C · 64 GB · 2×512 NVMe", "build runner", "HEALTHY", ""],
+      ["de-hetzner-00802", "1 Gbit · unlimited", "replica", "DRAINING", "warn"],
+      ["de-hetzner-01194", "Falkenstein · FSN1", "edge", "HEALTHY", ""],
+    ],
   },
-  m630: {
-    label: "Chassis study · configuration varies",
-    title: "PowerEdge M630",
-    description: "A blade server shares power, cooling, and networking through its enclosure. That density changes the failure domain.",
-    facts: [["Form", "Blade server"], ["Generation", "Dell 13G"], ["Compute", "Dual-socket chassis"], ["Dependencies", "Shared enclosure"]],
+  FI: {
+    country: "Finland", breadcrumb: "WORLD / EUROPE", nodes: "900", suppliers: "1 supplier", capacity: 76,
+    stats: [["Healthy", "849"], ["CPU avg", "59.2%"], ["Egress", "56.1 Gbps"]],
+    signals: [["warn", "DEGRADED 16"], ["", "DRAINING 16"], ["bad", "UNREACHABLE 1"]],
+    machines: [
+      ["fi-hetzner-00018", "Hetzner · AX42", "build runner", "HEALTHY", ""],
+      ["fi-hetzner-00291", "8C · 64 GB · 2×512 NVMe", "replica", "HEALTHY", ""],
+      ["fi-hetzner-00588", "Helsinki · HEL1", "build runner", "DEGRADED", "warn"],
+      ["fi-hetzner-00813", "1 Gbit · unlimited", "edge", "HEALTHY", ""],
+    ],
   },
-  r620: {
-    label: "Chassis study · configuration varies",
-    title: "PowerEdge R620",
-    description: "A dense 1U rack server. Drive layout, memory population, and remote management all become part of the operating picture.",
-    facts: [["Form", "1U rack server"], ["Generation", "Dell 12G"], ["Compute", "Dual-socket chassis"], ["Storage", "Front hot-swap bays"]],
+  US: {
+    country: "United States", breadcrumb: "WORLD / NORTH AMERICA", nodes: "900", suppliers: "3 suppliers", capacity: 68,
+    stats: [["Healthy", "835"], ["CPU avg", "47.9%"], ["Egress", "56.9 Gbps"]],
+    signals: [["warn", "DEGRADED 25"], ["", "DRAINING 20"], ["bad", "UNREACHABLE 3"]],
+    machines: [
+      ["us-ovhcloud-00112", "OVHcloud · RISE-1", "regional edge", "HEALTHY", ""],
+      ["us-interserver-00073", "28C · 128 GB · 2×24 TB", "artifact store", "HEALTHY", ""],
+      ["us-reliablesite-00141", "Ryzen 5600X · 64 GB", "git replica", "DEGRADED", "warn"],
+      ["us-ovhcloud-00354", "1 Gbit public · private", "regional edge", "HEALTHY", ""],
+    ],
+  },
+  NL: {
+    country: "Netherlands", breadcrumb: "WORLD / EUROPE", nodes: "230", suppliers: "2 suppliers", capacity: 61,
+    stats: [["Healthy", "218"], ["CPU avg", "45.3%"], ["Egress", "14.2 Gbps"]],
+    signals: [["warn", "DEGRADED 1"], ["", "DRAINING 4"], ["bad", "UNREACHABLE 2"]],
+    machines: [
+      ["nl-nforce-00029", "NFOrce · DL320e v2", "regional edge", "HEALTHY", ""],
+      ["nl-nforce-00108", "4C · 16 GB · 2×2 TB", "git replica", "HEALTHY", ""],
+      ["nl-hivelocity-00041", "Xeon E-2336 · 32 GB", "regional edge", "DRAINING", "warn"],
+      ["nl-hivelocity-00066", "1 Gbit · 20 TB", "build runner", "HEALTHY", ""],
+    ],
+  },
+  BR: {
+    country: "Brazil", breadcrumb: "WORLD / SOUTH AMERICA", nodes: "140", suppliers: "1 supplier", capacity: 57,
+    stats: [["Healthy", "133"], ["CPU avg", "44.3%"], ["Replicas", "140"]],
+    signals: [["", "MAINTENANCE 3"], ["", "DRAINING 4"], ["good", "UNREACHABLE 0"]],
+    machines: [
+      ["br-adentro-00012", "Adentro · Dedicado Light", "git replica", "HEALTHY", ""],
+      ["br-adentro-00048", "28C · 64 GB DDR4", "git replica", "HEALTHY", ""],
+      ["br-adentro-00089", "250 GB all-flash", "storage", "MAINTENANCE", "warn"],
+      ["br-adentro-00131", "Unlimited transfer", "regional edge", "HEALTHY", ""],
+    ],
+  },
+  AU: {
+    country: "Australia", breadcrumb: "WORLD / OCEANIA", nodes: "50", suppliers: "1 supplier", capacity: 49,
+    stats: [["Healthy", "47"], ["CPU avg", "43.5%"], ["Egress", "32.4 Gbps"]],
+    signals: [["", "MAINTENANCE 1"], ["", "DRAINING 2"], ["good", "UNREACHABLE 0"]],
+    machines: [
+      ["au-ransomit-00004", "RansomIT · E-2136", "regional edge", "HEALTHY", ""],
+      ["au-ransomit-00017", "6C · 64 GB · 2×500 NVMe", "regional edge", "HEALTHY", ""],
+      ["au-ransomit-00033", "10 Gbit · 20 TB", "git replica", "DRAINING", "warn"],
+      ["au-ransomit-00049", "Melbourne · ME2", "edge", "HEALTHY", ""],
+    ],
   },
 };
 
-const regionCatalog = {
-  DE: { place: "Falkenstein, Germany", offer: "Hetzner AX42", role: "Build runners", facts: [["CPU", "8 physical cores"], ["Memory", "64 GB DDR5 ECC"], ["Local disks", "2 × 512 GB NVMe"], ["Network", "1 Gbps · unlimited"]], mission: "Drain a build runner, deploy a change, and prove the queue keeps moving.", source: "https://www.hetzner.com/dedicated-rootserver/ax42/" },
-  FI: { place: "Helsinki, Finland", offer: "Hetzner AX42", role: "Build runners", facts: [["CPU", "8 physical cores"], ["Memory", "64 GB DDR5 ECC"], ["Local disks", "2 × 512 GB NVMe"], ["Network", "1 Gbps · unlimited"]], mission: "Lose the German pool, shift builds north, and verify the artifact chain.", source: "https://www.hetzner.com/dedicated-rootserver/ax42/" },
-  US: { place: "NYC metro, United States", offer: "InterServer dual Xeon", role: "Artifact store", facts: [["CPU", "28 physical cores"], ["Memory", "128 GB"], ["Local disks", "2 × 24 TB SATA"], ["Network", "1 Gbps · unmetered"]], mission: "Recover an artifact after a bad retention rule removes the nearest copy.", source: "https://www.interserver.net/dedicated/" },
-  BR: { place: "Brazil", offer: "Adentro Dedicado Light", role: "Git replica", facts: [["CPU", "28 cores / 56 threads"], ["Memory", "64 GB DDR4"], ["Local disks", "2 × 100 GB SSD"], ["Storage", "250 GB all-flash"]], mission: "Promote a regional replica while the primary route is unavailable.", source: "https://adentro.com.br/solucoes/servidor-dedicado/" },
-  SG: { place: "Singapore", offer: "Latitude.sh m4.metal.small", role: "Regional edge", facts: [["CPU", "6 physical cores"], ["Memory", "48 GB"], ["Local disks", "2 × 960 GB NVMe"], ["Transfer", "20 TB outbound"]], mission: "Trace a slow clone across the edge and decide whether to drain the node.", source: "https://www.latitude.sh/pricing/m4-metal-small" },
-  AU: { place: "Melbourne, Australia", offer: "RansomIT E-2136", role: "Regional edge", facts: [["CPU", "6 physical cores"], ["Memory", "64 GB"], ["Local disks", "2 × 500 GB NVMe"], ["Network", "10 Gbps · 20 TB"]], mission: "Keep service inside its traffic budget during a sudden replication burst.", source: "https://secure.ransomit.com.au/index.php?rp=/store/melbourne-dedicated-servers" },
-};
+const fleetCockpit = document.querySelector("[data-fleet-cockpit]");
+let selectedFleetRegion = "DE";
 
-function renderFacts(container, facts) {
-  if (!container) return;
-  container.replaceChildren(...facts.map(([label, value]) => {
-    const item = document.createElement("div");
-    const term = document.createElement("dt");
-    const description = document.createElement("dd");
-    term.textContent = label;
-    description.textContent = value;
-    item.append(term, description);
-    return item;
+function createFact([label, value]) {
+  const item = document.createElement("div");
+  const term = document.createElement("dt");
+  const description = document.createElement("dd");
+  term.textContent = label;
+  description.textContent = value;
+  item.append(term, description);
+  return item;
+}
+
+function createMachine([id, detail, role, status, statusClass]) {
+  const row = document.createElement("div");
+  const identity = document.createElement("span");
+  const name = document.createElement("b");
+  const meta = document.createElement("small");
+  const roleLabel = document.createElement("em");
+  const state = document.createElement("strong");
+  name.textContent = id;
+  meta.textContent = detail;
+  roleLabel.textContent = role;
+  state.textContent = status;
+  if (statusClass) state.className = statusClass;
+  identity.append(name, meta);
+  row.append(identity, roleLabel, state);
+  return row;
+}
+
+function selectFleetRegion(code) {
+  const region = fleetRegions[code];
+  if (!fleetCockpit || !region) return;
+  selectedFleetRegion = code;
+  fleetCockpit.dataset.selectedRegion = code;
+  fleetCockpit.querySelectorAll("[data-fleet-region]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.fleetRegion === code));
+  });
+  fleetCockpit.querySelector("[data-fleet-flag]").src = `/public/flags/${code.toLowerCase()}.svg`;
+  fleetCockpit.querySelector("[data-fleet-breadcrumb]").textContent = region.breadcrumb;
+  fleetCockpit.querySelector("[data-fleet-country]").textContent = region.country;
+  fleetCockpit.querySelector("[data-fleet-nodes]").textContent = region.nodes;
+  fleetCockpit.querySelector("[data-fleet-suppliers]").textContent = region.suppliers;
+  fleetCockpit.querySelector("[data-fleet-stats]").replaceChildren(...region.stats.map(createFact));
+  fleetCockpit.querySelector("[data-fleet-live]").textContent = `${region.capacity.toFixed(1)}%`;
+  fleetCockpit.querySelector(".focus-capacity b").style.width = `${region.capacity}%`;
+  fleetCockpit.querySelector("[data-fleet-signals]").replaceChildren(...region.signals.map(([kind, label]) => {
+    const signal = document.createElement("span");
+    signal.className = kind ? `signal-${kind}` : "";
+    signal.textContent = label;
+    return signal;
   }));
+  fleetCockpit.querySelector("[data-fleet-roster]").replaceChildren(...region.machines.map(createMachine));
 }
 
-const hardwareLab = document.querySelector("[data-hardware-lab]");
-hardwareLab?.querySelectorAll("[data-chassis]").forEach((button) => button.addEventListener("click", () => {
-  const chassis = chassisCatalog[button.dataset.chassis];
-  if (!chassis) return;
-  hardwareLab.querySelectorAll("[data-chassis]").forEach((choice) => choice.setAttribute("aria-pressed", String(choice === button)));
-  hardwareLab.querySelector("[data-chassis-label]").textContent = chassis.label;
-  hardwareLab.querySelector("[data-chassis-title]").textContent = chassis.title;
-  hardwareLab.querySelector("[data-chassis-description]").textContent = chassis.description;
-  renderFacts(hardwareLab.querySelector("[data-chassis-facts]"), chassis.facts);
-}));
+fleetCockpit?.querySelectorAll("[data-fleet-region]").forEach((button) => button.addEventListener("click", () => selectFleetRegion(button.dataset.fleetRegion)));
 
-const regionExplorer = document.querySelector("[data-region-explorer]");
-function selectRegion(code) {
-  const region = regionCatalog[code];
-  if (!regionExplorer || !region) return;
-  regionExplorer.querySelectorAll("[data-region]").forEach((choice) => choice.setAttribute("aria-pressed", String(choice.dataset.region === code)));
-  regionExplorer.querySelector("[data-region-flag]").src = `/public/flags/${code.toLowerCase()}.svg`;
-  regionExplorer.querySelector("[data-region-place]").textContent = region.place;
-  regionExplorer.querySelector("[data-region-offer]").textContent = region.offer;
-  regionExplorer.querySelector("[data-region-role]").textContent = region.role;
-  regionExplorer.querySelector("[data-region-mission]").textContent = region.mission;
-  regionExplorer.querySelector("[data-region-source]").href = region.source;
-  renderFacts(regionExplorer.querySelector("[data-region-facts]"), region.facts);
+if (fleetCockpit && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  window.setInterval(() => {
+    if (document.hidden) return;
+    const region = fleetRegions[selectedFleetRegion];
+    const jitter = Math.sin(Date.now() / 3800) * 0.4;
+    fleetCockpit.querySelector("[data-fleet-live]").textContent = `${(region.capacity + jitter).toFixed(1)}%`;
+  }, 2200);
 }
-
-regionExplorer?.querySelectorAll("[data-region]").forEach((button) => button.addEventListener("click", () => selectRegion(button.dataset.region)));
-document.querySelectorAll("[data-region-link]").forEach((link) => link.addEventListener("click", () => selectRegion(link.dataset.regionLink)));
 
 const initialSection = window.location.hash.slice(1);
 setCurrentSection(document.getElementById(initialSection)?.id || "introduction");

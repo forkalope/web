@@ -5,5 +5,7 @@ The country flags are SVG derivatives from
 the version used during the bare-metal provider research. The included
 `LICENSE` file contains the upstream MIT license.
 
-Included countries: Australia, Brazil, Finland, Germany, Singapore, and the
-United States.
+Included synthetic-fleet countries: Australia, Brazil, Finland, France,
+Germany, Hong Kong, Italy, Japan, Malaysia, the Netherlands, New Zealand,
+Singapore, South Africa, South Korea, Spain, Sweden, Türkiye, the United
+Kingdom, the United States, and Vietnam.
