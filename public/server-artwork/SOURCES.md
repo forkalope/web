@@ -16,6 +16,9 @@ They do not depict deployed Forkalope machines.
 | `digital-pacific-c6620.webp` | [Digital Pacific dedicated servers](https://www.digitalpacific.com.au/dedicated/dedicated-servers/) | Dell PowerEdge C6620 chassis photo |
 | `digital-pacific-m630.webp` | [Digital Pacific dedicated servers](https://www.digitalpacific.com.au/dedicated/dedicated-servers/) | Dell PowerEdge M630 chassis photo |
 | `digital-pacific-r620.webp` | [Digital Pacific dedicated servers](https://www.digitalpacific.com.au/dedicated/dedicated-servers/) | Dell PowerEdge R620 chassis photo |
+| `c6620-cutout.webp` | Derived from the Digital Pacific C6620 photo above | Background-removed chassis artwork |
+| `m630-cutout.webp` | Derived from the Digital Pacific M630 photo above | Background-removed chassis artwork |
+| `r620-cutout.webp` | Derived from the Digital Pacific R620 photo above | Background-removed chassis artwork |
 | `adentro-datacenter.webp` | [Adentro](https://adentro.com.br/) | Data-center operations photo |
 | `hosterion-racks.webp` | [Hosterion dedicated servers](https://hosterion.com/dedicated-servers) | Data-center rack photo |
 | `interserver-network.webp` | [InterServer dedicated servers](https://www.interserver.net/dedicated/) | Provider network illustration |

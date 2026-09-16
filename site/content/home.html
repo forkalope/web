@@ -58,81 +58,36 @@
     <article class="school-document" id="document">
       <header class="page-header tracked-section" id="introduction" data-title="Introduction" data-group="Start here">
         <p class="page-kicker">Start here</p>
-        <h1>Introduction</h1>
+        <h1>Learn to run<br />the real thing.</h1>
         <p class="page-lede">We’re building hands-on site reliability engineering (SRE) training around realistic failures, safe recovery, and reviewed operational work.</p>
         <p class="page-support">Practice on an open-source Git platform. Build a record of how you diagnose problems, make changes, and restore service.</p>
         <div class="opening-actions"><a class="primary-action" href="#interest">Get first-cohort details <span aria-hidden="true">↓</span></a><span>Founding cohort in development · enrollment is not open yet.</span></div>
       </header>
 
-      <figure class="fleet-preview" aria-labelledby="fleet-preview-title">
-        <figcaption class="fleet-preview-heading">
-          <div>
-            <p class="fleet-preview-kicker">Future network · concept preview</p>
-            <h2 id="fleet-preview-title">A world of machines to learn on.</h2>
-            <p>Based on real offers from 22 providers, including Hetzner AX42. Imagine exploring from a world view down to one machine.</p>
-          </div>
-          <a href="#network">Meet the operator network <span aria-hidden="true">↓</span></a>
+      <figure class="launch-preview" aria-labelledby="fleet-preview-title">
+        <figcaption class="launch-heading">
+          <span class="preview-label">On the horizon · future fleet concept</span>
+          <h2 id="fleet-preview-title">Your classroom has coordinates.</h2>
+          <p>Start with one machine. Learn to see the whole network.</p>
         </figcaption>
-        <div class="fleet-preview-scene">
-          <img src="/public/server-artwork/hetzner-falkenstein-aerial.webp" width="1600" height="1066" alt="Aerial view of Hetzner's Falkenstein data-center campus, with long rows of red-roofed buildings surrounded by fields" fetchpriority="high" decoding="async" />
-          <div class="fleet-scene-label"><span>One researched supply region</span><strong>Falkenstein, Germany</strong><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Provider facility photo ↗</a></div>
-          <div class="fleet-scene-stat"><strong>1,450</strong><span>concept build runners</span></div>
+        <div class="launch-hardware">
+          <div class="hardware-orbit" aria-hidden="true"></div>
+          <img class="launch-blade" src="/public/server-artwork/m630-cutout.webp" width="250" height="368" alt="PowerEdge M630 blade server cutout" loading="lazy" decoding="async" />
+          <img class="launch-compute" src="/public/server-artwork/c6620-cutout.webp" width="1400" height="443" alt="PowerEdge C6620 compute node cutout" loading="lazy" decoding="async" />
+          <img class="launch-rack" src="/public/server-artwork/r620-cutout.webp" width="694" height="241" alt="PowerEdge R620 rack server cutout" loading="lazy" decoding="async" />
+          <span class="launch-location launch-location-north"><img class="country-flag" src="/public/flags/fi.svg" width="28" height="21" alt="" /><span>Helsinki<strong>60° N · 25° E</strong></span></span>
+          <span class="launch-location launch-location-south"><img class="country-flag" src="/public/flags/au.svg" width="28" height="21" alt="" /><span>Melbourne<strong>38° S · 145° E</strong></span></span>
         </div>
-        <div class="fleet-preview-body">
-          <div class="fleet-map-wrap">
-            <svg class="fleet-map" viewBox="0 0 720 300" role="img" aria-labelledby="fleet-map-title fleet-map-description">
-              <title id="fleet-map-title">Schematic view of a possible global training fleet</title>
-              <desc id="fleet-map-description">A dark world map with highlighted regions across Europe, North America, South America, Africa, and Asia Pacific. Markers show illustrative country distribution, not data-center coordinates.</desc>
-              <g class="fleet-map-grid" aria-hidden="true">
-                <path d="M0 75H720M0 150H720M0 225H720M120 0V300M240 0V300M360 0V300M480 0V300M600 0V300" />
-              </g>
-              <g class="fleet-map-land" aria-hidden="true">
-                <path d="m81 69 16-20 30-12 23-19 36 6 11 14 31 3 14 17 31 8 4 18-18 9-8 22-23 8-9 24-20 11-6 23-23-5-9-16-20-7-5-16-22-4-7-24-18-6-6-18-23-7-6-14z" />
-                <path d="m209 171 19 2 15 18 1 21 13 19-5 21-11 13-5 24-15-8-4-25-13-17 2-19-11-18 2-18z" />
-                <path d="m330 71 11-13 23 2 11-12 20 4 7 15 18 3 5 14-17 8-5 15-15 5-2 17-16 7-7-11-14 1-9-13-14-1-9-16 9-11z" />
-                <path d="m355 127 22-8 17 8 13 20-5 19 11 19-10 18-4 21-17 18-14-10-5-20-13-13 2-17-13-16 7-18-8-9z" />
-                <path d="m403 73 25-17 34 2 15-10 40 7 18-8 39 14 36-4 26 17-11 15-26 4-9 13-25-2-16 13-22-8-14 17-22-6-9-15-22 0-10-12-29 1-5-14-17-2z" />
-                <path d="m550 156 21-9 19 11 8 19-13 13-18-5-15-13z" />
-                <path d="m586 224 22-11 28 5 19 15-9 15-30 5-26-9z" />
-                <path d="m675 185 7-3 6 6-4 10-8-2z" />
-              </g>
-              <g class="fleet-map-routes" aria-hidden="true">
-                <path d="M210 125Q298 61 400 92T559 146M400 92Q438 174 420 218M400 92Q324 155 245 224M420 113Q499 111 560 146" />
-              </g>
-              <g class="fleet-map-points" aria-hidden="true">
-                <circle cx="210" cy="125" r="3.5" /><circle cx="219" cy="135" r="2" />
-                <circle cx="399" cy="91" r="4" /><circle cx="410" cy="101" r="2.4" /><circle cx="392" cy="105" r="2" />
-                <circle cx="420" cy="218" r="3" /><circle cx="246" cy="224" r="2.7" />
-                <circle cx="559" cy="146" r="3.5" /><circle cx="554" cy="182" r="2.4" />
-                <circle cx="612" cy="236" r="2.8" /><circle cx="436" cy="94" r="2" />
-              </g>
-            </svg>
-            <span class="fleet-map-caption">Country distribution · schematic</span>
-          </div>
-          <div class="fleet-preview-data">
-            <div class="fleet-preview-total"><strong>5,000</strong><span>concept nodes<br />across 20 countries</span></div>
-            <div class="fleet-country-list" aria-label="Largest example country pools">
-              <div><span><span aria-hidden="true">🇩🇪</span> Germany</span><strong>1,450</strong></div>
-              <div><span><span aria-hidden="true">🇫🇮</span> Finland</span><strong>900</strong></div>
-              <div><span><span aria-hidden="true">🇺🇸</span> United States</span><strong>900</strong></div>
-              <p>17 other countries · 1,750 nodes</p>
-            </div>
-            <div class="fleet-artwork">
-              <svg viewBox="0 0 116 46" role="img" aria-labelledby="fleet-art-title fleet-art-desc">
-                <title id="fleet-art-title">Illustrative server artwork</title>
-                <desc id="fleet-art-desc">An original schematic illustration of three rack server units with drive bays and status lights.</desc>
-                <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">
-                  <path d="M12 3h92v11H12zM12 17h92v11H12zM12 31h92v11H12z" />
-                  <path d="M20 7h5v3h-5zM20 21h5v3h-5zM20 35h5v3h-5zM33 7h55M33 21h55M33 35h55" />
-                  <path d="M91 6h8v5h-8zM91 20h8v5h-8zM91 34h8v5h-8z" />
-                </g>
-                <g class="fleet-artwork-lights"><circle cx="95" cy="8.5" r="1" /><circle cx="95" cy="22.5" r="1" /><circle cx="95" cy="36.5" r="1" /></g>
-              </svg>
-              <span>Illustrative server artwork</span>
-            </div>
-          </div>
-        </div>
-        <p class="fleet-preview-note">All fleet quantities, assignments, and operations are synthetic. No servers are deployed; map markers are not facility locations.</p>
+        <div class="launch-scale"><span><strong>5,000</strong> concept machines</span><span><strong>20</strong> countries</span><span><strong>22</strong> providers</span></div>
+        <nav class="launch-countries" aria-label="Explore example fleet countries">
+          <a href="#network" data-region-link="DE"><img class="country-flag" src="/public/flags/de.svg" width="28" height="21" alt="" /><span>Germany</span></a>
+          <a href="#network" data-region-link="FI"><img class="country-flag" src="/public/flags/fi.svg" width="28" height="21" alt="" /><span>Finland</span></a>
+          <a href="#network" data-region-link="US"><img class="country-flag" src="/public/flags/us.svg" width="28" height="21" alt="" /><span>United States</span></a>
+          <a href="#network" data-region-link="BR"><img class="country-flag" src="/public/flags/br.svg" width="28" height="21" alt="" /><span>Brazil</span></a>
+          <a href="#network" data-region-link="SG"><img class="country-flag" src="/public/flags/sg.svg" width="28" height="21" alt="" /><span>Singapore</span></a>
+          <a href="#network" data-region-link="AU"><img class="country-flag" src="/public/flags/au.svg" width="28" height="21" alt="" /><span>Australia</span></a>
+        </nav>
+        <p class="preview-footnote">Explore a country ↓ &nbsp; Simulated fleet allocations · representative hardware artwork.</p>
       </figure>
 
       <section class="intro-copy" aria-label="Introduction">
@@ -146,10 +101,17 @@
         <h2>Learn to operate, not just complete lessons.</h2>
         <p>A course can show you how DNS, queues, backups, deployments, or access controls work. The job begins when several of them fail at once, the documentation is incomplete, and somebody needs a calm answer.</p>
         <p>That kind of judgment is learned through practice. Pilots use ground school, simulators, supervised hours, checklists, and checkrides because knowing the material is different from being responsible for the outcome. SREs and DevOps engineers deserve a training path with the same seriousness.</p>
-        <figure class="story-photo story-photo-wide">
-          <img src="/public/server-artwork/hetzner-falkenstein-exterior.webp" width="1200" height="800" alt="Exterior of a gray and red Hetzner data-center building in Falkenstein, Germany" loading="lazy" decoding="async" />
-          <figcaption><span>Operations become real when the system has a place, a power feed, a network path, and someone responsible for it.</span><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Hetzner · Falkenstein facility photo ↗</a></figcaption>
-        </figure>
+        <div class="flight-path">
+          <span class="preview-label">A taste of the exercises</span>
+          <h3>Follow one change around the world.</h3>
+          <ol>
+            <li><img class="country-flag" src="/public/flags/de.svg" width="28" height="21" alt="" /><div><span>01 / Falkenstein</span><strong>Build it.</strong><small>Inspect the runner.</small></div></li>
+            <li><img class="country-flag" src="/public/flags/fi.svg" width="28" height="21" alt="" /><div><span>02 / Helsinki</span><strong>Replicate it.</strong><small>Check the second copy.</small></div></li>
+            <li><img class="country-flag" src="/public/flags/us.svg" width="28" height="21" alt="" /><div><span>03 / NYC metro</span><strong>Recover it.</strong><small>Prove the restore.</small></div></li>
+          </ol>
+          <p>One example scenario for the future training network. Every handoff is a chance to learn what can fail.</p>
+        </div>
+
         <ul class="feature-list">
           <li><strong>Real systems, bounded risk.</strong> Work inside an environment where mistakes become lessons instead of customer emergencies.</li>
           <li><strong>Repetition, not theater.</strong> Diagnose failures, restore service, review what happened, then run the drill again.</li>
@@ -192,9 +154,9 @@
             <img src="/public/server-artwork/hetzner-server-tray.webp" width="1200" height="800" alt="Technician sliding a server tray into a rack" loading="lazy" decoding="async" />
             <figcaption><strong>The machine is part of the lesson.</strong><span>Students learn what the software is asking the hardware to do.</span><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Hetzner operations photo ↗</a></figcaption>
           </figure>
-          <figure>
-            <img src="/public/server-artwork/hetzner-server-aisle.webp" width="801" height="1200" alt="Long data-center aisle with server racks on both sides" loading="lazy" decoding="async" />
-            <figcaption><strong>One node is never the whole system.</strong><span>Trace dependencies, failure domains, and recovery paths.</span><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Hetzner facility photo ↗</a></figcaption>
+          <figure class="training-hardware">
+            <img class="" src="/public/server-artwork/m630-cutout.webp" width="250" height="368" alt="PowerEdge M630 blade server cutout" loading="lazy" decoding="async" />
+            <figcaption><strong>Meet the machine.</strong><span>Ports. Storage. Power. Every abstraction starts somewhere.</span><a href="#curriculum">Open the hardware lab ↓</a></figcaption>
           </figure>
         </div>
         <ol class="program-steps">
@@ -209,10 +171,11 @@
         <p class="section-kicker">Demonstration prototype</p>
         <h2>Example drill: Git pushes have stopped working.</h2>
         <p>This is the kind of exercise the first public drill will make concrete. It is a prototype scenario, not a live customer environment: the point is to show the shape of the work and the evidence a reviewer would look for.</p>
-        <figure class="drill-scene">
-          <img src="/public/server-artwork/hetzner-technical-workbench.webp" width="1200" height="800" alt="Technician inspecting a circuit board under a bench-mounted camera and monitor" loading="lazy" decoding="async" />
-          <figcaption><span class="drill-scene-number">11:42</span><strong>Observe first. Change second.</strong><span>Preserve the evidence, narrow the fault, and leave the next operator a better system.</span><a href="https://www.hetzner.com/pressroom/" target="_blank" rel="noreferrer">Hetzner technical-workbench photo ↗</a></figcaption>
+        <figure class="machine-drill">
+          <div class="machine-drill-art"><img class="" src="/public/server-artwork/r620-cutout.webp" width="694" height="241" alt="PowerEdge R620 rack server cutout" loading="lazy" decoding="async" /><span><i aria-hidden="true"></i> Example incident / push-api 502</span></div>
+          <figcaption><span class="preview-label">Lab 01 · investigate</span><strong>One box.<br />A hundred possible causes.</strong><p>Follow the request. Find the break. Bring pushes back.</p><span class="machine-drill-path">CLIENT <b>→</b> EDGE <b>⇢</b> ORIGIN</span></figcaption>
         </figure>
+
         <div class="drill-grid">
           <div><span class="drill-label">Incident brief</span><strong>Developers are receiving 502 errors when pushing. Reads are healthy. The last deploy was 18 minutes ago.</strong><pre class="incident-log"><code>11:42:08 push-api 502 upstream connect error
 11:42:10 web      GET /repo/forkalope 200
@@ -228,17 +191,32 @@
         <p class="section-kicker">Curriculum</p>
         <h2>The work around the code.</h2>
         <p>The exact sequence will evolve with the first cohorts. These are the capabilities the school is being designed to teach and test.</p>
-        <div class="hardware-runway">
-          <div class="hardware-runway-heading"><span>Hardware library · concept preview</span><strong>Different boxes. One operating language.</strong></div>
-          <div class="hardware-track" aria-label="Examples of researched bare-metal server artwork">
-            <figure><div><img src="/public/server-artwork/digital-pacific-c6620.webp" width="900" height="290" alt="Front view of a Dell PowerEdge C6620 compute node" loading="lazy" decoding="async" /></div><figcaption><strong>PowerEdge C6620</strong><span>Digital Pacific · chassis photo</span></figcaption></figure>
-            <figure><div><img src="/public/server-artwork/digital-pacific-m630.webp" width="570" height="400" alt="Dell PowerEdge M630 blade server" loading="lazy" decoding="async" /></div><figcaption><strong>PowerEdge M630</strong><span>Digital Pacific · chassis photo</span></figcaption></figure>
-            <figure><div><img src="/public/server-artwork/digital-pacific-r620.webp" width="736" height="415" alt="Front view of a Dell PowerEdge R620 rack server" loading="lazy" decoding="async" /></div><figcaption><strong>PowerEdge R620</strong><span>Digital Pacific · chassis photo</span></figcaption></figure>
-            <figure><div><img src="/public/server-artwork/hetzner-ax-family.webp" width="1000" height="391" alt="Abstract processor artwork for Hetzner's AMD AX server family" loading="lazy" decoding="async" /></div><figcaption><strong>AX family</strong><span>Hetzner · provider illustration</span></figcaption></figure>
-            <figure><div><img src="/public/server-artwork/hetzner-sx-family.webp" width="1000" height="392" alt="Abstract hard-drive artwork for Hetzner's SX storage server family" loading="lazy" decoding="async" /></div><figcaption><strong>SX family</strong><span>Hetzner · provider illustration</span></figcaption></figure>
+        <div class="hardware-lab" data-hardware-lab>
+          <div class="hardware-lab-heading"><span class="preview-label">Inside the hardware lab</span><h3>Every machine has a story.</h3><p>Pick a chassis. Get to know what you’ll be operating.</p></div>
+          <div class="hardware-choices" role="group" aria-label="Choose a server chassis">
+            <button type="button" data-chassis="c6620" aria-pressed="true" aria-controls="chassis-details">
+              <span class="hardware-index">01<span>Compute node</span></span>
+              <span class="hardware-object"><img class="" src="/public/server-artwork/c6620-cutout.webp" width="1400" height="443" alt="PowerEdge C6620 compute node cutout" loading="lazy" decoding="async" /></span>
+              <strong>PowerEdge C6620</strong><span class="hardware-origin"><img class="country-flag" src="/public/flags/au.svg" width="28" height="21" alt="" /> Digital Pacific <span aria-hidden="true">↗</span></span>
+            </button>
+            <button type="button" data-chassis="m630" aria-pressed="false" aria-controls="chassis-details">
+              <span class="hardware-index">02<span>Blade server</span></span>
+              <span class="hardware-object"><img class="" src="/public/server-artwork/m630-cutout.webp" width="250" height="368" alt="PowerEdge M630 blade server cutout" loading="lazy" decoding="async" /></span>
+              <strong>PowerEdge M630</strong><span class="hardware-origin"><img class="country-flag" src="/public/flags/au.svg" width="28" height="21" alt="" /> Digital Pacific <span aria-hidden="true">↗</span></span>
+            </button>
+            <button type="button" data-chassis="r620" aria-pressed="false" aria-controls="chassis-details">
+              <span class="hardware-index">03<span>Rack server</span></span>
+              <span class="hardware-object"><img class="" src="/public/server-artwork/r620-cutout.webp" width="694" height="241" alt="PowerEdge R620 rack server cutout" loading="lazy" decoding="async" /></span>
+              <strong>PowerEdge R620</strong><span class="hardware-origin"><img class="country-flag" src="/public/flags/au.svg" width="28" height="21" alt="" /> Digital Pacific <span aria-hidden="true">↗</span></span>
+            </button>
           </div>
-          <p>Artwork shows chassis models or product families, not the exact physical machines in a future Forkalope fleet. <a href="https://www.digitalpacific.com.au/dedicated/dedicated-servers/" target="_blank" rel="noreferrer">Digital Pacific source ↗</a> <a href="https://www.hetzner.com/dedicated-rootserver/" target="_blank" rel="noreferrer">Hetzner source ↗</a></p>
+          <div class="chassis-details" id="chassis-details" aria-live="polite" aria-atomic="true">
+            <div><span class="preview-label" data-chassis-label>Rental example · Sydney, Australia</span><h4 data-chassis-title>PowerEdge C6620</h4><p data-chassis-description>A compact compute node with a concrete storage decision: four SSDs, configured as RAID 10.</p></div>
+            <dl data-chassis-facts><div><dt>CPU</dt><dd>16 physical cores</dd></div><div><dt>Memory</dt><dd>64 GB DDR5</dd></div><div><dt>Storage</dt><dd>960 GB usable</dd></div><div><dt>Transfer</dt><dd>5 TB / month</dd></div></dl>
+          </div>
+          <p class="preview-footnote">Background-removed chassis artwork. <a href="https://www.digitalpacific.com.au/dedicated/dedicated-servers/" target="_blank" rel="noreferrer">Digital Pacific research source ↗</a></p>
         </div>
+
         <div class="curriculum-table">
           <div><span>01</span><strong>Systems</strong><p>Processes, filesystems, permissions, resource limits, service managers, and the path from source to a running service.</p></div>
           <div><span>02</span><strong>Networks</strong><p>DNS, TLS, HTTP, ports, proxies, timeouts, and how to trace a request across boundaries.</p></div>
@@ -291,13 +269,25 @@
         <p class="section-kicker">The network</p>
         <h2>SREs train here. Forkalope Operators power the network.</h2>
         <p>Forkalope’s longer-term advantage is not a library of videos. It is a growing group of SRE-minded people trained on the same operating principles, familiar with the same systems, and able to review one another’s work.</p>
-        <div class="network-gallery" aria-label="Provider imagery from a possible worldwide bare-metal supply network">
-          <figure class="network-gallery-lead"><img src="/public/server-artwork/adentro-datacenter.webp" width="1200" height="761" alt="Technician working inside an orange-lit data-center aisle" loading="lazy" decoding="async" /><figcaption><strong>Brazil</strong><span>Adentro · operations photo</span></figcaption></figure>
-          <figure><img src="/public/server-artwork/hosterion-racks.webp" width="478" height="222" alt="Symmetrical aisle between densely cabled data-center racks" loading="lazy" decoding="async" /><figcaption><strong>Europe</strong><span>Hosterion · rack photo</span></figcaption></figure>
-          <figure class="network-gallery-art"><img src="/public/server-artwork/interserver-network.webp" width="526" height="526" alt="Illustration of a globe connected to operator workstations" loading="lazy" decoding="async" /><figcaption><strong>United States</strong><span>InterServer · network illustration</span></figcaption></figure>
-          <figure class="network-gallery-art"><img src="/public/server-artwork/interserver-dedicated.webp" width="384" height="305" alt="Illustration of a dedicated server connected to smaller systems" loading="lazy" decoding="async" /><figcaption><strong>Bare metal</strong><span>InterServer · product illustration</span></figcaption></figure>
+        <div class="region-explorer" data-region-explorer>
+          <div class="region-explorer-heading"><span class="preview-label">Future fleet · explore a country</span><h3>Pull up a seat in the control room.</h3><p>Different hardware. Different time zones. One system to understand.</p></div>
+          <div class="region-controls" role="group" aria-label="Choose an example fleet country">
+            <button type="button" data-region="DE" aria-pressed="true" aria-controls="region-details"><img class="country-flag" src="/public/flags/de.svg" width="28" height="21" alt="" /><span>Germany</span><small>1,450 nodes</small></button>
+            <button type="button" data-region="FI" aria-pressed="false" aria-controls="region-details"><img class="country-flag" src="/public/flags/fi.svg" width="28" height="21" alt="" /><span>Finland</span><small>900 nodes</small></button>
+            <button type="button" data-region="US" aria-pressed="false" aria-controls="region-details"><img class="country-flag" src="/public/flags/us.svg" width="28" height="21" alt="" /><span>United States</span><small>900 nodes</small></button>
+            <button type="button" data-region="BR" aria-pressed="false" aria-controls="region-details"><img class="country-flag" src="/public/flags/br.svg" width="28" height="21" alt="" /><span>Brazil</span><small>140 nodes</small></button>
+            <button type="button" data-region="SG" aria-pressed="false" aria-controls="region-details"><img class="country-flag" src="/public/flags/sg.svg" width="28" height="21" alt="" /><span>Singapore</span><small>60 nodes</small></button>
+            <button type="button" data-region="AU" aria-pressed="false" aria-controls="region-details"><img class="country-flag" src="/public/flags/au.svg" width="28" height="21" alt="" /><span>Australia</span><small>50 nodes</small></button>
+          </div>
+          <div class="region-details" id="region-details" aria-live="polite" aria-atomic="true">
+            <div class="region-identity"><img class="country-flag" data-region-flag src="/public/flags/de.svg" width="40" height="30" alt="" /><div><span data-region-place>Falkenstein, Germany</span><h4 data-region-offer>Hetzner AX42</h4></div><span class="region-role" data-region-role>Build runners</span></div>
+            <dl data-region-facts><div><dt>CPU</dt><dd>8 physical cores</dd></div><div><dt>Memory</dt><dd>64 GB DDR5 ECC</dd></div><div><dt>Local disks</dt><dd>2 × 512 GB NVMe</dd></div><div><dt>Network</dt><dd>1 Gbps · unlimited traffic</dd></div></dl>
+            <div class="region-mission"><span>Imagine your next exercise</span><p data-region-mission>Drain a build runner, deploy a change, and prove the queue keeps moving.</p></div>
+            <a data-region-source href="https://www.hetzner.com/dedicated-rootserver/ax42/" target="_blank" rel="noreferrer">View researched offer ↗</a>
+          </div>
+          <p class="preview-footnote">Real offer examples from September 2026 research. Node counts and exercises are simulated; the fleet is a future concept.</p>
         </div>
-        <p class="image-provenance">Provider-supplied photography and illustrations show the kinds of infrastructure being researched. They do not represent a current Forkalope deployment. <a href="https://adentro.com.br/" target="_blank" rel="noreferrer">Adentro ↗</a> <a href="https://hosterion.com/dedicated-servers" target="_blank" rel="noreferrer">Hosterion ↗</a> <a href="https://www.interserver.net/dedicated/" target="_blank" rel="noreferrer">InterServer ↗</a></p>
+
         <div class="flywheel" aria-label="Forkalope network flywheel">
           <div><span>01</span><strong>Students practice on real systems.</strong></div>
           <div><span>02</span><strong>Graduates become trusted Forkalope Operators.</strong></div>

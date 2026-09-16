@@ -106,5 +106,76 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 880) setSidebar(false);
 });
 
+const chassisCatalog = {
+  c6620: {
+    label: "Rental example · Sydney, Australia",
+    title: "PowerEdge C6620",
+    description: "A compact compute node with a concrete storage decision: four SSDs, configured as RAID 10.",
+    facts: [["CPU", "16 physical cores"], ["Memory", "64 GB DDR5"], ["Storage", "960 GB usable"], ["Transfer", "5 TB / month"]],
+  },
+  m630: {
+    label: "Chassis study · configuration varies",
+    title: "PowerEdge M630",
+    description: "A blade server shares power, cooling, and networking through its enclosure. That density changes the failure domain.",
+    facts: [["Form", "Blade server"], ["Generation", "Dell 13G"], ["Compute", "Dual-socket chassis"], ["Dependencies", "Shared enclosure"]],
+  },
+  r620: {
+    label: "Chassis study · configuration varies",
+    title: "PowerEdge R620",
+    description: "A dense 1U rack server. Drive layout, memory population, and remote management all become part of the operating picture.",
+    facts: [["Form", "1U rack server"], ["Generation", "Dell 12G"], ["Compute", "Dual-socket chassis"], ["Storage", "Front hot-swap bays"]],
+  },
+};
+
+const regionCatalog = {
+  DE: { place: "Falkenstein, Germany", offer: "Hetzner AX42", role: "Build runners", facts: [["CPU", "8 physical cores"], ["Memory", "64 GB DDR5 ECC"], ["Local disks", "2 × 512 GB NVMe"], ["Network", "1 Gbps · unlimited"]], mission: "Drain a build runner, deploy a change, and prove the queue keeps moving.", source: "https://www.hetzner.com/dedicated-rootserver/ax42/" },
+  FI: { place: "Helsinki, Finland", offer: "Hetzner AX42", role: "Build runners", facts: [["CPU", "8 physical cores"], ["Memory", "64 GB DDR5 ECC"], ["Local disks", "2 × 512 GB NVMe"], ["Network", "1 Gbps · unlimited"]], mission: "Lose the German pool, shift builds north, and verify the artifact chain.", source: "https://www.hetzner.com/dedicated-rootserver/ax42/" },
+  US: { place: "NYC metro, United States", offer: "InterServer dual Xeon", role: "Artifact store", facts: [["CPU", "28 physical cores"], ["Memory", "128 GB"], ["Local disks", "2 × 24 TB SATA"], ["Network", "1 Gbps · unmetered"]], mission: "Recover an artifact after a bad retention rule removes the nearest copy.", source: "https://www.interserver.net/dedicated/" },
+  BR: { place: "Brazil", offer: "Adentro Dedicado Light", role: "Git replica", facts: [["CPU", "28 cores / 56 threads"], ["Memory", "64 GB DDR4"], ["Local disks", "2 × 100 GB SSD"], ["Storage", "250 GB all-flash"]], mission: "Promote a regional replica while the primary route is unavailable.", source: "https://adentro.com.br/solucoes/servidor-dedicado/" },
+  SG: { place: "Singapore", offer: "Latitude.sh m4.metal.small", role: "Regional edge", facts: [["CPU", "6 physical cores"], ["Memory", "48 GB"], ["Local disks", "2 × 960 GB NVMe"], ["Transfer", "20 TB outbound"]], mission: "Trace a slow clone across the edge and decide whether to drain the node.", source: "https://www.latitude.sh/pricing/m4-metal-small" },
+  AU: { place: "Melbourne, Australia", offer: "RansomIT E-2136", role: "Regional edge", facts: [["CPU", "6 physical cores"], ["Memory", "64 GB"], ["Local disks", "2 × 500 GB NVMe"], ["Network", "10 Gbps · 20 TB"]], mission: "Keep service inside its traffic budget during a sudden replication burst.", source: "https://secure.ransomit.com.au/index.php?rp=/store/melbourne-dedicated-servers" },
+};
+
+function renderFacts(container, facts) {
+  if (!container) return;
+  container.replaceChildren(...facts.map(([label, value]) => {
+    const item = document.createElement("div");
+    const term = document.createElement("dt");
+    const description = document.createElement("dd");
+    term.textContent = label;
+    description.textContent = value;
+    item.append(term, description);
+    return item;
+  }));
+}
+
+const hardwareLab = document.querySelector("[data-hardware-lab]");
+hardwareLab?.querySelectorAll("[data-chassis]").forEach((button) => button.addEventListener("click", () => {
+  const chassis = chassisCatalog[button.dataset.chassis];
+  if (!chassis) return;
+  hardwareLab.querySelectorAll("[data-chassis]").forEach((choice) => choice.setAttribute("aria-pressed", String(choice === button)));
+  hardwareLab.querySelector("[data-chassis-label]").textContent = chassis.label;
+  hardwareLab.querySelector("[data-chassis-title]").textContent = chassis.title;
+  hardwareLab.querySelector("[data-chassis-description]").textContent = chassis.description;
+  renderFacts(hardwareLab.querySelector("[data-chassis-facts]"), chassis.facts);
+}));
+
+const regionExplorer = document.querySelector("[data-region-explorer]");
+function selectRegion(code) {
+  const region = regionCatalog[code];
+  if (!regionExplorer || !region) return;
+  regionExplorer.querySelectorAll("[data-region]").forEach((choice) => choice.setAttribute("aria-pressed", String(choice.dataset.region === code)));
+  regionExplorer.querySelector("[data-region-flag]").src = `/public/flags/${code.toLowerCase()}.svg`;
+  regionExplorer.querySelector("[data-region-place]").textContent = region.place;
+  regionExplorer.querySelector("[data-region-offer]").textContent = region.offer;
+  regionExplorer.querySelector("[data-region-role]").textContent = region.role;
+  regionExplorer.querySelector("[data-region-mission]").textContent = region.mission;
+  regionExplorer.querySelector("[data-region-source]").href = region.source;
+  renderFacts(regionExplorer.querySelector("[data-region-facts]"), region.facts);
+}
+
+regionExplorer?.querySelectorAll("[data-region]").forEach((button) => button.addEventListener("click", () => selectRegion(button.dataset.region)));
+document.querySelectorAll("[data-region-link]").forEach((link) => link.addEventListener("click", () => selectRegion(link.dataset.regionLink)));
+
 const initialSection = window.location.hash.slice(1);
 setCurrentSection(document.getElementById(initialSection)?.id || "introduction");
