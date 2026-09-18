@@ -1,60 +1,51 @@
 <main class="legal-main" id="main">
       <p class="eyebrow">The ground rules / Terms</p>
-      <h1>Build together.<br />Know the deal.</h1>
-      <p class="legal-intro">The proposed ground rules for supporting Forkalope, operating a node, and buying services from the network.</p>
-      <p class="legal-date">Draft updated <time datetime="2026-09-13">September 13, 2026</time> · Effective date not yet set</p>
+      <h1>Know what is real.<br />Know what is simulated.</h1>
+      <p class="legal-intro">These draft terms explain the boundaries for Forkalope’s website, Flight School training environment, and the services we may build around them.</p>
+      <p class="legal-date">Draft updated <time datetime="2026-09-18">September 18, 2026</time> · Effective date not yet set</p>
       <aside class="draft-notice" aria-label="Draft status">
         <strong>Working draft · not an active service agreement</strong>
-        <p>These are starting terms for services we are designing. Reading this page or choosing a preview plan does not sign you up, authorize a charge, or create a payout entitlement. Final terms, the legal contracting party, and a contact address must be supplied before enrollment.</p>
+        <p>The current site is an early preview. Reading this page, joining an interest list, or exploring a simulated environment does not create an account, authorize a charge, create a payout entitlement, or grant access to production infrastructure. Final terms, the legal contracting party, and a contact address must be supplied before enrollment or paid services begin.</p>
       </aside>
-      <nav class="legal-toc" aria-label="On this page"><a href="#membership">Membership</a><a href="#sysops">Independent Sysops</a><a href="#earnings">Paid work</a><a href="#recovery">Recovery</a><a href="#billing">Billing</a><a href="#before-launch">Before launch</a></nav>
+      <nav class="legal-toc" aria-label="On this page"><a href="#scope">Scope</a><a href="#simulation">Simulation</a><a href="#use">Responsible use</a><a href="#services">Planned services</a><a href="#recovery">Availability</a><a href="#before-launch">Before launch</a></nav>
 
       <section class="legal-section" id="scope">
-        <h2>1. Software and services</h2>
-        <p>Forkalope’s open-source software is governed by the license supplied with its source. Hosted services, memberships, and paid work would have separate agreements. Running the software yourself does not require a paid membership.</p>
-        <p>Before a paid service begins, its order must identify the provider, included features and limits, price, and applicable terms. Business service or data-processing agreements may add specific commitments. Planned features on this site are not a promise that those features are available today.</p>
+        <h2>1. What these terms cover</h2>
+        <p>“Forkalope” refers to the project and the website at forkalope.com. The legal person or entity responsible for a final service will be identified before these draft terms become effective. Open-source software is governed by the license supplied with its source; hosted services, training, memberships, and paid work would have separate agreements.</p>
+        <p>The current preview does not sell memberships, accept payment, or promise access to a hosted forge, a physical server, or a production network. Planned features and examples on this site are not a promise that those features are available today.</p>
       </section>
-      <section class="legal-section" id="membership">
-        <h2>2. Co-Sysops and Tines</h2>
-        <p>The proposed membership levels are <strong>$30, $60, and $90 per month</strong>, representing one, two, or three Tines of infrastructure support. Tines help fund shared capacity, backups, monitoring, and operations. They do not purchase a particular physical machine.</p>
-        <p>Co-Sysops would receive the stewardship features listed in their final plan. Node affiliation and approved naming privileges do not confer legal ownership, root access, access to customer data, or authority to bind Forkalope. Hardware and node assignments may change as the network is maintained.</p>
-        <p>Dues do not buy equity, a financial return, or a share of node revenue. Contributing more or joining earlier does not increase commission rates. Community participation is not legal cooperative membership or corporate voting power unless a separate agreement expressly establishes it.</p>
+
+      <section class="legal-section" id="simulation">
+        <h2>2. Flight School is simulated infrastructure</h2>
+        <p><strong>Servers, providers, sites, hostnames, IP addresses, routes, credentials, logs, incidents, telemetry, command output, and network behavior shown in Flight School are simulated.</strong> They are training material, not evidence about a real server or provider.</p>
+        <p>Displayed IPv4 and IPv6 addresses are synthetic identifiers. They may use reserved non-routable ranges or otherwise resemble public Internet addresses, and an address may coincidentally be assigned to a real system. A displayed address must not be treated as an invitation to contact, scan, probe, authenticate to, or route traffic to any real-world host.</p>
+        <p>Commands such as <code>ssh</code>, <code>ping</code>, <code>curl</code>, <code>dig</code>, and <code>traceroute</code> operate only on the simulator’s virtual network. Forkalope must not pass a simulated hostname or address to real DNS, sockets, HTTP clients, or other external networking APIs. If a destination is not represented in the simulated world, the simulator should return a simulated failure rather than reach the public Internet.</p>
+        <p>Do not copy simulated credentials, fingerprints, addresses, or command output into a real operational environment. Do not use Forkalope to test or claim a security finding about a real host.</p>
       </section>
-      <section class="legal-section" id="sysops">
-        <h2>3. Independent Sysops</h2>
-        <p>An Independent Sysop would rent infrastructure in their own name, remain responsible for their provider’s contract and charges, and administer their own machines. They could coordinate Co-Sysops affiliated with an approved network node.</p>
-        <p>Joining the shared hosting or recovery network would require an operator agreement covering security, updates, backups, reserved capacity, incident response, customer data, abuse handling, and exit or migration procedures. Merely installing Forkalope would not authorize someone to host network customers or receive their private replicas.</p>
-        <p>Node sponsorship allocations and compensation for delivered hosting would follow that agreement. Coordinating members would not create an upline or a right to their future earnings. Forkalope would not automatically reimburse a Sysop’s server bill or guarantee customers.</p>
+
+      <section class="legal-section" id="use">
+        <h2>3. Responsible use</h2>
+        <p>Use the website and training environment lawfully and only for their intended educational or informational purposes. Do not attempt to bypass access controls, interfere with the service, submit malware, target real systems, impersonate another person, or use simulated output to mislead others.</p>
+        <p>Do not enter passwords, private keys, tokens, customer data, or other secrets into a preview terminal, issue, form, or training exercise unless a later service expressly asks for them and explains how they are handled. You remain responsible for content you submit and for protecting your own credentials.</p>
       </section>
-      <section class="legal-section" id="earnings">
-        <h2>4. Earn through customers and work</h2>
-        <p>A separate program may compensate qualified participants for directly sourced customers, migrations, support, approved bounties, or contracted infrastructure service. <strong>No one earns a recruitment commission for bringing in Co-Sysops or Sysops, or a percentage of another participant’s earnings.</strong></p>
-        <p>The proposed principle is equal published rules, with no founder multipliers or membership-tier advantages. Paid membership would not be required to apply for customer or work opportunities.</p>
-        <p>Rates, eligibility, attribution, acceptance criteria, refund adjustments, taxes, payment timing, and the duration of recurring commissions must be specified in separate program terms before work is commissioned. Illustrative earnings are not an offer or guarantee of income.</p>
+
+      <section class="legal-section" id="services">
+        <h2>4. Planned memberships, hosting, and paid work</h2>
+        <p>Future Co-Sysop memberships may help fund shared capacity, backups, monitoring, and operations. A membership would not purchase a particular physical machine, equity, a financial return, legal ownership, root access, customer data, or authority to bind Forkalope.</p>
+        <p>Future hosting or recovery services would require an order or service agreement identifying the provider, included features and limits, price, support, data handling, and applicable terms. A shared network would not make a sponsor an owner of another customer’s repository or give an operator access to customer data beyond the responsibilities of the applicable agreement.</p>
+        <p>A separate program may compensate qualified participants for customer referrals, migrations, support, approved bounties, or contracted infrastructure work. <strong>No one earns a recruitment commission for bringing in Co-Sysops or Sysops, or a percentage of another participant’s earnings.</strong> Rates, eligibility, attribution, taxes, payment timing, and any recurring commission period must be published before work is commissioned. Illustrative earnings are not an offer or guarantee of income.</p>
       </section>
-      <section class="legal-section" id="content">
-        <h2>5. Your content and responsible use</h2>
-        <p>You retain your rights in your code and content. A hosted service agreement would grant only the permissions needed to store, process, display, back up, and replicate it to deliver the service you select. Public content remains subject to the licenses and permissions its owners choose.</p>
-        <p>Users must have authority to upload their content, protect their credentials, and respect other people’s rights. Unauthorized access, attacks, unlawful content, harassment, and abuse of shared resources would be prohibited. Private customer data would not be made available to sponsors simply because they support the node.</p>
-      </section>
+
       <section class="legal-section" id="recovery">
-        <h2>6. Shared recovery and availability</h2>
-        <p>We are designing a network in which approved operators can keep authorized replicas and reserve capacity to help one another recover. This is a development direction, <strong>not a current guarantee of automatic or instantaneous failover, uninterrupted service, or zero data loss.</strong></p>
-        <p>Actual recovery depends on the selected service, replica freshness, spare capacity, and functioning dependencies. Customers should keep appropriate independent backups. Any recovery targets, uptime commitment, support response, or service credit must appear in the applicable service agreement.</p>
+        <h2>5. Availability, recovery, and changes</h2>
+        <p>The training environment and any future service may change, be unavailable, contain errors, or reset simulated state. Training output is not a production recommendation, and no uptime, recovery time, failover, or zero-data-loss commitment applies unless a final service agreement says so.</p>
+        <p>We may restrict or suspend access when reasonably necessary for security, abuse prevention, maintenance, legal obligations, or protection of the service. We will publish dated revisions and explain material changes before asking anyone to accept final terms.</p>
+        <p>See the <a href="/privacy/">draft privacy policy</a> for the proposed approach to website, training, and future service data.</p>
       </section>
-      <section class="legal-section" id="billing">
-        <h2>7. Billing, cancellation, and leaving</h2>
-        <p>Before checkout is enabled, it must state the charge and currency, billing interval, any automatic renewal, taxes, cancellation method, and refund policy. The intended model is monthly membership with a way to stop future renewals. No payment is taken through the current preview.</p>
-        <p>Final terms must explain when cancellation takes effect, what happens to node affiliation, and how data can be exported before a hosted account closes. Refund eligibility, backup expiration, notice of price changes, and operator offboarding remain to be finalized. Applicable mandatory consumer rights are not waived by these draft terms.</p>
-      </section>
-      <section class="legal-section" id="enforcement">
-        <h2>8. Safety, changes, and disputes</h2>
-        <p>Service terms should allow proportionate restrictions when necessary to address abuse, security threats, nonpayment, or legal obligations, with notice and a review route where feasible. The final agreement must explain termination, data access, warranties, liability, dispute handling, and any governing law.</p>
-        <p>We will publish a dated version before asking anyone to accept terms and explain material changes. See the <a href="/privacy/">draft privacy policy</a> for the proposed approach to personal information and independent nodes.</p>
-      </section>
+
       <section class="legal-section legal-pending" id="before-launch">
         <h2>Still to complete before launch</h2>
-        <p>Legal entity and working contact; final plan benefits; checkout and cancellation terms; refund rules; acceptable-use and reporting procedures; operator and partner agreements; business service limits; and legal review for the regions where we offer services.</p>
-        <p>This draft intentionally leaves those decisions open. It is not a complete agreement for taking payments or hosting customer data.</p>
+        <p>Legal entity and working contact; final training and plan terms; enrollment, checkout, cancellation, and refund rules; acceptable-use and reporting procedures; operator and partner agreements; business service limits; retention commitments; and legal review for the regions where services are offered.</p>
+        <p>This draft intentionally leaves those decisions open. It is not a complete agreement for taking payments, hosting customer data, or operating a production network.</p>
       </section>
     </main>

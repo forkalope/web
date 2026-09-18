@@ -1,55 +1,68 @@
 <main class="legal-main" id="main">
       <p class="eyebrow">The ground rules / Privacy</p>
-      <h1>Your code.<br />Your confidence.</h1>
-      <p class="legal-intro">An open network needs clear answers about who handles your information. This is the starting point for ours.</p>
-      <p class="legal-date">Draft updated <time datetime="2026-09-13">September 13, 2026</time> · Effective date not yet set</p>
+      <h1>Your information.<br />Clear boundaries.</h1>
+      <p class="legal-intro">This draft explains what the current website can receive, what a simulated training session may record, and what would need to be disclosed before hosted services launch.</p>
+      <p class="legal-date">Draft updated <time datetime="2026-09-18">September 18, 2026</time> · Effective date not yet set</p>
       <aside class="draft-notice" aria-label="Draft status">
         <strong>Working draft · service policies are still being developed</strong>
-        <p>This page distinguishes the current informational website from our proposed hosting network. Hosting, membership, and payment practices below describe the intended model, not a claim that those services are live. We need to identify the legal operator and privacy contact and verify our providers before adopting a final policy.</p>
+        <p>The current site is an early preview. It does not currently provide paid hosting, production infrastructure, or a general-purpose account service. We still need to identify the legal operator and privacy contact, verify providers, and set retention periods before adopting a final policy.</p>
       </aside>
-      <nav class="legal-toc" aria-label="On this page"><a href="#today">Website today</a><a href="#service">Planned services</a><a href="#nodes">Nodes and replicas</a><a href="#choices">Your choices</a><a href="#before-launch">Before launch</a></nav>
+      <nav class="legal-toc" aria-label="On this page"><a href="#scope">Scope</a><a href="#today">Website today</a><a href="#simulation">Training data</a><a href="#service">Planned services</a><a href="#nodes">Nodes and replicas</a><a href="#choices">Your choices</a><a href="#before-launch">Before launch</a></nav>
 
       <section class="legal-section" id="scope">
         <h2>1. Who this covers</h2>
-        <p>“Forkalope” refers to the project behind this website. The legal person or entity responsible for this site will be identified here before this draft becomes effective. An independent deployment may be run by a different operator with its own privacy notice. Using Forkalope software does not, by itself, make that operator part of our hosted service.</p>
+        <p>“Forkalope” refers to the project behind this website. The legal person or entity responsible for this site will be identified here before this draft becomes effective. An independent deployment may be run by a different operator with its own privacy notice. Using Forkalope software does not, by itself, make that operator part of a Forkalope-hosted service.</p>
       </section>
+
       <section class="legal-section" id="today">
         <h2>2. Visiting this website today</h2>
-        <p>The current site presents information and membership plans. Its own code does not set cookies, use browser storage, or include advertising or analytics scripts. Selecting a plan displays a summary; it does not currently create an account or collect payment details.</p>
-        <p>Delivering a website involves receiving technical information such as your IP address, requested page, and browser information. Our hosting infrastructure may record access or security logs. Its exact logging and retention settings still need to be verified.</p>
-        <p>The landscape page loads some project icons from external websites. Those requests disclose your IP address and browser information to those providers and may include referrer information. Following an external link also takes you to a service with its own privacy practices.</p>
+        <p>The current site presents information about Forkalope and its planned Flight School and network. Its own code does not set cookies, use browser storage, or include advertising or analytics scripts. Selecting a plan or following an interest link does not currently create an account or collect payment details through this site.</p>
+        <p>Delivering a website involves receiving technical information such as your IP address, requested page, timestamp, and browser information. Our hosting infrastructure may record access or security logs. Its exact logging and retention settings still need to be verified and will be described before this policy is finalized.</p>
+        <p>The landscape page loads some project icons from external websites. Those requests disclose your IP address and browser information to those providers and may include referrer information. Following an external link takes you to a service with its own privacy practices.</p>
       </section>
+
+      <section class="legal-section" id="simulation">
+        <h2>3. Flight School training data</h2>
+        <p>Flight School is a simulated environment. Its servers, hostnames, providers, IP addresses, routes, credentials, incidents, telemetry, logs, and command output are fictional training state. A displayed address is not a real Forkalope host and is not used as a destination for real network traffic.</p>
+        <p>If a training experience records progress, it may associate an attempt with information such as a session identifier, selected exercise, commands entered, simulated actions, grader results, timestamps, and diagnostic events. The intended purposes are to provide the exercise, evaluate progress, troubleshoot the simulator, and improve the curriculum. Exact collection, access, and retention rules must be published before a persistent training account launches.</p>
+        <p><strong>Do not enter passwords, private keys, API tokens, customer data, or other secrets into a preview terminal or exercise.</strong> Simulated SSH and network commands remain inside the virtual world; they are not sent to the real host that may happen to use a displayed address.</p>
+      </section>
+
       <section class="legal-section" id="service">
-        <h2>3. Information planned services would need</h2>
+        <h2>4. Information planned services would need</h2>
         <ul>
-          <li><strong>Accounts and support:</strong> contact details, profile information, organization roles, and messages needed to run accounts and respond to requests.</li>
+          <li><strong>Accounts and support:</strong> contact details, profile information, organization roles, training progress, and messages needed to run accounts and respond to requests.</li>
           <li><strong>Repositories and collaboration:</strong> code, Git history, author names and emails, issues, reviews, files, and permissions needed to provide the features you choose.</li>
-          <li><strong>Operations:</strong> authentication events, usage, diagnostics, and security logs needed to maintain the service, investigate abuse, and recover from failures.</li>
+          <li><strong>Operations and security:</strong> authentication events, usage, diagnostics, device or browser information, and security logs needed to maintain the service, investigate abuse, and recover from failures.</li>
           <li><strong>Membership and business billing:</strong> selected plans, billing contact details, transaction references, and payment status. Stripe is the intended payment provider; checkout is not connected yet.</li>
           <li><strong>Paid work:</strong> approved assignments, customer attribution, and payment or tax information needed if a separate partner or operator payout program launches.</li>
         </ul>
-        <p>The intended uses are providing the requested service, billing, support, security, and meeting legal obligations. Any additional uses, providers, or required choices must be described before collection starts.</p>
+        <p>The intended uses are providing the requested service, operating and securing it, billing, support, training evaluation, and meeting legal obligations. Any additional uses, providers, or required choices must be described before collection starts.</p>
       </section>
+
       <section class="legal-section" id="nodes">
-        <h2>4. A shared network does not make private code public</h2>
+        <h2>5. A shared network does not make private code public</h2>
         <p><strong>Co-Sysop sponsorship would not grant access to other customers’ private repositories, credentials, or billing information.</strong> Stewardship dashboards should show appropriate node health and capacity information, with customer data kept out of public views.</p>
-        <p>The proposed recovery network would store authorized replicas on other approved nodes. Before enabling that for private data, we need to disclose the operators, locations, access arrangements, and applicable customer controls. An operator with administrative access to a server may have technical access to data processed there; a “private” repository label alone does not remove that trust requirement.</p>
+        <p>A future recovery network may store authorized replicas on other approved nodes. Before enabling that for private data, we need to disclose the operators, locations, access arrangements, and applicable customer controls. An operator with administrative access to a server may have technical access to data processed there; a “private” repository label alone does not remove that trust requirement.</p>
         <p>Independent Sysops may operate as service providers under an agreement or run a separate service. Their role and responsibility must be clear before a customer’s data is placed with them. Sponsoring a node is not consent to share unrelated customer data.</p>
       </section>
+
       <section class="legal-section" id="sharing">
-        <h2>5. Sharing and public content</h2>
+        <h2>6. Sharing and public content</h2>
         <p>Planned sharing would be limited to providers needed to deliver the service, authorized collaborators and organization administrators, and disclosures required by law or necessary to address security or abuse. The final policy must identify provider categories and explain any processing across national borders.</p>
         <p>Content you deliberately make public can be viewed, cloned, indexed, and independently copied. Removing it from a Forkalope service cannot recall copies already held by others.</p>
       </section>
+
       <section class="legal-section" id="choices">
-        <h2>6. Retention, security, and your choices</h2>
-        <p>We intend to retain information only for the service purpose or an applicable legal requirement. Exact periods for website logs, closed accounts, repositories, billing records, and backup copies remain to be set. Deletion from active storage and expiration from backups are separate processes.</p>
+        <h2>7. Retention, security, and your choices</h2>
+        <p>We intend to retain information only for the service purpose or an applicable legal requirement. Exact periods for website logs, training attempts, closed accounts, repositories, billing records, and backup copies remain to be set. Deletion from active storage and expiration from backups are separate processes.</p>
         <p>The service should support appropriate access, correction, export, and deletion requests, subject to applicable law and necessary identity checks. The privacy contact and request procedure are not yet established. Organization-managed data may also require coordination with the organization’s administrator.</p>
         <p>Replication supports recovery; it does not guarantee security or prevent every loss. Security controls and incident procedures must be verified for the actual deployment before we describe them as service commitments.</p>
       </section>
+
       <section class="legal-section legal-pending" id="before-launch">
         <h2>Still to complete before launch</h2>
-        <p>Legal operator and address; a working privacy contact; provider and region inventory; retention periods; request and deletion procedures; applicable legal bases and regional rights; age requirements; and any required business data-processing terms.</p>
+        <p>Legal operator and address; a working privacy contact; provider and region inventory; training and service data flows; retention periods; request and deletion procedures; applicable legal bases and regional rights; age requirements; and any required business data-processing terms.</p>
         <p>We will date revisions here and explain material changes when the policy is adopted. These open items mean this draft is not a complete launch policy.</p>
       </section>
     </main>
